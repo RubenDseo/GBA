@@ -3819,6 +3819,9 @@
 .icofont-search:before {
 	content: "\edef";
 }
+.icofont-search-stock:before{
+	content: "\ed19";
+}
 .icofont-stock-search:before {
 	content: "\edf0";
 }
