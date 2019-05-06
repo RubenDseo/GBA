@@ -40,6 +40,9 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+	<!--CAPTCHA-->	
+	 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body data-spy="scroll" data-target=".header" data-offset="50">
@@ -49,7 +52,7 @@
 	<header class="header">
 		<div class="container">
 			<div class="row flexbox-center">
-				<div class="col-lg-2 col-md-3 col-6">
+				<div class="col-lg-2 col-md-3 col-sm-6 col-6">
 					<div class="logo">
 						<a href="#home"><img id="logo-R" src="img-GBA/logogba.png" style="width: 170%" alt="logo" /></a>
 					</div>
@@ -94,14 +97,10 @@
 			<div class="hero-area-single-slide">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-7">
+						<div class="col-lg-7 col-sm-12">
 							<div class="hero-area-content">
 								<h1>Ingeniería Biomédica</h1>
-								<p class="text-justify">Es una área interdisciplinaria del conocimiento donde tiene como
-									propósito atender la
-									demanda
-									creciente de tecnologías para las Ciencias de la Vida por medio de la aplicación de
-									técnicas, métodos y otros recursos de la ingeniería.</p>
+								<p class="text-justify">Es una área interdisciplinaria del conocimiento donde tiene como propósito atender la demanda creciente de tecnologías para las Ciencias de la Vida por medio de la aplicación de técnicas, métodos y otros recursos de la ingeniería.</p>
 								<a href="about.html" class="appao-btn">Nosotros</a>
 								<a href="index-slider.html#contacto" class="appao-btn">Contacto</a>
 							</div>
@@ -113,21 +112,24 @@
 			<div class="hero-area-single-slide">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-7">
+						<div class="col-lg-7 col-sm-12">
 							<div class="hero-area-content">
 								<h1>Productos</h1>
-								<p>Conoce nuestros productos que cuentan con un alto nivel en tecnología de
-									fabricación y con los estándares de calidad.</p>
+								<p>Conoce nuestros productos con un alto nivel en:</p>
+								<li style="list-style-type: disc; font-size: 16px; margin-left: 17px;">Tecnología de fabricación y</li> 
+								<li style="list-style-type: disc; font-size: 16px; margin-left: 17px;">Estándares de calidad</li>
+								<br>
+
 								<a href="catalogo.html" class="appao-btn">Catálogo</a>
 								<a href="about.html" class="appao-btn">Contacto</a>
 							</div>
 						</div>
-						<div class="col-lg-5">
+						<!--<div class="col-lg-5">
 							<div class="hand-mockup text-lg-left text-center">
-								<img src="" alt="Hand Mockup" />
+								<img src="" alt="Hand Mockup" />-->
 								<!--sin imagen de brazo robotico-->
-							</div>
-						</div>
+						<!--</div>
+						</div>-->
 					</div>
 				</div>
 			</div>
@@ -135,21 +137,21 @@
 			<div class="hero-area-single-slide">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-7">
+						<div class="col-lg-7 col-sm-12">
 							<div class="hero-area-content">
 								<h1>Servicios</h1>
-								<p>Contamos con ingenieros especializados y capacitados para ofrecer
-									atención y servicio que requieren nuestros clientes.</p>
+								<p>Contamos con ingenieros especializados y capacitados para brindar
+									la atención y el servicio que requieran nuestros clientes.</p>
 								<a href="index-slider.html#servicios" class="appao-btn">Servicios</a>
 								<a href="about.html" class="appao-btn">Contacto</a>
 							</div>
 						</div>
-						<div class="col-lg-5">
+						<!--<div class="col-lg-5">
 							<div class="hand-mockup text-lg-left text-center">
-								<img src="" alt="Hand Mockup" />
+								<img src="" alt="Hand Mockup" />-->
 								<!--sin imagen de brazo robotico-->
-							</div>
-						</div>
+						<!--</div>
+						</div>-->
 					</div>
 				</div>
 			</div>
@@ -331,7 +333,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="sec-title">
-						<!--<h2>Showcase<span class="sec-title-border"><span></span><span></span><span></span></span></h2>-->
+						<h2>GBA<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
 						<p>Damos servicio y atención a todo tipo de dependencias del Sector Salud
 						</p>
 					</div>
@@ -341,13 +343,23 @@
 				<div class="col-lg-6">
 					<div class="single-showcase-box">
 						<h4>Mantenimiento preventivo/ correctivo por evento</h4>
-						<p class="text-justify">Preventivo se realiza de manera anticipada sin que el equipo presente alguna falla.
+															
+
+						<p class="text-justify">
+							<i class="icofont icofont-law-document mr-2"></i>
+							Preventivo: se realiza de manera anticipada sin que el equipo presente alguna falla.
 							<br>
 							<br>
-							Correctivo se realiza para equipos que presentan  fallas y no operan con normalidad y consta de dos partes 
-							revisión y diagnóstico y reparación requerida. 
+							<i class="icofont icofont-gears mr-2"></i></i></i>
+							Correctivo: se realiza para equipos que presentan  fallas y no operan con normalidad que consta de:  
+							<br>
+							<i class="icofont icofont-bubble-right ml-3"></i>
+							Revisión y diagnóstico 
+							<br>
+							<i class="icofont icofont-bubble-right ml-3"></i>
+							Reparación requerida
 						</p>
-						<a href="#" class="appao-btn appao-btn2">Cotiza</a>
+						<a href="#" class="appao-btn appao-btn2 " data-toggle="modal" data-target="#exampleModal">Cotizar</a>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -365,16 +377,52 @@
 				<div class="col-lg-6">
 					<div class="single-showcase-box">
 						<h4>Productos</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et
-							dolore magna aliqua. Ut enim ad minim nostrud exercitation ullamco laboris nisi ut aliquip
+						<p>Conoce nuestros productos de la más alta calidad, como: 
+							<br>
+							<i class="icofont icofont-bubble-right mr-2 ml-3"></i>Cunas de calor radiante<br>
+							<i class="icofont icofont-bubble-right mr-2 ml-3"></i>Desfibriladores<br>
+							<i class="icofont icofont-bubble-right mr-2 ml-3"></i>Electrocardiógrafos<br>
+							<i class="icofont icofont-bubble-right mr-2 ml-3"></i>Esterilizadores<br>
+							<i class="icofont icofont-bubble-right mr-2 ml-3"></i>Estuches de diagnóstico<br>
+							<i class="icofont icofont-bubble-right mr-2 ml-3"></i>Estuches de laringoscopio<br>
+							<i class="icofont icofont-bubble-right mr-2 ml-3"></i>Incubadoras, entre otros<br>
+
 						</p>
-						<a href="#" class="appao-btn appao-btn2">Cotiza</a>
+						<a href="#" class="appao-btn appao-btn2" data-toggle="modal" data-target="#exampleModal">Cotizar</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section><!-- showcase section end -->
+
+
+	<!--******************** Inicio de MODULO **************-->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+				<div class="modal-header">
+				    <h5 class="modal-title" id="exampleModalLabel">Cotiza</h5>
+				    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+				   </button>
+				</div>
+				
+				<div class="modal-body">
+				    <form id="contact-form" action="#" method="POST">
+						<input type="text" name="name" placeholder="Nombre">
+						<input type="email" name="email" placeholder="Email">
+						<input type="text" name="subject" placeholder="Asunto">
+						<textarea name="message" placeholder="Mensaje"></textarea>
+					</form>
+				</div>
+				<div class="modal-footer">
+				    <button type="button" class="appao-btn appao-btn2" data-dismiss="modal">Cancelar</button>
+        			<button type="button" class="appao-btn appao-btn2">Enviar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--******************** fin de MODULO **************-->
 
 	<!-- testimonial section start -->
 	<!--<section class="testimonial-area ptb-90">
@@ -463,7 +511,7 @@
 	</video>
 	<!-- counter section start -->
 	<section class="counter-area">
-		<div class="container">
+		<div class="container" style="padding-top: 276px;">
 			<div class="row">
 				<div class="col-md-3 col-sm-6">
 					<div class="single-counter-box">
@@ -505,7 +553,7 @@
 				<div class="col-lg-12">
 					<div class="sec-title">
 						<h2>Productos<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+						<p>Productos nuevos en el catálogo
 						</p>
 					</div>
 				</div>
@@ -531,9 +579,10 @@
 		</div>
 	</section><!-- screenshots section end -->
 	<!-- google map area start -->
-	<div class="google-map" id="contacto"></div>
+	<div class="p-0" style="height:450px">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d953.7767650807313!2d-99.03031019653505!3d19.327694696848535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce02bc6d1fe7b7%3A0x5be47bdb35ad12e0!2sFunerales+Tapia!5e0!3m2!1ses!2smx!4v1556920441416!5m2!1ses!2smx" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
 	<!-- google map area end -->
-
 	<!-- footer section start -->
 	<footer class="footer">
 		<div class="container" style="padding-top: 60px;">
@@ -542,11 +591,12 @@
 					<div class="contact-form">
 						<h4>Escribenos</h4>
 						<p class="form-message"></p>
-						<form id="contact-form" action="#" method="POST">
+						<form id="contact-form" action="formulario.php" method="POST">
 							<input type="text" name="name" placeholder="Nombre">
 							<input type="email" name="email" placeholder="Email">
 							<input type="text" name="subject" placeholder="Asunto">
 							<textarea name="message" placeholder="Mensaje"></textarea>
+							<div class="g-recaptcha mb-3" data-sitekey="6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX"></div>
 							<button type="submit" name="submit">Enviar</button>
 						</form>
 					</div>
@@ -623,6 +673,18 @@
 	<!--<script>
         $(".footer").load("ajaxFooter.php");
     </script>-->
+
+    <script>
+    	$('#exampleModal').on('show.bs.modal', function (event) {
+		  var button = $(event.relatedTarget) // Button that triggered the modal
+		  var recipient = button.data('whatever') // Extract info from data-* attributes
+		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+		  var modal = $(this)
+		  modal.find('.modal-title').text('New message to ' + recipient)
+		  modal.find('.modal-body input').val(recipient)
+		})
+    </script>
 
 	<!-- jquery main JS -->
 	<script src="assets/js/jquery.min.js"></script>
