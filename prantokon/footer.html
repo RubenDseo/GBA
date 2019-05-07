@@ -2,7 +2,8 @@
 <html lang="zxx">
 
 <head>	
-		
+<!--CAPTCHA-->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -15,12 +16,13 @@
 						<div class="contact-form">
 							<h4>Escribenos</h4>
 							<p class="form-message"></p>
-							<form id="contact-form" action="#" method="POST">
+							<form id="contact-form" action="formulario.php" method="POST">
 								<input type="text" name="name" placeholder="Nombre">
 								<input type="email" name="email" placeholder="Email">
 								<input type="text" name="subject" placeholder="Asunto">
 								<textarea name="message" placeholder="Mensaje"></textarea>
-								<button type="submit" name="submit">Enviar</button>
+								<div class="g-recaptcha mb-3" data-sitekey="6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX"></div>
+								<button type="submit" class="appao-btn appao-btn2">Enviar</button>
 							</form>
 						</div>
 					</div>

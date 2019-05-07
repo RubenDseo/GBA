@@ -38,35 +38,10 @@
 	<div id="preloader"></div>
 
 	<!-- header section start -->
-	<header class="header">
-		<div class="container">
-			<div class="row flexbox-center">
-				<div class="col-lg-2 col-md-3 col-6">
-					<div class="logo">
-						<a href="#home"><img id="logo-R" src="img-GBA/logogba.png" style="width: 170%" alt="logo"/></a>
-					</div>
-				</div>
-				<div class="col-lg-10 col-md-9 col-6">
-					<div class="responsive-menu"></div>
-					<div class="mainmenu">
-						<ul id="primary-menu">
-							<li><a class="nav-link active" href="index-slider.html">Inicio</a></li>
-							<li><a class="nav-link" href="about.html">Nosotros</a></li>
-							<li><a class="nav-link" href="index-slider.html#servicios">Servicios</a></li>
-							<li><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-							<li><a class="nav-link" href="index-slider.html#contacto">Contacto</a></li>
-							<!-- Carrito 
-							<li class="cart">
-								<a class="nav-link" href="cart.html" style="padding-top: 0px; padding-bottom: 5px;">
-									<i class="icofont icofont-cart icofont-2x"></i>
-								</a>
-							</li>-->
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header><!-- header section end -->
+	<div class="head">
+
+	</div>
+	<!-- header section end -->
 
 	<!-- imagen de encabezado area start -->
 	<section class="hero-area" id="home">
@@ -271,80 +246,10 @@
 	</div>
 
 	<!-- footer section start -->
-	<footer class="footer" id="contacto">
-		<div class="container" style="padding-top: 60px;">
-			<div class="row">
-				<div class="col-lg-6" style="padding-top: 90px;">
-					<div class="contact-form">
-						<h4>Escribenos</h4>
-						<p class="form-message"></p>
-						<form id="contact-form" action="#" method="POST">
-							<input type="text" name="name" placeholder="Nombre">
-							<input type="email" name="email" placeholder="Email">
-							<input type="text" name="subject" placeholder="Asunto">
-							<textarea name="message" placeholder="Mensaje"></textarea>
-							<button type="submit" name="submit">Enviar</button>
-						</form>
-					</div>
-				</div>
-				<div class="col-lg-6" style="padding-top: 90px;">
-					<div class="contact-address">
-						<h4>Contacto</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-						<ul>
-							<li>
-								<div class="contact-address-icon">
-									<i class="fa fa-phone" aria-hidden="true"></i>
-								</div>
-								<div class="contact-address-info">
-									<a href="callto:#">5523370134</a>
-								</div>
-							</li>
-							<li>
-								<div class="contact-address-icon">
-									<i class="icofont icofont-envelope"></i>
-								</div>
-								<div class="contact-address-info">
-									<a href="mailto:#">ventasgba1@gmail.com</a>
-								</div>
-							</li>
-							<li>
-								<div class="contact-address-icon">
-									<i class="icofont icofont-web"></i>
-								</div>
-								<div class="contact-address-info">
-									<a href="www.jsoftbd.com">www.jsoftbd.com</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="copyright-area">
-						<ul>
-							<li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-							<li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-							<li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
-							<li><a href="#"><i class="icofont icofont-social-google-plus"></i></a></li>
-						</ul>
-						<p>&copy;
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;
-							<script>document.write(new Date().getFullYear());</script> All rights reserved | This
-							template is made
-							with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-								target="_blank">Colorlib</a>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer><!-- footer section end -->
+	<div class="foot">
+
+	</div>
+	<!-- footer section end -->
 
 	<!--icono de scroll-->
 	<a href="#" class="scrollToTop">
@@ -398,7 +303,11 @@
 	<script src="plugins/flexslider/jquery.flexslider-min.js"></script>
 	<script src="js/product.js"></script>
 
-	<script src="assets/js/gba.js"></script>
+	<script>
+		$(".foot").load("ajaxFooter.php");
+		$(".head").load("ajaxHeader.php");
+	</script>
+
 </body>
 
 </html>
