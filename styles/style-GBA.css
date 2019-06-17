@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+.barraLateral {
+    padding-top: 99px;
+}
+
+.img-realcionada {}
+
+.produc_relacionado {
+    width: 60%;
+    margin: 0 auto;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+
+.img-realcionada {
+    width: 100%;
+    box-shadow: 2px 2px 4px;
+}
+
+.produc_relacionado:hover {
+    width: 65%;
+    box-shadow: 2px 2px 4px;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+
+.divProducto {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #70b0d5;
+}
+
+.text_pRelaconado {
+    color: #717171;
+    font-weight: 600;
+}
+
+.product_buttons>div>div {
+    width: 30%;
+    margin: auto;
+    height: auto;
+    border: solid 1px #ededed;
+    /* border-bottom: solid 1px #ededed; */
+    background: rgba(255, 255, 255, 0);
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.product_buttons>div>div:hover {
+    color: white;
+    background: rgba(152, 152, 154, 0.29);
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.text-Servicios-R {
+    text-align: justify;
+    color: antiquewhite;
+}
+.visibilidad{
+    visibility: hidden;
+}
