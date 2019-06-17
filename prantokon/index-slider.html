@@ -41,7 +41,9 @@
 		<![endif]-->
 
 	<!--CAPTCHA-->
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
+	<!--CAPTCHA-->
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
 </head>
 
@@ -367,6 +369,7 @@
 							<i class="icofont icofont-bubble-right mr-2 ml-3"></i>Incubadoras, entre otros<br>
 
 						</p>
+						<button id="showModal" type="button">Show Modal</button>
 						<a href="#" class="appao-btn appao-btn2" data-toggle="modal"
 							data-target="#exampleModal">Cotizar</a>
 					</div>
@@ -389,12 +392,15 @@
 				</div>
 
 				<div class="modal-body">
-					<form id="contact-form" action="formulario.php" method="POST">
-						<input type="text" name="name" placeholder="Nombre">
-						<input type="email" name="email" placeholder="Email">
-						<input type="text" name="subject" placeholder="Asunto">
-						<textarea name="message" placeholder="Mensaje"></textarea>
-						<div class="g-recaptcha mb-3" data-sitekey="6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX"></div>
+					<form id="formularioModal">
+						<input id="nombre" type="text" name="name" placeholder="Nombre">
+						<input id="email" type="email" name="email" placeholder="Email">
+						<input id="asunto" type="text" name="subject" placeholder="Asunto">
+						<textarea id="mensaje" name="message" placeholder="Mensaje"></textarea>
+						<!--data-sitekey="6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX"></div>
+-->
+						<div id="recaptchaID" 
+							class="g-recaptcha mb-3"></div>
 						<button type="button" class="appao-btn appao-btn2" data-dismiss="modal">Cancelar</button>
 						<button type="submit" class="appao-btn appao-btn-ea">Enviar</button>
 					</form>
@@ -622,6 +628,75 @@
 	<script src="assets/js/switcher.js"></script>
 	<!-- main JS -->
 	<script src="assets/js/main.js"></script>
+
+	<!-- formulario-modal JS-->
+	<script>
+		console.log('entro al index-slider');
+
+		var respuestaCaptcha;
+		var captchaResponse;
+		var verifyCallback = function () {
+			captchaResponse = grecaptcha.getResponse();
+
+			console.log("el captcha se verifico respuesta: "+respuestaCaptcha+ "respuesta: "+ captchaResponse);
+			captchaResponse = grecaptcha.getResponse();
+		};
+
+		var onloadCallback = function () {
+			console.log("el captcha antes respuesta: "+respuestaCaptcha)
+
+			respuestaCaptcha = grecaptcha.render('recaptchaID', {
+				'sitekey': '6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX',
+				'callback': verifyCallback,
+			});
+			console.log("el captcha despu: "+respuestaCaptcha)
+
+		};
+
+
+		var formulario = document.getElementById('formularioModal');
+		var respuesta = document.getElementById('respuesta');
+
+		formulario.addEventListener('submit', function (e) {
+			e.preventDefault();
+			var datos = new FormData(formulario);
+			console.log(datos)
+			console.log(datos.get('name'))
+			console.log(datos.get('email'))
+			console.log(datos.get('subject'))
+			// console.log(datos.get('message'))
+			datos.append('recaptchaResponse', 'captchaResponse');
+			fetch('./formulario.php', {
+				method: 'POST',
+				body: datos
+			})
+
+				.then(res => res.json())
+				.then(data => {
+					console.log(data)
+					if (data === 'error') {
+						alert("Ingrese todos los campos");
+						console.log("valor del captcha: "+ respuestaCaptcha+ " "+datos.get('name')+" "+datos.get('email')+ " "+datos.get('subject'));
+						if (respuestaCaptcha != undefined) {
+							console.log("entro a refresh");
+							grecaptcha.reset(respuestaCaptcha);  //limpia el recaptcha  
+						}
+					} else if(data==='erro'){
+							alert("No se valido el recaptcha: "+respuestaCaptcha);
+							grecaptcha.reset(respuestaCaptcha);  //limpia el recaptcha  
+
+					}else {
+						alert(data);
+						// Limpiar el formulario
+						$('input').val("");//todos los inputs quedarán vacíos ;)
+						$('textarea').val("");//todos los textarea quedarán vacíos ;)
+						grecaptcha.reset(respuestaCaptcha);  //limpia el recaptcha  
+					}
+
+
+				})
+		})
+	</script>
 
 	<script>
 		$(".foot").load("ajaxFooter.php");

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -56,31 +56,44 @@
 						</div>
 			</div>
 	</section><!-- imagen de encabezado area end -->
-
 	<div class="super_container">
 		<div class="super_container_inner">
 			<div class="super_overlay"></div>
 
-			<!-- Products -->
-
 			<div class="products">
 				<div class="container">
 					<div class="row products_bar_row">
-						<div class="col">
+						<div class="col-lg-3" style="margin-top: 127px">
+
 							<div
-								class="products_bar d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-start justify-content-center">
-								<div class="products_bar_links">
-									<ul class="d-flex flex-row align-items-start justify-content-start">
-										<li><a href="#">Todos</a></li>
-										<li><a href="#">Productos</a></li>
-										<li class="active"><a href="#">Nuevos Productos</a></li>
-										<li><a href="#">Productos con descuento</a></li>
-									</ul>
-								</div>
+								class=" col-lg-12 products_bar_filtro1 d-flex flex-lg-row flex-column align-items-start justify-content-lg-start justify-content-center p-0">
 								<div
-									class="products_bar_side d-flex flex-row align-items-center justify-content-start ml-lg-auto">
-									<div class="products_dropdown product_dropdown_sorting">
-										<div class="isotope_sorting_text"><span>Clasificación por defecto</span><i
+									class="col-lg-12 products_bar_side d-flex flex-row align-items-center justify-content-start p-0">
+
+
+									<div class="col-lg-12 products_dropdown product_dropdown_filter p-0">
+										<div class="isotope_filter_text"><span>Categorías</span><i class="fa fa-caret-down"
+												aria-hidden="true"></i></div>
+										<ul>
+											<li class="item_filter_btn" data-filter="*">Todos</li>
+											<li class="item_filter_btn" data-filter=".equipo-medico">Equipos Médicos</li>
+											<li class="item_filter_btn" data-filter=".aceesorios">Accesorios</li>
+											<li class="item_filter_btn" data-filter=".consumibles">Consumibles</li>
+											<li class="item_filter_btn" data-filter=".refacciones">Refacciones</li>
+											<li class="item_filter_btn" data-filter=".dis-medicos">Dispositivos Médicos</li>
+											<li class="item_filter_btn" data-filter=".otros">Otros</li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+							<div
+								class=" col-lg-12 products_bar_filtro2 d-flex flex-lg-row flex-column align-items-start justify-content-lg-start justify-content-center p-0 mt-10">
+								<div
+									class="col-lg-12 products_bar_side d-flex flex-row align-items-center justify-content-start p-0">
+
+									<div class="col-lg-12 products_dropdown product_dropdown_sorting p-0">
+										<div class="isotope_sorting_text"><span>Clasificación</span><i
 												class="fa fa-caret-down" aria-hidden="true"></i></div>
 										<ul>
 											<li class="item_sorting_btn"
@@ -91,37 +104,31 @@
 												Nombre</li>
 										</ul>
 									</div>
-									<div class="product_view d-flex flex-row align-items-center justify-content-start">
+									<!--<div class="product_view d-flex flex-row align-items-center justify-content-start">
 										<div class="view_item active"><img src="images/view_1.png" alt=""></div>
 										<div class="view_item"><img src="images/view_2.png" alt=""></div>
 										<div class="view_item"><img src="images/view_3.png" alt=""></div>
-									</div>
-									<div class="products_dropdown text-right product_dropdown_filter">
-										<div class="isotope_filter_text"><span>Filtro</span><i class="fa fa-caret-down"
-												aria-hidden="true"></i></div>
-										<ul>
-											<li class="item_filter_btn" data-filter="*">Todos</li>
-											<li class="item_filter_btn" data-filter=".hot">Hot</li>
-											<li class="item_filter_btn" data-filter=".new">Nuevos</li>
-											<li class="item_filter_btn" data-filter=".sale">Descuentos</li>
-										</ul>
-									</div>
+									</div>-->
+
+									
 								</div>
 							</div>
+							
 						</div>
-					</div>
-					<div class="row products_row products_container grid">
+
+
+						<!--EMPIEZAAAAAAAAAAAAAAAAAA-->
+						<div class="col-lg-9 products_row products_container grid" style="margin-top: 127px;">
 
 						<!-- Productos -->
-						<div class="col-xl-4 col-md-6 grid-item new">
+						<div class="col-xl-5 col-md-6 grid-item aceesorios" style="left: 7.75439%">
 							<div class="product">
-								<div class="product_image"><img src="images/product_1.jpg" alt=""></div>
+								<div class="product_image"><img src="img-GBA/GBA-desfibriladores.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_info d-flex flex-row align-items-start justify-content-start">
 										<div>
 											<div>
-												<div class="product_name"><a href="product.html">Cool Clothing with
-														Brown Stripes</a></div>
+												<div class="product_name"><a href="product.html">Cool Clothing</a></div>
 												<div class="product_category">In <a href="category.html">Category</a>
 												</div>
 											</div>
@@ -157,9 +164,9 @@
 						</div>
 
 						<!-- Product -->
-						<div class="col-xl-4 col-md-6 grid-item hot">
+						<div class="col-xl-5 col-md-6 grid-item equipo-medico" style="left: 50.4211%">
 							<div class="product">
-								<div class="product_image"><img src="images/product_2.jpg" alt=""></div>
+								<div class="product_image"><img src="img-GBA/GBA-baumanometros.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_info d-flex flex-row align-items-start justify-content-start">
 										<div>
@@ -201,9 +208,9 @@
 						</div>
 
 						<!-- Product -->
-						<div class="col-xl-4 col-md-6 grid-item sale">
+						<div class="col-xl-5 col-md-6 grid-item refacciones">
 							<div class="product">
-								<div class="product_image"><img src="images/product_3.jpg" alt=""></div>
+								<div class="product_image"><img src="img-GBA/GBA-desfibriladores.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_info d-flex flex-row align-items-start justify-content-start">
 										<div>
@@ -245,9 +252,9 @@
 						</div>
 
 						<!-- Product -->
-						<div class="col-xl-4 col-md-6 grid-item sale">
+						<div class="col-xl-5 col-md-6 grid-item refacciones">
 							<div class="product">
-								<div class="product_image"><img src="images/product_4.jpg" alt=""></div>
+								<div class="product_image"><img src="img-GBA/GBA-desfibriladores.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_info d-flex flex-row align-items-start justify-content-start">
 										<div>
@@ -289,9 +296,9 @@
 						</div>
 
 						<!-- Product -->
-						<div class="col-xl-4 col-md-6 grid-item hot">
+						<div class="col-xl-5 col-md-6 grid-item equipo-medico">
 							<div class="product">
-								<div class="product_image"><img src="images/product_5.jpg" alt=""></div>
+								<div class="product_image"><img src="img-GBA/GBA-desfibriladores.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_info d-flex flex-row align-items-start justify-content-start">
 										<div>
@@ -333,7 +340,7 @@
 						</div>
 
 						<!-- Product -->
-						<div class="col-xl-4 col-md-6 grid-item new">
+						<div class="col-xl-5 col-md-6 grid-item otros">
 							<div class="product">
 								<div class="product_image"><img src="images/product_6.jpg" alt=""></div>
 								<div class="product_content">
@@ -377,7 +384,7 @@
 						</div>
 
 						<!-- Product -->
-						<div class="col-xl-4 col-md-6 grid-item sale">
+						<div class="col-xl-5 col-md-6 grid-item aceesorios">
 							<div class="product">
 								<div class="product_image"><img src="images/product_7.jpg" alt=""></div>
 								<div class="product_content">
@@ -421,7 +428,7 @@
 						</div>
 
 						<!-- Product -->
-						<div class="col-xl-4 col-md-6 grid-item new">
+						<div class="col-xl-5 col-md-6 grid-item dis-medicos">
 							<div class="product">
 								<div class="product_image"><img src="images/product_8.jpg" alt=""></div>
 								<div class="product_content">
@@ -465,7 +472,7 @@
 						</div>
 
 						<!-- Product -->
-						<div class="col-xl-4 col-md-6 grid-item sale">
+						<div class="col-xl-5 col-md-6 grid-item consumibles">
 							<div class="product">
 								<div class="product_image"><img src="images/product_9.jpg" alt=""></div>
 								<div class="product_content">
@@ -509,8 +516,15 @@
 						</div>
 
 					</div>
+
+						<!--TERMINAAAAAAAAAAAAAAA-->
+
+
+					</div>
+					
 					<div class="row page_nav_row">
-						<div class="col">
+						<div class="col-lg-3"></div>
+						<div class="col-lg-9">
 							<div class="page_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-center">
 									<li class="active"><a href="#">01</a></li>
