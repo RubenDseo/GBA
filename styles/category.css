@@ -845,13 +845,13 @@ section
 {
 	font-size: 16px;
 	font-weight: 400;
-	color: #969696;
+	color: rgb(48, 69, 131);
 }
 .products_dropdown i
 {
 	margin-left: 9px;
 	font-size: 14px;
-	color: #bcbcbc;
+	color: rgb(48, 69, 131);
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -860,7 +860,7 @@ section
 }
 .products_dropdown:hover i
 {
-	color: #000000;
+	color: rgb(43, 163, 189);
 }
 .products_dropdown > ul
 {
@@ -869,8 +869,8 @@ section
 	right: 36px;
 	visibility: initial;
 	opacity: 1;
-	width: 175px;
-	text-align: right;
+	width: 85%;
+	text-align: start;
 	background: #f6f8fa;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -891,7 +891,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 400;
-	color: #bcbcbc;
+	color: rgb(48, 69, 131);
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -900,7 +900,7 @@ section
 }
 .products_dropdown ul li:hover
 {
-	color: #000000;
+	color:rgb(43, 163, 189);
 }
 .products_dropdown:hover > ul
 {
