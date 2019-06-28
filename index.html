@@ -23,6 +23,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
 	<!-- Switcher CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/switcher-style.css">
+	<!-- Switcher CSS -->
+	<link rel="stylesheet" type="text/css" href="styles/style-GBA.css">
 	<!-- Animate CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
 	<!-- Main style CSS -->
@@ -80,11 +82,11 @@
 						<div class="col-lg-7 col-sm-12">
 							<div class="hero-area-content">
 								<h1>Ingeniería Biomédica</h1>
-								<p class="text-justify">Es una área interdisciplinaria del conocimiento donde tiene como
-									propósito
-									atender la demanda creciente de tecnologías para las Ciencias de la Vida por medio
-									de la aplicación de
-									técnicas, métodos y otros recursos de la ingeniería.</p>
+								<p class="text-justify">Grupo Biomédico Azteca es una empresa dedicada a la venta,
+									calibración, servicio correctivo y preventivo de equipo médico y accesorios.
+									Contamos con ingenieros biomédicos, electrónicos y de software capacitados para
+									brindarle un servicio de calidad.
+								</p>
 								<a href="about.html" class="appao-btn">Nosotros</a>
 								<a href="index.html#contacto" class="appao-btn">Contacto</a>
 							</div>
@@ -383,6 +385,34 @@
 					</div>
 				</div>
 			</div>
+			<div class="row flexbox-center">
+				<div class="col-lg-6">
+					<div class="single-showcase-box">
+						<h4>Servicio de calibracón</h4>
+
+
+						<p class="text-justify">
+							
+							<i class="icofont icofont-gears mr-2"></i></i></i>
+							Contamos con equipo de calibración de alto rendimiento y certificado, 
+							así mismo nuestro personal está capacitado para realizar la calibración en los equipos:
+							<br>
+							<i class="icofont icofont-bubble-right ml-3"></i>
+							Monitor de signos vitales
+							<br>
+							<i class="icofont icofont-bubble-right ml-3"></i>
+							Ventiladores volumétricos
+						</p>
+						<a href="#" class="appao-btn appao-btn2 " data-toggle="modal"
+							data-target="#exampleModal">Cotizar</a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="single-showcase-box">
+						<img class="img-Calibracion" src="img-GBA\Citrex-calibracion.png" alt="showcase">
+					</div>
+				</div>
+			</div>
 		</div>
 	</section><!-- showcase section end -->
 
@@ -535,22 +565,22 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="single-counter-box">
 						<i class="icofont icofont-users-alt-5"></i>
-						<h1><span class="counter">9798</span></h1>
-						<p>Clientes</p>
+						<h1><span class="counter">20</span></h1>
+						<p>De experiencia</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="single-counter-box">
 
 						<i class="fa fa-people-carry"></i>
-						<h1><span class="counter">3</span></h1>
-						<p>Servicios</p>
+						<h1><span class="counter">32</span></h1>
+						<p>Estados de la república</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="single-counter-box">
 						<i class="icofont icofont-blood"></i>
-						<h1><span class="counter">22</span></h1>
+						<h1><span class="counter">450</span></h1>
 						<p>Productos</p>
 					</div>
 				</div>
@@ -572,8 +602,10 @@
 				<div class="col-lg-12">
 					<div class="sec-title">
 						<h2>Productos<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
-						<p>Productos nuevos en el catálogo
+						<p>Conoce toda nuestra gama de productos y equipos médicos con registro sanitario.
 						</p>
+						<br>
+						<a class="btn btn-outline-info" href="catalogo.html" role="button">Catálogo</a>
 					</div>
 				</div>
 			</div>
@@ -581,16 +613,23 @@
 				<div class="col-lg-12">
 					<div class="screenshot-wrap">
 						<div class="single-screenshot">
-							<img src="img-GBA/GBA-desfibriladores.jpg" alt="screenshot" />
+							<img src="productos/Bhelius/imgWeb/CunaDeCalorRadiante-Bhelius.jpeg" alt="screenshot" />
 						</div>
 						<div class="single-screenshot">
-							<img src="img-GBA/GBA-baumanometros.jpg" alt="screenshot" />
+							<img src="productos/Saps/ingWeb/IncubadoraInfanteSaps.png" alt="screenshot" />
 						</div>
 						<div class="single-screenshot">
-							<img src="assets/imgB/oxygen.jpg" alt="screenshot" />
+							<img src="productos/Bhelius/imgWeb/incubadoraBhelius.png" alt="screenshot" />
+
 						</div>
 						<div class="single-screenshot">
-							<img src="img-GBA/cuan-Grupo-Biomedic-Azteca.jpg" alt="screenshot" />
+							<img src="productos/Saps/ingWeb/IncubadoraSaps.png" alt="screenshot" />
+						</div>
+						<div class="single-screenshot">
+							<img src="productos/Saps/ingWeb/cunaDeCalorSaps.png" alt="screenshot" />
+						</div>
+						<div class="single-screenshot">
+							<img src="productos/Bhelius/imgWeb/LamparaFototerapiaBhelius.png" alt="screenshot" />
 						</div>
 					</div>
 				</div>
@@ -642,8 +681,6 @@
 
 	<!-- formulario-modal1 el de mantenimiento preventivo JS-->
 	<script>
-
-
 		var respuestaCaptcha2;
 		var respuestaCaptcha3;
 
@@ -684,9 +721,9 @@
 			console.log(datosModal.get('messageModal1'))
 			datosModal.append('recaptchaResponse', captchaResponse);
 			fetch('./formulario-modal.php', {
-				method: 'POST',
-				body: datosModal
-			})
+					method: 'POST',
+					body: datosModal
+				})
 
 				.then(res => res.json())
 				.then(data => {
@@ -694,22 +731,22 @@
 					if (data === 'error') {
 						alert("Ingrese todos los campos");
 						if (respuestaCaptcha2 != undefined) {
-							grecaptcha.reset(respuestaCaptcha2);  //limpia el recaptcha  
+							grecaptcha.reset(respuestaCaptcha2); //limpia el recaptcha  
 						}
 					} else if (data === 'erro') {
 						alert("No se valido correctamente el recaptcha ");
-						grecaptcha.reset(respuestaCaptcha2);  //limpia el recaptcha  
+						grecaptcha.reset(respuestaCaptcha2); //limpia el recaptcha  
 					} else {
 						alert(data);
 						// Limpiar el formulario
-						$('input').val("");//todos los inputs quedarán vacíos ;)
-						$('textarea').val("");//todos los textarea quedarán vacíos ;)
-						grecaptcha.reset(respuestaCaptcha2);  //limpia el recaptcha  
+						$('input').val(""); //todos los inputs quedarán vacíos ;)
+						$('textarea').val(""); //todos los textarea quedarán vacíos ;)
+						grecaptcha.reset(respuestaCaptcha2); //limpia el recaptcha  
 					}
 				})
 		})
 		//fin del envio de info del formulario del mantenimiento
-		
+
 		//inicio del envio de info del formulario de los productos
 		var formularioModalP = document.getElementById('formularioModal2');
 
@@ -723,9 +760,9 @@
 			console.log(datosModalP.get('messageModal2'))
 			datosModalP.append('recaptchaResponseP2', captchaResponse);
 			fetch('./formulario-modalProducto.php', {
-				method: 'POST',
-				body: datosModalP
-			})
+					method: 'POST',
+					body: datosModalP
+				})
 
 				.then(res => res.json())
 				.then(data => {
@@ -733,22 +770,21 @@
 					if (data === 'error') {
 						alert("Ingrese todos los campos");
 						if (respuestaCaptcha3 != undefined) {
-							grecaptcha.reset(respuestaCaptcha3);  //limpia el recaptcha  
+							grecaptcha.reset(respuestaCaptcha3); //limpia el recaptcha  
 						}
 					} else if (data === 'erro') {
 						alert("No se valido correctamente el recaptcha ");
-						grecaptcha.reset(respuestaCaptcha3);  //limpia el recaptcha  
+						grecaptcha.reset(respuestaCaptcha3); //limpia el recaptcha  
 					} else {
 						alert(data);
 						// Limpiar el formulario
-						$('input').val("");//todos los inputs quedarán vacíos ;)
-						$('textarea').val("");//todos los textarea quedarán vacíos ;)
-						grecaptcha.reset(respuestaCaptcha3);  //limpia el recaptcha  
+						$('input').val(""); //todos los inputs quedarán vacíos ;)
+						$('textarea').val(""); //todos los textarea quedarán vacíos ;)
+						grecaptcha.reset(respuestaCaptcha3); //limpia el recaptcha  
 					}
 				})
 		})
 		//fin del envio de info del formulario del mantenimiento
-		
 	</script>
 
 	<!-- jquery main JS -->

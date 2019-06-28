@@ -58,6 +58,17 @@
     text-align: justify;
     color: antiquewhite;
 }
-.visibilidad{
+
+.visibilidad {
     visibility: hidden;
+}
+
+.LogoMarcaProducto {
+    width: 60%;
+    margin-top: 40px;
+}
+
+.img-Calibracion {
+    width: 60%;
+    margin-left: 15%;
 }
