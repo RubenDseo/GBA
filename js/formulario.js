@@ -60,9 +60,10 @@ formulario.addEventListener('submit',function(e){
     .then(data=> {
         console.log(data)
         if (data==='error') {
-            alert("Ingrese todos los campos");
+            alert("Ingrese los campos requeridos");
          
             if (respuestaCaptcha!=undefined) {
+                
                 grecaptcha.reset(respuestaCaptcha);  //limpia el recaptcha  
             }
         }else if(data==='erro'){
@@ -71,8 +72,10 @@ formulario.addEventListener('submit',function(e){
         }else{
             alert(data);
             // Limpiar el formulario
+           
             $('input').val("");//todos los inputs quedarán vacíos ;)
             $('textarea').val("");//todos los textarea quedarán vacíos ;)
+            $('email').val("");
             grecaptcha.reset(respuestaCaptcha);  //limpia el recaptcha  
         }
 

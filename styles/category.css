@@ -1004,7 +1004,7 @@ section
 }
 .product_name
 {
-	max-width: 175px;
+	max-width: 100%;
 }
 .product_name a
 {
@@ -1093,7 +1093,7 @@ section
 .product_buttons
 {
 	width: 100%;
-	height: 57px;
+	height: 70px;
 }
 .home_item_large .product_buttons
 {

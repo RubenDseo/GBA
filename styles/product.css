@@ -1091,7 +1091,7 @@ section
 	height: 100%;
 	border-top: solid 1px #ededed;
 	border-bottom: solid 1px #ededed;
-	background: rgba(255,255,255,0);
+	background: rgba(255,255,255,0)!important;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -1105,7 +1105,8 @@ section
 }
 .product_buttons > div > div:hover
 {
-	background: rgb(48, 69, 131);
+	/*background: rgb(48, 69, 131) !important;*/
+	background: rgba(48, 69, 131, 0.74) !important;
 }
 .product_buttons > div > div:first-of-type
 {
