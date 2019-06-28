@@ -2,8 +2,8 @@
 <html lang="zxx">
 
 <head>	
-<!--CAPTCHA-->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<!--CAPTCHA-->
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </head>
 
 <body>
@@ -16,12 +16,13 @@
 						<div class="contact-form">
 							<h4>Escribenos</h4>
 							<p class="form-message"></p>
-							<form id="contact-form" action="formulario.php" method="POST">
-								<input type="text" name="name" placeholder="Nombre">
-								<input type="email" name="email" placeholder="Email">
-								<input type="text" name="subject" placeholder="Asunto">
-								<textarea name="message" placeholder="Mensaje"></textarea>
-								<div class="g-recaptcha mb-3" data-sitekey="6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX"></div>
+							<form id="formulario-contacto">
+								<input id="nombre" type="text" name="name" placeholder="Nombre" required>
+								<input id="email" type="email" name="email" placeholder="Email" required>
+		                        <input id="telefono" type="tel" name="telefono" placeholder="Teléfono">
+								<input id="asunto" type="text" name="subject" placeholder="Asunto" required>
+								<textarea id="mensajeF" name="message" placeholder="Mensaje"></textarea>
+								<div id="wrecaptcha" class="g-recaptcha mb-3"></div>
 								<button type="submit" class="appao-btn appao-btn2">Enviar</button>
 							</form>
 						</div>
@@ -83,7 +84,7 @@
 		</footer>
 	<!-- footer section end -->
 
-	
+	<script src="../js/formulario.js"></script>
 </body>
 
 </html>

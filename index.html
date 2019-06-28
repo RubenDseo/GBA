@@ -41,7 +41,7 @@
 		<![endif]-->
 
 	<!--CAPTCHA-->
-	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback2&render=explicit" async defer></script>
 
 	<style>
 		.img-biomdico {
@@ -378,8 +378,7 @@
 							<i class="icofont icofont-bubble-right mr-2 ml-3"></i>Incubadoras, entre otros<br>
 
 						</p>
-						<a href="#" class="appao-btn appao-btn2" data-toggle="modal"
-							data-target="#exampleModal2">Cotizar</a>
+						<a href="catalogo.html" class="appao-btn appao-btn2">Catálogo</a>
 					</div>
 				</div>
 			</div>
@@ -401,39 +400,12 @@
 
 				<div class="modal-body">
 					<form id="formularioModal">
-						<input type="text" name="nameModal1" placeholder="Nombre">
-						<input type="email" name="emailModal1" placeholder="Email">
-						<input type="text" name="subjectModal1" placeholder="Asunto">
+						<input type="text" name="nameModal1" placeholder="Nombre" required>
+						<input type="email" name="emailModal1" placeholder="Email" required>
+                        <input type="tel" name="telefono" placeholder="Teléfono">						
+						<input type="text" name="subjectModal1" placeholder="Asunto" required>
 						<textarea name="messageModal1" placeholder="Mensaje"></textarea>
 						<div id="recaptchaID" class="g-recaptcha mb-3"></div>
-						<button type="button" class="appao-btn appao-btn2" data-dismiss="modal">Cancelar</button>
-						<button type="submit" class="appao-btn appao-btn-ea">Enviar</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--******************** fin de MODULO de mantenimiento preventivo**************-->
-
-	<!--******************** Inicio de MODULO de productos **************-->
-	<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-		aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Cotiza</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-
-				<div class="modal-body">
-					<form id="formularioModal2">
-						<input type="text" name="nameModal2" placeholder="Nombre">
-						<input type="email" name="emailModal2" placeholder="Email">
-						<input type="text" name="subjectModal2" placeholder="Asunto">
-						<textarea name="messageModal2" placeholder="Mensaje"></textarea>
-						<div id="recaptchaIDModal2" class="g-recaptcha mb-3"></div>
 						<button type="button" class="appao-btn appao-btn2" data-dismiss="modal">Cancelar</button>
 						<button type="submit" class="appao-btn appao-btn-ea">Enviar</button>
 					</form>
@@ -629,45 +601,24 @@
 		})
 	</script>
 	<script>
-		$('#exampleModal2').on('show.bs.modal', function (event) {
-			var button = $(event.relatedTarget) // Button that triggered the modal
-			var recipient = button.data('whatever') // Extract info from data-* attributes
-			// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-			// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-			var modal = $(this)
-			modal.find('.modal-title').text('New message to ' + recipient)
-			modal.find('.modal-body input').val(recipient)
-		})
-	</script>
-
-	<!-- formulario-modal1 el de mantenimiento preventivo JS-->
-	<script>
 
 
 		var respuestaCaptcha2;
-		var respuestaCaptcha3;
 
 		//se verifica recaptcha del modal de mantenimiento y el de producto
 		var captchaResponse;
-		var verifyCallback = function (response) {
+		var verifyCallback2 = function (response) {
 			captchaResponse = response;
 			console.log("La verifiacion del recaptcha es: ");
 		};
 
 		//cargando los recaptcha del modal de mantenimiento y el de productos
-		var onloadCallback = function () {
+		var onloadCallback2 = function () {
 			respuestaCaptcha2 = grecaptcha.render('recaptchaID', {
 				'sitekey': '6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX',
-				'callback': verifyCallback,
+				'callback': verifyCallback2,
 			});
 			console.log("recaptcha mantenimiento:  " + respuestaCaptcha2);
-
-			respuestaCaptcha3 = grecaptcha.render('recaptchaIDModal2', {
-				'sitekey': '6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX',
-				'callback': verifyCallback,
-			});
-			console.log("recaptcha producto:  " + respuestaCaptcha3);
-
 		};
 
 
@@ -710,44 +661,7 @@
 		})
 		//fin del envio de info del formulario del mantenimiento
 		
-		//inicio del envio de info del formulario de los productos
-		var formularioModalP = document.getElementById('formularioModal2');
-
-		formularioModalP.addEventListener('submit', function (e) {
-			e.preventDefault();
-			var datosModalP = new FormData(formularioModalP);
-			console.log(datosModalP)
-			console.log(datosModalP.get('nameModal2'))
-			console.log(datosModalP.get('emailModal2'))
-			console.log(datosModalP.get('subjectModal2'))
-			console.log(datosModalP.get('messageModal2'))
-			datosModalP.append('recaptchaResponseP2', captchaResponse);
-			fetch('./formulario-modalProducto.php', {
-				method: 'POST',
-				body: datosModalP
-			})
-
-				.then(res => res.json())
-				.then(data => {
-					console.log(data)
-					if (data === 'error') {
-						alert("Ingrese todos los campos");
-						if (respuestaCaptcha3 != undefined) {
-							grecaptcha.reset(respuestaCaptcha3);  //limpia el recaptcha  
-						}
-					} else if (data === 'erro') {
-						alert("No se valido correctamente el recaptcha ");
-						grecaptcha.reset(respuestaCaptcha3);  //limpia el recaptcha  
-					} else {
-						alert(data);
-						// Limpiar el formulario
-						$('input').val("");//todos los inputs quedarán vacíos ;)
-						$('textarea').val("");//todos los textarea quedarán vacíos ;)
-						grecaptcha.reset(respuestaCaptcha3);  //limpia el recaptcha  
-					}
-				})
-		})
-		//fin del envio de info del formulario del mantenimiento
+		
 		
 	</script>
 
