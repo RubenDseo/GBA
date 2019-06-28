@@ -4,7 +4,7 @@
 <head>
 
     <!--CAPTCHA-->
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback2&render=explicit" async defer></script>
 </head>
 
 <body>
@@ -22,13 +22,13 @@
                 </div>
 
                 <div class="modal-body">
-                    <form id="contact-form" action="formulario.php" method="POST">
-                        <input type="text" name="name" placeholder="Nombre" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="tel" name="telefono" placeholder="Teléfono">
-                        <input id="producto-cotizado" type="text" name="producto" value="" required disabled>
-                        <textarea name="message" placeholder="Mensaje"></textarea>
-                        <div class="g-recaptcha mb-3" data-sitekey="6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX"></div>
+                    <form id="formularioModal">
+                        <input type="text" name="nameModal1" placeholder="Nombre" required>
+                        <input type="email" name="emailModal1" placeholder="Email" required>
+                        <input type="tel" name="telefono" placeholder="Teléfono">                       
+                        <input id="producto-cotizado" type="text" name="subjectModal1" placeholder="Asunto" required>
+                        <textarea name="messageModal1" placeholder="Mensaje"></textarea>
+                        <div id="recaptchaID" class="g-recaptcha mb-3"></div>
                         <button type="button" class="appao-btn appao-btn2" data-dismiss="modal">Cancelar</button>
                         <button type="submit" class="appao-btn appao-btn-ea">Enviar</button>
                     </form>
@@ -37,6 +37,68 @@
         </div>
     </div>
     <!--******************** fin de MODULO **************-->
+
+    <script>
+        
+        //se verifica recaptcha del modal de mantenimiento y el de producto
+        var captchaResponse;
+        var verifyCallback2 = function (response) {
+            captchaResponse = response;
+            console.log("La verifiacion del recaptcha es: ");
+        };
+
+        //cargando los recaptcha del modal de mantenimiento y el de productos
+        var onloadCallback2 = function () {
+            respuestaCaptcha2 = grecaptcha.render('recaptchaID', {
+                'sitekey': '6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX',
+                'callback': verifyCallback2,
+            });
+            console.log("recaptcha cotiza:  " + respuestaCaptcha2);
+        };
+
+
+        //inicio del envio de info del formulario del mantenimiento
+        var formularioModal = document.getElementById('formularioModal');
+
+        formularioModal.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var datosModal = new FormData(formularioModal);
+            console.log(datosModal)
+            console.log(datosModal.get('nameModal1'))
+            console.log(datosModal.get('emailModal1'))
+            console.log(datosModal.get('subjectModal1'))
+            console.log(datosModal.get('messageModal1'))
+            datosModal.append('recaptchaResponse', captchaResponse);
+            fetch('./formulario-modal.php', {
+                method: 'POST',
+                body: datosModal
+                
+            })
+
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data === 'error') {
+                        alert("Ingrese todos los campos y el recaptcha");
+                        if (respuestaCaptcha2 != undefined) {
+                            grecaptcha.reset(respuestaCaptcha2);  //limpia el recaptcha  
+                        }
+                    } else if (data === 'erro') {
+                        alert("No se valido correctamente el recaptcha ");
+                        grecaptcha.reset(respuestaCaptcha2);  //limpia el recaptcha  
+                    } else {
+                        alert(data);
+                        // Limpiar el formulario
+                        $('input').val("");//todos los inputs quedarán vacíos ;)
+                        $('textarea').val("");//todos los textarea quedarán vacíos ;)
+                        grecaptcha.reset(respuestaCaptcha2);  //limpia el recaptcha  
+                    }
+                })
+        })
+        //fin del envio de info del formulario del mantenimiento
+
+    </script>
+
 </body>
 
 </html>

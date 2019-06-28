@@ -60,7 +60,7 @@ formulario.addEventListener('submit',function(e){
     .then(data=> {
         console.log(data)
         if (data==='error') {
-            alert("Ingrese los campos requeridos");
+            alert("Ingrese los campos requeridos y el recaptcha");
          
             if (respuestaCaptcha!=undefined) {
                 
