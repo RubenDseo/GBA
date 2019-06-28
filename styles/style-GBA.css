@@ -7,8 +7,7 @@
 .img-realcionada {}
 
 .produc_relacionado {
-    width: 60%;
-    margin: 0 auto;
+    width: 40%;
     -webkit-transition: width 0.5s ease-in-out;
     transition: width 0.5s ease-in-out;
 }
@@ -18,18 +17,11 @@
     box-shadow: 2px 2px 4px;
 }
 
-.produc_relacionado:hover {
-    width: 65%;
-    box-shadow: 2px 2px 4px;
-    -webkit-transition: width 0.5s ease-in-out;
-    transition: width 0.5s ease-in-out;
-}
-
 .divProducto {
     width: 85%;
     margin: auto;
     margin-bottom: 10px;
-    padding-bottom: 10px;
+    padding: 25px 0px;
     border-bottom: 1px solid #70b0d5;
 }
 
