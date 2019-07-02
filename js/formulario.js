@@ -1,29 +1,3 @@
-/*$(document).ready(function(){
-
-    $("button[type=button]").click(function(event){
-        event.preventDefault();
-        var nombre=$("#nombreF").val();
-        var email=$("#emailF").val();
-        var asunto=$("#asuntoF").val();
-        var mensaje=$("#mensajeF").val();
-        var captcha=$("#recaptcha").val();
-
-        $.post("formulario.php",{
-            nombre: nombre,
-            email: email,
-            asunto: asunto,
-            mensaje: mensaje,
-            captcha: captcha
-
-        }, function(respuesta){
-            $("#info").text(respuesta);
-        });
-    });
-});*/
-//lo que envia en url sin nada: name=&email=&subject=&message=&g-recaptcha-response=
-
-//console.log('entro al formulario.js');
-
 var respuestaCaptcha;
 
 var verifyCallback = function(response) {
@@ -62,8 +36,8 @@ function enviaForm(){
             ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             ajax.send("name="+nombre+"&email="+emailId+"&subject="+asunto+"&telefono="+telefonoId+"&message="+mensajeF);
             ajax.onreadystatechange = function(){
-                console.log(ajax.readyState);
-                console.log(ajax.status);
+              //  console.log(ajax.readyState);
+              //  console.log(ajax.status);
                 if(ajax.readyState == 4 && ajax.status == 200){
                     alert("Formulario enviado correctamente");
                 }else{
@@ -73,12 +47,12 @@ function enviaForm(){
 
                 //alert("Se envio el formulario correctamente!");
                 document.getElementById("formulario-contacto").reset();
-                grecaptcha.reset("wrecaptcha");
+                grecaptcha.reset(respuestaCaptcha);
     }else{
 
     }
 
-    console.log(validacionDatos);
+   // console.log(validacionDatos);
 
 }
 
@@ -90,7 +64,7 @@ function validarDatos() {
     var telefonoRegex = /^(\(\+?\d{2,3}\)[\*|\s|\-|\.]?(([\d][\*|\s|\-|\.]?){6})(([\d][\s|\-|\.]?){2})?|(\+?[\d][\s|\-|\.]?){8}(([\d][\s|\-|\.]?){2}(([\d][\s|\-|\.]?){2})?)?)$/;
     //var nameRegex2 = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
     var nameRegex = /^[A-Za-z]{1}[A-Za-z\s]+$/;
-    console.log(telefonoRegex.test(telefonoId));
+   // console.log(telefonoRegex.test(telefonoId));
    
     if(nombre == null || nombre.length == 0 || !(nameRegex.test(nombre)) ) {
         alert('ERROR: El campo nombre no debe ir vacío o lleno de solamente espacios en blanco');
