@@ -72,10 +72,8 @@ formulario.addEventListener('submit',function(e){
         }else{
             alert(data);
             // Limpiar el formulario
-           
-            $('input').val("");//todos los inputs quedarán vacíos ;)
-            $('textarea').val("");//todos los textarea quedarán vacíos ;)
-            $('email').val("");
+        
+            document.getElementById("formulario-contacto").reset();
             grecaptcha.reset(respuestaCaptcha);  //limpia el recaptcha  
         }
 
