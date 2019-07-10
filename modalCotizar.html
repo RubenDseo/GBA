@@ -53,7 +53,7 @@
 		var verifyCallback2 = function (response2) {
 			captchaResponse2 = response2;
 			if (captchaResponse2 != 0) {
-				document.getElementById("btnEnviarModal").innerHTML = "<button type='button' onclick='enviaFormModal()' class='appao-btn appao-btn2' style='color: white;'>Enviar</button>";
+				document.getElementById("btnEnviarModal").innerHTML = "<button type='button' onclick='enviaFormModal()' class='appao-btn appao-btn2'>Enviar</button>";
 			}
 		};
 
@@ -99,6 +99,7 @@
 				//alert("Se envio el formulario correctamente!");
 				document.getElementById("formularioModal").reset();
 				grecaptcha.reset(respuestaCaptcha2);
+				document.getElementById("btnEnviarModal").innerHTML = "<button type='button' class='appao-btn appao-btn2' style='color: white; background: rgba(48, 69, 131, 0.45);' disabled>Enviar</button>";
 			} else {
 
 			}
@@ -111,11 +112,12 @@
 			var nombreModal1 = document.getElementById('nameModal1').value;
 			var telefonoIdModal1 = document.getElementById('telefonoModal1').value;
 			var emailModal1 = document.getElementById('emailModal1').value;
-	
+			var asuntoModal1 = document.getElementById('subjectModal1').value;
+
 			//var telefonoRegex2 = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 			var telefonoRegexModal = /^(\(\+?\d{2,3}\)[\*|\s|\-|\.]?(([\d][\*|\s|\-|\.]?){6})(([\d][\s|\-|\.]?){2})?|(\+?[\d][\s|\-|\.]?){8}(([\d][\s|\-|\.]?){2}(([\d][\s|\-|\.]?){2})?)?)$/;
 			//var nameRegex2 = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
-			var nameRegexModal = /^[A-Za-z]{1}[A-Za-z\s]+$/;
+			var nameRegexModal = /^[A-Za-záéíóúÁÉÍÓÚ]{1}[A-Za-záéíóúÁÉÍÓÚ\s]+$/;
 			//console.log(telefonoRegexModal.test(telefonoIdModal1));
 
 			if (nombreModal1 == null || nombreModal1.length == 0 || !(nameRegexModal.test(nombreModal1))) {
@@ -129,6 +131,11 @@
 
 			if (!(/\S+@\S+\.\S+/.test(emailModal1))) {
 				alert('ERROR: Debe escribir un correo válido');
+				return false;
+			}
+
+			if(asuntoModal1 == null || asuntoModal1.length==0){
+				alert('ERROR: Por favor escriba el asunto');
 				return false;
 			}
 			return true;

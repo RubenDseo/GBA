@@ -48,6 +48,7 @@ function enviaForm(){
                 //alert("Se envio el formulario correctamente!");
                 document.getElementById("formulario-contacto").reset();
                 grecaptcha.reset(respuestaCaptcha);
+                document.getElementById("btnEnviar").innerHTML = "<button type='button' class='appao-btn appao-btn2' style='color: white; background: rgba(48, 69, 131, 0.45);' disabled>Enviar</button>";
     }else{
 
     }
@@ -60,10 +61,12 @@ function validarDatos() {
     var nombre=document.getElementById('nombre').value;
     var emailId=document.getElementById('email').value;
     var telefonoId = document.getElementById('telefono').value;
+    var asunto = document.getElementById('asunto').value;
+
     //var telefonoRegex2 = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
     var telefonoRegex = /^(\(\+?\d{2,3}\)[\*|\s|\-|\.]?(([\d][\*|\s|\-|\.]?){6})(([\d][\s|\-|\.]?){2})?|(\+?[\d][\s|\-|\.]?){8}(([\d][\s|\-|\.]?){2}(([\d][\s|\-|\.]?){2})?)?)$/;
     //var nameRegex2 = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
-    var nameRegex = /^[A-Za-z]{1}[A-Za-z\s]+$/;
+    var nameRegex = /^[A-Za-záéíóúÁÉÍÓÚ]{1}[A-Za-záéíóúÁÉÍÓÚ\s]+$/;
    // console.log(telefonoRegex.test(telefonoId));
    
     if(nombre == null || nombre.length == 0 || !(nameRegex.test(nombre)) ) {
@@ -79,6 +82,10 @@ function validarDatos() {
         alert('ERROR: Debe escribir un correo válido');
         return false;
     }  
+    if(asunto == null || asunto.length==0){
+        alert('ERROR: Por favor escriba el asunto');
+        return false;
+    }
     return true;
 } 
 
