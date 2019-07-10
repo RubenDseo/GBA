@@ -47,7 +47,7 @@
         }
 
         p {
-           /* color: rgb(48, 69, 131) !important;*/
+            /* color: rgb(48, 69, 131) !important;*/
             font-family: inherit;
         }
 
@@ -66,7 +66,7 @@
             }
         }
 
-        .height-porcen{
+        .height-porcen {
             height: 100% !important;
         }
     </style>
@@ -116,14 +116,16 @@
                 <div class="card mb-3 max-wCatalogo " style="max-width: 522.5px;">
                     <div class="row no-gutters">
                         <div class="col-md-6 col-lg-6">
-                            <img src="img-GBA/ventilador-mecanico-aztec-medica.jpg" class="card-img height-porcen" alt="...">
+                            <img src="img-GBA/ventilador-mecanico-aztec-medica.jpg" class="card-img height-porcen"
+                                alt="...">
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="card-body">
                                 <h5 class="card-title">Ventiladores Mecánicos</h5>
                                 <p class="card-text">Contamos con ventiladores de cuidados intensivos y de traslado de
                                     alta tecnología.</p>
-                                <a href="" class="appao-btn appao-btn2 pd-producto">Próximamente</a>
+                                <a id="productos-ventiladoresMecanicos" href=""
+                                    class="appao-btn appao-btn2 pd-producto">Próximamente</a>
                             </div>
                         </div>
                     </div>
@@ -134,13 +136,15 @@
                 <div class="card mb-3 max-wCatalogo" style="max-width: 522.5px;">
                     <div class="row no-gutters">
                         <div class="col-md-6 col-lg-6">
-                            <img src="img-GBA/electrocardiografo-de-12-canales.jpg" class="card-img height-porcen" alt="...">
+                            <img src="img-GBA/electrocardiografo-de-12-canales.jpg" class="card-img height-porcen"
+                                alt="...">
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="card-body">
                                 <h5 class="card-title">Monitoreo de pacientes</h5>
                                 <p class="card-text">Para mayor seguridad para el paciente.</p>
-                                <a href="" class="appao-btn appao-btn2 pd-producto">Próximamente</a>
+                                <a id="productos-monitoreoDePacientes" href=""
+                                    class="appao-btn appao-btn2 pd-producto">Próximamente</a>
                             </div>
                         </div>
                     </div>
@@ -157,7 +161,8 @@
                                 <h5 class="card-title">Quirófano</h5>
                                 <p class="card-text">Para mejorar los resultados de cada operación y la seguridad del
                                     paciente.</p>
-                                <a href="productos-quirofano.html" class="appao-btn appao-btn2 pd-producto">Productos</a>
+                                <a id="productos-quirofano" href="productos-quirofano.html"
+                                    class="appao-btn appao-btn2 pd-producto">Productos</a>
                             </div>
                         </div>
                     </div>
@@ -174,7 +179,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Neonatología</h5>
                                 <p class="card-text">Línea de productos con soluciones integrales.</p>
-                                <a href="productos-neonatologia.html" class="appao-btn appao-btn2 pd-producto">Productos</a>
+                                <a id="productos-neonatologia" href="productos-neonatologia.html"
+                                    class="appao-btn appao-btn2 pd-producto">Productos</a>
                             </div>
                         </div>
                     </div>
@@ -192,7 +198,8 @@
                                 <h5 class="card-title">Material quirúrgico y consumibles</h5>
                                 <p class="card-text">Gran variedad de material médico para que se realicen su funciones
                                     adecuadamente.</p>
-                                <a href="" class="appao-btn appao-btn2 pd-producto">Próximamente</a>
+                                <a id="productos-materialQuirurgicoConsumibles" href=""
+                                    class="appao-btn appao-btn2 pd-producto">Próximamente</a>
                             </div>
                         </div>
                     </div>
@@ -210,7 +217,8 @@
                                 <h5 class="card-title">Medicina interna y general</h5>
                                 <p class="card-text">Productos para prevenir y diagnosticar enfermedades mejorando la
                                     atención del paciente. </p>
-                                <a href="" class="appao-btn appao-btn2 pd-producto">Próximamente</a>
+                                <a id="productos-medicinaInternaGeneral" href=""
+                                    class="appao-btn appao-btn2 pd-producto">Próximamente</a>
                             </div>
                         </div>
                     </div>
@@ -238,14 +246,15 @@
                 <div class="card mb-3 max-wCatalogo" style="max-width: 522.5px;">
                     <div class="row no-gutters">
                         <div class="col-md-6 col-lg-6">
-                            <img src="img-GBA/La-esterilización-del-material-clínico.jpg" class="card-img height-porcen" alt="...">
+                            <img src="img-GBA/La-esterilización-del-material-clínico.jpg" class="card-img height-porcen"
+                                alt="...">
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="card-body">
                                 <h5 class="card-title">CEYE</h5>
                                 <p class="card-text">Prodcutos que aseguran la esterilidad del producto que se usa en
                                     quirófanos.</p>
-                                <a href="" class="appao-btn appao-btn2 pd-producto">Próximamente</a>
+                                <a id="productos-CEYE" href="" class="appao-btn appao-btn2 pd-producto">Próximamente</a>
                             </div>
                         </div>
                     </div>
@@ -257,6 +266,11 @@
         </div>
     </div>
     <!--fin del cuerpo de catalogos-->
+
+    <!--inicio de los productos del catalogo-->
+    <div id="productosIDS">
+    </div>
+    <!--fin de los productos del catalogo-->
 
     <!-- footer section start -->
     <div class="foot">
@@ -317,6 +331,19 @@
     <script>
         $(".foot").load("ajaxFooter.php");
         $(".head").load("ajaxHeader.php");
+    </script>
+
+    <script>
+        $("a[id^=productos-]").click(function (e) {
+            e.preventDefault();//para quitar lo del # del href
+            idDiv = $(this).attr('id');//toma el id del div
+            console.log(idDiv);
+
+            var catalogos = document.getElementById('productos');// cambiar a display none en style
+            catalogos.style.display = 'none';
+
+            $("#productosIDS").load(idDiv + ".php");
+        });
     </script>
 </body>
 

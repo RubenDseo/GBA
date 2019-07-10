@@ -330,7 +330,7 @@
 	}
 	.product_dropdown_filter
 	{
-		width: 94px;
+		width: 100%;
 	}
 	.product_tag
 	{
@@ -371,6 +371,10 @@
 	.footer_list li a > div::after
 	{
 		font-size: 10px;
+	}
+
+	.margin-topCla{
+		margin-top: 0px;
 	}
 }
 
