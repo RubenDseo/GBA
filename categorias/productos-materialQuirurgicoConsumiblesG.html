@@ -175,12 +175,27 @@
             color: rgb(43, 163, 189);
             font-size: 20px;
         }
+
+        .colapseProducto {
+            width: 100%;
+            padding: 0;
+        }
+
+        .infoProduct {
+            width: 620px;
+            padding: 15px;
+        }
+
+        .color-div-cerrar:hover {
+            background: red !important;
+            color: white !important;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container col-lg-12" style="margin-top:130px">
 
+    <div class="container col-lg-12" style="margin-top:130px">
         <div class="row">
             <div class="col-lg-3 mt-5">
                 <div class="col-lg-12">
@@ -194,7 +209,7 @@
                         </div>-->
                         <div class="col-lg-12 menuCategorias mb-4">
                             <div class="categoriasP">
-                                <span><a id="id-catalogo" href="catalogo.html">Categorías</a></span>
+                                <span><a id="id-catalogo" href="../catalogo.html">Categorías</a></span>
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </div>
                             <ul>
@@ -202,16 +217,15 @@
                                 <li><a id="productos-monitoreoDePacientesG" href="#">Monitoreo de pacientes</a></li>
                                 <li><a id="productos-quirofanoG" href="#">Quirófano</a></li>
                                 <li><a id="productos-neonatologiaG" href="#">Neonatología</a></li>
-                                <li><a id="productos-materialQuirurgicoConsumiblesG" href="#">Material quirúrgico y
-                                        consumibles</a>
-                                </li>
+                                <li><a id="productos-materialQuirurgicoConsumiblesG" href="#" class="active">Material quirúrgico y
+                                        consumibles</a></li>
                                 <li><a id="productos-medicinaInternarGeneralG" href="#">Medicina interna y general</a>
                                 </li>
                                 <li><a id="productos-tomasMuralesG" href="#">Tomas murales</a></li>
                                 <li><a id="productos-CEYEG" href="#">CEYE</a></li>
                             </ul>
                         </div>
-                        <div class="col-lg-12 menuTipo mb-4">
+                        <div id="menuFiltro" class="col-lg-12 menuTipo mb-4">
                             <ul>
                                 <li class="todos active"><a href="#" class="btn-menu" data-filter="todos">Todos</a></li>
                                 <li class="equipo-medico"><a href="#" class="btn-menu"
@@ -234,24 +248,23 @@
                     <div class="row">
 
                         <!--Producto 1-->
-                        <div class="col-lg-4 mb-4 equipo-medico filtroProduct"
-                            title="Ventilador mécanico de transporte Oxymag">
+                        <div class="col-lg-4 mb-4 equipo-medico filtroProduct" title="Cuna de calor radiante Bhelius">
                             <a href="">
-                                <img class="tamImagen"
-                                    src="productos/Oxymag/6x6/ventiladordetransporte-oximag-6-600.png"
-                                    alt="Ventilador mécanico de transporte Oxymag">
+                                <img class="tamImagen" src="productos/Bhelius/imgWeb/CunaDeCalorRadiante-Bhelius.jpeg"
+                                    alt="Cuna de calor radiante Bhelius">
                             </a>
                             <div class="info-product col-lg-12">
-                                <a class="color-a" href="#">
+                                <a class="color-a" href="productos/Bhelius/bhelius-cuna-de-calor-radiante.html">
                                     <div class="flex-row align-content-start pd-name-product">
-                                        Ventilador mécanico de transporte Oxymag
+                                        Cuna de calor radiante Bhelius
                                     </div>
                                 </a>
                                 <div class="categoria-camb">
-                                    En <a href="">Ventiladores mécanicos</a>
+                                    En <a href="">Neonatología</a>
                                 </div>
                                 <div class="row ">
-                                    <a href="#" class="col-lg-6 p-0 color-info">
+                                    <a href="productos/Bhelius/bhelius-cuna-de-calor-radiante.html"
+                                        class="col-lg-6 p-0 color-info">
                                         <div class="col-lg-12 bordes-iconos text-center p-1 color-div">
                                             <div class="col-lg-12">
                                                 <i class="fa fa-info-circle tam-icono-info" aria-hidden="true"></i>
@@ -260,7 +273,7 @@
                                         </div>
                                     </a>
                                     <div id="cotizar1" class="col-lg-6 p-0 color-info"
-                                        title="Ventilador mécanico de transporte Oxymag">
+                                        title="Cuna de calor radiante Bhelius">
                                         <div class="col-lg-12 bordes-iconos text-center p-1 color-div">
                                             <div class="col-lg-12">
                                                 <img class="tam-icono" src="img-GBA/icons8-add.png" alt="">
@@ -272,33 +285,79 @@
                             </div>
                         </div>
                         <!--Fin de Producto 1-->
-
-                        <!--Producto 2-->
-                        <div class="col-lg-4 mb-4 equipo-medico filtroProduct" title="Ventilador Fleximag Plus Oxymag">
+                        <!--Inicio de Producto 2 (Collapse)-->
+                        <div class="col-lg-4 mb-4 equipo-medico filtroProduct" title="Cuna de calor radiante Bhelius">
                             <a href="">
-                                <img class="tamImagen" src="productos/Oxymag/6x6/ventiladorfleximag-oxymag-1-600.png"
-                                    alt="Ventilador Fleximag Plus Oxymag">
+                                <img class="tamImagen"
+                                    src="productos/SinMarca/intrumental/600x600/Instrumental-SM-2-600x600.png"
+                                    alt="Intrumental quirúrgico">
                             </a>
                             <div class="info-product col-lg-12">
-                                <a class="color-a" href="#">
+                                <a class="color-a" href="">
                                     <div class="flex-row align-content-start pd-name-product">
-                                        Ventilador Fleximag Plus Oxymag
+                                        Instrumental quirúrgico
                                     </div>
                                 </a>
                                 <div class="categoria-camb">
-                                    En <a href="">Ventiladores mécanicos</a>
+                                    En <a href="">Material quirúrgico y consumibles
+                                    </a>
                                 </div>
                                 <div class="row ">
-                                    <a href="#" class="col-lg-6 p-0 color-info">
-                                        <div class="col-lg-12 bordes-iconos text-center p-1 color-div">
-                                            <div class="col-lg-12">
+                                    <div class="btn-group col-lg-6 p-0 color-info">
+                                        <button type="button" class="btn colapseProducto" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <div class="col-lg-12 bordes-iconos text-center p-1 color-div">
                                                 <i class="fa fa-info-circle tam-icono-info" aria-hidden="true"></i>
                                                 <p>Información</p>
                                             </div>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right infoProduct">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <img src="productos/SinMarca/intrumental/600x600/Instrumental-SM-1-600x600.png"
+                                                        class="w-100" alt="">
+                                                </div>
+                                                <div class="col-md-6">
+                                                        Especialmente diseñado para realizar acciones específicas de llevar a
+                                                        cabo efectos deseados durante una cirugía u operación, tal como
+                                                        modificar tejido biológico.   
+                                                        <ul class="mt-3">
+                                                                <li><i class="icofont icofont-bubble-right ml-3"></i>Diéresis</li>
+                                                                <li><i class="icofont icofont-bubble-right ml-3"></i>Disección</li>
+                                                                <li><i class="icofont icofont-bubble-right ml-3"></i>Hemostasia</li>
+                                                                <li><i class="icofont icofont-bubble-right ml-3"></i>Exposición</li>
+                                                                <li><i class="icofont icofont-bubble-right ml-3"></i>Prehensión</li>
+                                                                <li><i class="icofont icofont-bubble-right ml-3"></i>Medición y percusión</li>
+                                                                <li><i class="icofont icofont-bubble-right ml-3"></i>Síntesis</li>
+                                                                <li><i class="icofont icofont-bubble-right ml-3"></i>Especiales</li>
+                                                        </ul>                                                     
+                                                </div>
+                                                <div class="col-md-12 mt-3">
+                                                        Dependiendo de la especialidad tenemos abundantes instrumentos
+                                                        para su intervención quirúrgica, de la más alta calidad y que mejor se
+                                                        adapte a sus necesidades.   
+                                                </div>
+                                                <div class="d-flex flex-row-reverse bd-highlight col-md-12">
+                                                    <div
+                                                        class="bd-highlight bordes-iconos text-center p-1 color-div-cerrar">
+                                                        <i class="fa fa-times-circle tam-icono-info"
+                                                            style="font-size: 24px;" aria-hidden="true"></i>
+                                                        <span>Cerrar</span>
+                                                    </div>
+
+                                                    <div id="cotizar2" class="bd-highlight p-0 color-info"
+                                                        title="Instrumental quirúrgico">
+                                                        <div class="col-lg-12 bordes-iconos text-center p-1 color-div">
+                                                            <img style="max-width: 20%;" src="img-GBA/icons8-add.png"
+                                                                alt="">
+                                                            <span>Cotizar</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </a>
-                                    <div id="cotizar2" class="col-lg-6 p-0 color-info"
-                                        title="Ventilador Fleximag Plus Oxymag">
+                                    </div>
+                                    <div id="cotizar2" class="col-lg-6 p-0 color-info" title="Instrumental quirúrgico">
                                         <div class="col-lg-12 bordes-iconos text-center p-1 color-div">
                                             <div class="col-lg-12">
                                                 <img class="tam-icono" src="img-GBA/icons8-add.png" alt="">
@@ -306,6 +365,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -323,7 +383,6 @@
     </div>
     <!--fin de los productos del catalogo-->
 
-
     <!--icono de scroll-->
     <a href="#" class="scrollToTop">
         <i class="icofont icofont-arrow-up"></i>
@@ -335,7 +394,7 @@
     </div>
 
     <!-- filtro categoria-->
-    <script src="assets/js/filtroCategoria.js"></script>
+    <script src="../assets/js/filtroCategoria.js"></script>
 
     <script>
         $("#modalSection").load("ajaxModalCotiza.php");
@@ -346,10 +405,11 @@
 
         //con el div[id^=cotizar] identifica el div seleccionado    
         $("div[id^=cotizar]").click(function () {
-            idDiv = $(this).attr('id');//toma el id del div
+            idDiv = $(this).attr('id'); //toma el id del div
             console.log(idDiv);
 
-            name = document.getElementById(idDiv).attributes["title"].value; //toma en title del div seleccionado 
+            name = document.getElementById(idDiv).attributes["title"]
+                .value; //toma en title del div seleccionado 
             console.log(name)
 
             //muestra el modal con el name  en #producto-cotizado del prodcuto a cotizar
@@ -366,12 +426,18 @@
     <script>
         var searchProducto = document.querySelector("#filtroProductos");
         //console.log(searchProducto);
+
         searchProducto.addEventListener('keyup', function (e) {
             var term = e.target.value.toLowerCase();
             //console.log(term);
             var products = document.getElementsByClassName('filtroProduct');
             //console.log(products);
 
+            var nameClasse = document.getElementById('menuFiltro').getElementsByClassName('active');
+            //classActive.removeClass("active");
+            //if(nameClasse.getAttribute("class"))
+            // var clases=nameClasse.getAttribute("class");
+            //console.log(clases[0]);
             Array.from(products).forEach(function (product) {
                 var nombre = product.getAttribute("title");
                 //console.log(nombre);
@@ -385,10 +451,10 @@
     </script>
     <script>
         $("a[id^=productos-]").click(function (e) {
-            e.preventDefault();
-            idDiv = $(this).attr('id');//toma el id del div     
+            e.preventDefault(); //para quitar lo del # del href
+            idDiv = $(this).attr('id'); //toma el id del div
             console.log(idDiv);
-            $("#productosIDS").load(idDiv + ".php");
+            $("#productosIDS").load("categorias/"+idDiv + ".php");
         });
     </script>
 </body>

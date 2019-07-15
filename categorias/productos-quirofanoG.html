@@ -175,6 +175,13 @@
             color: rgb(43, 163, 189);
             font-size: 20px;
         }
+        .estilo-lc{
+            font-family: 'Poppins', sans-serif;
+            color: rgb(48, 69, 131);
+        }
+        .estilo-lc:hover{
+            color: rgb(43, 163, 189);
+        }
     </style>
 </head>
 
@@ -200,7 +207,7 @@
                             <ul>
                                 <li><a id="productos-ventiladoresMecanicosG" href="#">Ventiladores mecánicos</a></li>
                                 <li><a id="productos-monitoreoDePacientesG" href="#">Monitoreo de pacientes</a></li>
-                                <li><a id="productos-quirofanoG" href="#">Quirófano</a></li>
+                                <li><a id="productos-quirofanoG" href="#" class="active">Quirófano</a></li>
                                 <li><a id="productos-neonatologiaG" href="#">Neonatología</a></li>
                                 <li><a id="productos-materialQuirurgicoConsumiblesG" href="#">Material quirúrgico y
                                         consumibles</a>
@@ -232,7 +239,11 @@
             <div class="col-lg-9 mt-5">
                 <div class="col-lg-12">
                     <div class="row">
-
+                        <div class="col-lg-12 aqua text-center mb-4">
+                            <h2 class="estilo-lc">
+                                Quirófano
+                            </h2>
+                        </div>
                         <!--Producto 1-->
                         <div class="col-lg-4 mb-4 equipo-medico filtroProduct" title="Lámpara de fototerapia Bhelius">
                             <a href="">
@@ -240,7 +251,7 @@
                                     alt="Lámpara de fototerapia Bhelius">
                             </a>
                             <div class="info-product col-lg-12">
-                                <a class="color-a" href="productos/bhelius-lampara-de-fototerapia.html">
+                                <a class="color-a" href="productos/Bhelius/bhelius-lampara-de-fototerapia.html">
                                     <div class="flex-row align-content-start pd-name-product">
                                         Lámpara de fototerapia Bhelius
                                     </div>
@@ -249,7 +260,7 @@
                                     En <a href="">Quirófano</a>
                                 </div>
                                 <div class="row ">
-                                    <a href="productos/bhelius-lampara-de-fototerapia.html"
+                                    <a href="productos/Bhelius/bhelius-lampara-de-fototerapia.html"
                                         class="col-lg-6 p-0 color-info">
                                         <div class="col-lg-12 bordes-iconos text-center p-1 color-div">
                                             <div class="col-lg-12">
@@ -347,7 +358,7 @@
         $("a[id^=productos-]").click(function (e) {
             e.preventDefault();
             idDiv = $(this).attr('id');//toma el id del div         
-            $("#productosIDS").load(idDiv + ".php");
+            $("#productosIDS").load("categorias/"+idDiv + ".php");
         });
     </script>
 </body>
