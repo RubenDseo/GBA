@@ -193,6 +193,16 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-12">
+                            <button id="regresarPage" type="button" onclick="ocultarMostrarDivs()" class="btn btn-success mb-4 col-lg-9">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                       <i class="icofont icofont-bubble-left icofont-2x"></i>
+                                    </div>
+                                    <div class="col-lg-8" style="font-size: x-large;">
+                                        Regresar
+                                    </div>
+                                </div>
+                            </button>
                             <input type="text" id="filtroProductos" class="form-control"
                                 placeholder="Buscar producto...">
                         </div>
@@ -402,5 +412,13 @@
             console.log(idDiv);
             $("#productosIDS").load("categorias/"+idDiv + ".php");
         });
+    </script>
+
+     <script>      
+        function ocultarMostrarDivs(){
+
+            document.getElementById('productos').style.display = 'block'; //mostrar el contenido de catalogos
+            document.getElementById('productosIDS').innerHTML = '';//vaciar el contenido de esta pagina
+        }
     </script>
 </body>
