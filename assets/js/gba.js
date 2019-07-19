@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+    console.log("hola00");
     $(function(){
        
         $(window).scroll(function(){

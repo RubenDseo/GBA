@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="ingenieros capacitados especializados ingeniería biomédica equipo médico comercialización accesorios consumibles Urgencias terapias intensivas quirófano CEYE mantenimiento preventivo correctivo reparación servicio de calibración analizadores simuladores certificados capacitación personal médico asesorías teóricas prácticas Ventiladores monitoreo neonatología material quirúrgico medicina interna tomas murales dependencias sector salud experiencia marcas estados de la república estuches de laringoscopio revisión y diagnóstico reparación requerida"		>
+
 	<title>GBA | Grupo Biomédico Azteca</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
@@ -41,9 +43,6 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-
-	<!--CAPTCHA-->
-	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback2&render=explicit" async defer></script>
 
 	<style>
 		.img-biomdico {
@@ -265,8 +264,7 @@
                                         <br>
                                         <p>Se brinda principalmente a los equipos médicos que se encuentran dañados y/o fuera de servicio. La reparación puede incluir cambio de refacciones, consumibles, ajustes de parámetros, corrección de errores en software, cambio de componentes electrónicos etc.</p>
 										<br/>
-										<a href="#">
-                                            Contacto
+										<a href="#" id="cotizar-1">Contacto
                                             <span class="fa fa-angle-right align-middle ml-2"></span>
                                         </a>
                                     </div>
@@ -286,8 +284,7 @@
                                         <br>
                                         <p>Se brinda a y todos aquellos equipos médicos que se encuentran operativo y que por el tiempo de uso requieren sustitución de componentes como filtros, baterías, consumibles, etc. Se realizan rutinas de mantenimiento para asegurar el correcto funcionamiento del equipo.  </p>
 										<br>
-										<a href="#">
-                                            Contacto
+										<a href="#" id="cotizar-2">Contacto
                                             <span class="fa fa-angle-right align-middle ml-2"></span>
                                         </a>
                                     </div>
@@ -316,8 +313,7 @@
 											 de medición correcta. De esta forma garantizamos que el equipo 
 											 funcionará de forma correcta.</p>
 											 <br>
-                                        <a href="#">
-                                            Conocer más
+                                        <a href="#" id="cotizar-3">    Conocer más
                                             <span class="fa fa-angle-right align-middle ml-2"></span>
                                         </a>
                                     </div>
@@ -346,8 +342,7 @@
 											de un dispositivo médico y errores comunes con el fin de aumentar 
 											la eficiencia en el equipo y brindar un servicio de calidad al paciente.</p>
 											<br>
-                                        <a href="#">
-                                            Contacto
+                                        <a href="#" id="cotizar-4">	  Contacto
                                             <span class="fa fa-angle-right align-middle ml-2"></span>
                                         </a>
                                     </div>
@@ -548,8 +543,7 @@
 							<i class="icofont icofont-bubble-right ml-3"></i>
 							Reparación requerida
 						</p>
-						<a href="#" class="appao-btn appao-btn2 " data-toggle="modal"
-							data-target="#exampleModal">Cotizar</a>
+						<a href="#" class="appao-btn appao-btn2 " id="cotizar-5" >Cotizar</a>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -599,8 +593,7 @@
 							<i class="icofont icofont-bubble-right ml-3"></i>
 							Ventiladores volumétricos
 						</p>
-						<a href="#" class="appao-btn appao-btn2 " data-toggle="modal"
-							data-target="#exampleModal">Cotizar</a>
+						<a href="#" class="appao-btn appao-btn2 " id="cotizar-6" >Cotizar</a>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -831,114 +824,9 @@
 	</a>
 	<!--fin de icono de scroll-->
 
-	<script>
-		$('#exampleModal').on('show.bs.modal', function (event) {
-			var button = $(event.relatedTarget) // Button that triggered the modal
-			var recipient = button.data('whatever') // Extract info from data-* attributes
-			// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-			// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-			var modal = $(this)
-			modal.find('.modal-title').text('New message to ' + recipient)
-			modal.find('.modal-body input').val(recipient)
-		})
-	</script>
-	<script>
+    <div id="modalSection">
 
-
-		var respuestaCaptcha2;
-
-		//se verifica recaptcha del modal de mantenimiento 
-		var captchaResponse2;
-		var verifyCallback2 = function (response2) {
-			captchaResponse2 = response2;
-			if (captchaResponse2 != 0) {
-				document.getElementById("btnEnviarModal").innerHTML = "<button type='button' onclick='enviaFormModal()' class='appao-btn appao-btn2'>Enviar</button>";
-			}
-		};
-
-		//cargando los recaptcha del modal de mantenimiento y el de productos
-		var onloadCallback2 = function () {
-			respuestaCaptcha2 = grecaptcha.render('recaptchaID', {
-				'sitekey': '6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX',
-				'callback': verifyCallback2,
-			});
-		};
-
-		function enviaFormModal() {
-			/*var formulario = document.getElementById('formulario-contacto');
-			var datos = new FormData(formulario);
-			console.log(datos)
-			console.log(datos.get('name'))
-			console.log(datos.get('email'))
-			console.log(datos.get('subject'))
-			console.log(datos.get('message'))*/
-			var validacionDatosModal = validarDatosModal();
-			if (validacionDatosModal) {
-				var nombreModal1 = document.getElementById('nameModal1').value;
-				var telefonoIdModal1 = document.getElementById('telefonoModal1').value;
-				var emailModal1 = document.getElementById('emailModal1').value;
-				var asuntoModal1 = document.getElementById('subjectModal1').value;
-				var mensajeModal1 = document.getElementById('messageModal1').value;
-
-				var ajaxModal1 = new XMLHttpRequest();
-				ajaxModal1.open("POST", "./formulario-modal.php", true);
-				ajaxModal1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-				ajaxModal1.send("name=" + nombreModal1 + "&email=" + emailModal1 + "&subject=" + asuntoModal1 + "&telefono=" + telefonoIdModal1 + "&message=" + mensajeModal1);
-				ajaxModal1.onreadystatechange = function () {
-					//console.log(ajaxModal1.readyState);
-					//console.log(ajaxModal1.status);
-					if (ajaxModal1.readyState == 4 && ajaxModal1.status == 200) {
-						alert("Formulario enviado correctamente");
-					} else {
-
-					}
-				}
-
-				//alert("Se envio el formulario correctamente!");
-				document.getElementById("formularioModal").reset();
-				grecaptcha.reset(respuestaCaptcha2);
-				document.getElementById("btnEnviar").innerHTML = "<button type='button' class='appao-btn appao-btn2' style='color: white; background: rgba(48, 69, 131, 0.45);' disabled>Enviar</button>";
-			} else {
-
-			}
-
-			//console.log(validacionDatosModal);
-
-		}
-
-		function validarDatosModal() {
-			var nombreModal1 = document.getElementById('nameModal1').value;
-			var telefonoIdModal1 = document.getElementById('telefonoModal1').value;
-			var emailModal1 = document.getElementById('emailModal1').value;
-			var asuntoModal1 = document.getElementById('subjectModal1').value;
-
-			//var telefonoRegex2 = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
-			var telefonoRegexModal = /^(\(\+?\d{2,3}\)[\*|\s|\-|\.]?(([\d][\*|\s|\-|\.]?){6})(([\d][\s|\-|\.]?){2})?|(\+?[\d][\s|\-|\.]?){8}(([\d][\s|\-|\.]?){2}(([\d][\s|\-|\.]?){2})?)?)$/;
-			//var nameRegex2 = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
-			var nameRegexModal = /^[A-Za-záéíóúÁÉÍÓÚ]{1}[A-Za-záéíóúÁÉÍÓÚ\s]+$/;
-			//console.log(telefonoRegexModal.test(telefonoIdModal1));
-
-			if (nombreModal1 == null || nombreModal1.length == 0 || !(nameRegexModal.test(nombreModal1))) {
-				alert('ERROR: El campo nombre no debe ir vacío o lleno de solamente espacios en blanco');
-				return false;
-			}
-			if (!(telefonoRegexModal.test(telefonoIdModal1))) {
-				alert('Error: Número no válido')
-				return false;
-			}
-
-			if (!(/\S+@\S+\.\S+/.test(emailModal1))) {
-				alert('ERROR: Debe escribir un correo válido');
-				return false;
-			}
-			if(asuntoModal1 == null || asuntoModal1.length==0){
-				alert('ERROR: Por favor escriba el asunto');
-				return false;
-			}
-			return true;
-		}
-
-	</script>
+    </div>
 
 	<!-- jquery main JS -->
 	<script src="assets/js/jquery.min.js"></script>
@@ -964,8 +852,8 @@
 	<script src="assets/js/gmap3.min.js"></script>
 	<!-- Google map api -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnKyOpsNq-vWYtrwayN3BkF3b4k3O9A_A"></script>
-	<!-- Custom map JS -->
-	<script src="assets/js/custom-map.js"></script>
+	<!-- Custom map JS 
+	<script src="assets/js/custom-map.js"></script>-->
 	<!-- WOW JS -->
 	<script src="assets/js/wow-1.3.0.min.js"></script>
 	<!-- Switcher JS -->
@@ -976,7 +864,25 @@
 	<script>
 		$(".foot").load("ajaxFooter.php");
 		$(".head").load("ajaxHeader.php");
+		$("#modalSection").load("ajaxModalCotiza.php");
 	</script>
+
+	  <script>
+        var idDiv;
+        var name;
+
+        //con el div[id^=cotizar] identifica el div seleccionado    
+        $("a[id^=cotizar-]").click(function (e) {
+        	e.preventDefault();//para quitar lo del # del href
+            idDiv = $(this).attr('id');//toma el id del div
+            console.log(idDiv);
+
+          
+            //muestra el modal con el name  en #producto-cotizado del prodcuto a cotizar
+            $('#exampleModal').modal('show');
+            
+        });
+    </script>
 </body>
 
 </html>

@@ -90,6 +90,7 @@
 					//console.log(ajaxModal1.readyState);
 					//console.log(ajaxModal1.status);
 					if (ajaxModal1.readyState == 4 && ajaxModal1.status == 200) {
+						$('#exampleModal').modal('hide');
 						alert("Formulario enviado correctamente");
 					} else {
 
