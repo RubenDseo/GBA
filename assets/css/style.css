@@ -480,6 +480,9 @@ input::-webkit-input-placeholder {
 .hero-area-content h1 {
     color: #fff;
 }
+.hero-area-content h2 {
+    color: #fff;
+}
 .hero-area-content p {
     margin: 28px 0 25px;
 }
@@ -947,8 +950,9 @@ input::-webkit-input-placeholder {
 	border: 2px solid transparent;
 	transition: all 0.4s;
 }
-.single-counter-box h1 {
-	margin: 25px 0 10px;
+.single-counter-box h2 {
+    margin: 25px 0 10px;
+    color: #fff;
 }
 .single-counter-box p {
     font-size: 24px;
@@ -1339,6 +1343,7 @@ h4.post-title a {
 	opacity: 1;
 }
 .hero-area-single-slide h1,
+.hero-area-single-slide h2,
 .hero-area-single-slide p,
 .hero-area-single-slide li,
 .hero-area-single-slide a.appao-btn {
@@ -1346,6 +1351,13 @@ h4.post-title a {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 .hero-area-single-slide h1 {
+    -webkit-transform: translateX(-140px);
+    transform: translateX(-140px);
+    -webkit-transition: all .20s linear 0s;
+    transition: all .20s linear 0s;
+}
+}
+.hero-area-single-slide h2 {
     -webkit-transform: translateX(-140px);
     transform: translateX(-140px);
     -webkit-transition: all .20s linear 0s;
@@ -1376,6 +1388,7 @@ h4.post-title a {
     transition: all .4s;
 }
 .active .hero-area-single-slide h1,
+.active .hero-area-single-slide h2,
 .active .hero-area-single-slide p,
 .active .hero-area-single-slide li,
 .active .hero-area-single-slide a.appao-btn {
@@ -1385,6 +1398,10 @@ h4.post-title a {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 .active .hero-area-single-slide h1 {
+    -webkit-transition: all 700ms linear 0s;
+    transition: all 2000ms linear 0s;
+}
+.active .hero-area-single-slide h2 {
     -webkit-transition: all 700ms linear 0s;
     transition: all 2000ms linear 0s;
 }
@@ -1624,3 +1641,255 @@ h4.post-title a {
     -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
     transition: width 0.5s;
 }
+/*inician las clases de catalogo.html*/
+.pd-producto {
+    padding: 3px 10px !important;
+    margin-top: 10px;
+}
+
+.card {
+    border: 1px solid rgb(48, 69, 131) !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .max-wCatalogo {
+        max-width: 350.5px !important;
+    }
+
+    .tam-espacio {
+        width: 19px;
+        padding: 0px;
+    }
+}
+
+.height-porcen {
+    height: 100% !important;
+}
+.letra-p{
+    font-family: inherit !important;
+    font-weight: 400;
+}
+.titulo-catalogo{
+    font-family: inherit;
+    font-size: 22px !important;
+    color: #4a4a4a !important;
+}
+/*fin de las clases de catalogo*/
+
+/*inicio de las clases de index*/
+.img-biomdico {
+    width: 53%;
+    margin-left: 30%;
+}
+
+.img-equiposMedicos {
+    width: 90%;
+}
+/*fin de las clases de index*/
+
+
+/*inician las clases de las categorias*/
+.tamImagen {
+    height: auto;
+    width: 100%;
+}
+
+.info-product {
+    border: solid 2px #dbdbdb;
+}
+
+.info-product .color-a {
+    color: #2f2c2cf2;
+}
+
+.info-product .color-a:hover {
+    color: rgb(48, 69, 131);
+}
+
+.categoria-camb {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 0px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.categoria-camb a {
+    color: #969696 !important;
+}
+
+.categoria-camb a:hover {
+    color: rgb(48, 69, 131) !important;
+}
+
+.bordes-iconos {
+    border-left: solid 1px #ededed;
+    border-top: solid 1px #ededed;
+}
+
+.pd-name-product {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tam-icono {
+    max-width: 33%;
+}
+
+.tam-icono-info {
+    font-size: 35px;
+}
+
+.color-info .color-div {
+    background: white !important;
+    color: #666666 !important;
+    cursor: pointer;
+}
+
+.color-info .color-div:hover {
+    background: rgb(48, 69, 131) !important;
+    color: white !important;
+}
+
+.color-div .tam-letras a {
+    color: #969696 !important;
+    font-weight: 300;
+}
+
+.color-div .tam-letras a:hover {
+    color: white !important;
+    font-weight: 300;
+}
+
+.color-div a img {
+    fill: #666666 !important;
+}
+
+.color-div a img:hover {
+    fill: white !important;
+}
+
+.menuTipo ul {
+    visibility: initial;
+    opacity: 1;
+    width: 85%;
+    text-align: start;
+    background: #f6f8fa;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.menuTipo ul li {
+    margin-bottom: 7px;
+    width: max-content;
+}
+
+.menuTipo ul li a {
+    color: rgb(48, 69, 131);
+}
+
+.menuTipo ul li a:hover {
+    color: rgb(43, 163, 189);
+}
+
+.active {
+    border-bottom: 2px solid rgb(43, 163, 189);
+}
+
+.menuCategorias ul {
+    visibility: initial;
+    opacity: 1;
+    width: 100%;
+    text-align: start;
+    background: #f6f8fa;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.menuCategorias ul li {
+    margin-bottom: 7px;
+    width: max-content;
+}
+
+.menuCategorias ul li a {
+    color: rgb(48, 69, 131);
+}
+
+.menuCategorias ul li a:hover {
+    color: rgb(43, 163, 189);
+}
+
+.categoriasP span a {
+    color: rgb(48, 69, 131);
+}
+
+.categoriasP span a:hover {
+    color: rgb(43, 163, 189);
+}
+
+.categoriasP {
+    color: rgb(48, 69, 131);
+    font-size: 18px;
+}
+
+.categoriasP:hover {
+    color: rgb(43, 163, 189);
+    font-size: 20px;
+}
+
+.colapseProducto {
+    width: 100%;
+    padding: 0;
+}
+
+.infoProduct {
+    width: 620px;
+    padding: 15px;
+}
+
+.color-div-cerrar:hover {
+    background: red !important;
+    color: white !important;
+}
+.estilo-lc{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(48, 69, 131);
+}
+.estilo-lc:hover{
+    color: rgb(43, 163, 189);
+}
+
+/*fin de las clases de categorias*/
+
+/*inicio de clases de los productos*/
+.liProduct {
+    margin: 2px;
+    width: 75%;
+}
+
+.cotizar-color {
+    color: #4a4a4a;
+}
+
+/*fin de las clases de los productos*/

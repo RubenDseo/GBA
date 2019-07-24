@@ -30,7 +30,8 @@
 						<textarea id="messageModal1" name="messageModal1" placeholder="Mensaje"></textarea>
 						<div id="recaptchaID" class="g-recaptcha mb-3"></div>
 						<div class="col-lg-12 row">
-							<button type="button" class="appao-btn appao-btn2 mr-3" data-dismiss="modal">Cancelar</button>
+							<button type="button" class="appao-btn appao-btn2 mr-3"
+								data-dismiss="modal">Cancelar</button>
 							<div id="btnEnviarModal">
 								<button type="button" class="appao-btn appao-btn2"
 									style="color: white; background: rgba(48, 69, 131, 0.45);" disabled>Enviar</button>
@@ -48,7 +49,7 @@
 
 		var respuestaCaptcha2;
 
-		//se verifica recaptcha del modal de mantenimiento 
+		//se verifica recaptcha del modal
 		var captchaResponse2;
 		var verifyCallback2 = function (response2) {
 			captchaResponse2 = response2;
@@ -57,23 +58,15 @@
 			}
 		};
 
-		//cargando los recaptcha del modal de mantenimiento y el de productos
+		//cargando los recaptcha del modal
 		var onloadCallback2 = function () {
 			respuestaCaptcha2 = grecaptcha.render('recaptchaID', {
 				'sitekey': '6LfO6KEUAAAAANK3EauCKGq4DmSZMdpCPd_Z4zMX',
 				'callback': verifyCallback2,
 			});
-			//console.log("recaptcha mantenimiento:  " + respuestaCaptcha2);
 		};
 
 		function enviaFormModal() {
-			/*var formulario = document.getElementById('formulario-contacto');
-			var datos = new FormData(formulario);
-			console.log(datos)
-			console.log(datos.get('name'))
-			console.log(datos.get('email'))
-			console.log(datos.get('subject'))
-			console.log(datos.get('message'))*/
 			var validacionDatosModal = validarDatosModal();
 			if (validacionDatosModal) {
 				var nombreModal1 = document.getElementById('nameModal1').value;
@@ -87,26 +80,20 @@
 				ajaxModal1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				ajaxModal1.send("name=" + nombreModal1 + "&email=" + emailModal1 + "&subject=" + asuntoModal1 + "&telefono=" + telefonoIdModal1 + "&message=" + mensajeModal1);
 				ajaxModal1.onreadystatechange = function () {
-					//	console.log(ajaxModal1.readyState);
-					//	console.log(ajaxModal1.status);
 					if (ajaxModal1.readyState == 4 && ajaxModal1.status == 200) {
-						 $('#exampleModal').modal('hide');
+						$('#exampleModal').modal('hide');
 						alert("Formulario enviado correctamente");
 					} else {
 
 					}
 				}
 
-				//alert("Se envio el formulario correctamente!");
 				document.getElementById("formularioModal").reset();
 				grecaptcha.reset(respuestaCaptcha2);
 				document.getElementById("btnEnviarModal").innerHTML = "<button type='button' class='appao-btn appao-btn2' style='background: rgba(48, 69, 131, 0.45);' disabled>Enviar</button>";
 			} else {
 
 			}
-
-			//console.log(validacionDatosModal);
-
 		}
 
 		function validarDatosModal() {
@@ -115,11 +102,8 @@
 			var emailModal1 = document.getElementById('emailModal1').value;
 			var asuntoModal1 = document.getElementById('subjectModal1').value;
 
-			//var telefonoRegex2 = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 			var telefonoRegexModal = /^(\(\+?\d{2,3}\)[\*|\s|\-|\.]?(([\d][\*|\s|\-|\.]?){6})(([\d][\s|\-|\.]?){2})?|(\+?[\d][\s|\-|\.]?){8}(([\d][\s|\-|\.]?){2}(([\d][\s|\-|\.]?){2})?)?)$/;
-			//var nameRegex2 = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
 			var nameRegexModal = /^[A-Za-záéíóúÁÉÍÓÚ]{1}[A-Za-záéíóúÁÉÍÓÚ\s]+$/;
-			//console.log(telefonoRegexModal.test(telefonoIdModal1));
 
 			if (nombreModal1 == null || nombreModal1.length == 0 || !(nameRegexModal.test(nombreModal1))) {
 				alert('ERROR: El campo nombre no debe ir vacío o lleno de solamente espacios en blanco');
@@ -134,7 +118,7 @@
 				alert('ERROR: Debe escribir un correo válido');
 				return false;
 			}
-			if(asuntoModal1 == null || asuntoModal1.length==0){
+			if (asuntoModal1 == null || asuntoModal1.length == 0) {
 				alert('ERROR: Por favor escriba el asunto');
 				return false;
 			}
