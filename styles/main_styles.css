@@ -64,7 +64,7 @@ ul
 }
 p
 {
-	font-family: 'Roboto', sans-serif;
+	/*font-family: 'Roboto', sans-serif;*/
 	font-size: 16px;
 	line-height: 1.5;
 	font-weight: 300;
@@ -134,7 +134,7 @@ h4{font-size: 18px;}
 /*h5{font-size: 14px;}*/
 h1, h2, h3, h4, h6
 {
-	font-family: 'Roboto', sans-serif;
+	/*font-family: 'Roboto', sans-serif;*/
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -1137,6 +1137,18 @@ section
 	background: #FFFFFF;
 	padding-top: 72px;
 	padding-bottom: 82px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .products {
+        padding-top: 35px !important;    
+    }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .products {
+        padding-top: 35px !important;    
+    }
+
 }
 .page_nav_row
 {

@@ -11,66 +11,16 @@
 
 <body>
 
-    <div class="container col-lg-12" style="margin-top:130px">
+    <div class="col-lg-12">
         <div class="row">
-            <div class="col-lg-3 mt-5">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <button id="regresarPage" type="button" onclick="ocultarMostrarDivs()"
-                                class="btn btn-success mb-4 col-lg-9">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <i class="icofont icofont-bubble-left icofont-2x"></i>
-                                    </div>
-                                    <div class="col-lg-8" style="font-size: x-large;">
-                                        Regresar
-                                    </div>
-                                </div>
-                            </button>
-
-                        </div>
-                        <div class="col-lg-12 menuCategorias mb-4">
-                            <div class="categoriasP">
-                                <span><a id="id-catalogo" href="catalogo.html">Categorías</a></span>
-                                <i class="fa fa-caret-down" aria-hidden="true"></i>
-                            </div>
-                            <ul>
-                                <li><a id="productos-ventiladoresMecanicosG" href="#">Ventiladores mecánicos</a></li>
-                                <li><a id="productos-monitoreoDePacientesG" href="#">Monitoreo de pacientes</a></li>
-                                <li><a id="productos-quirofanoG" href="#">Quirófano</a></li>
-                                <li><a id="productos-neonatologiaG" href="#">Neonatología</a></li>
-                                <li><a id="productos-materialQuirurgicoConsumiblesG" href="#">Material quirúrgico y
-                                        consumibles</a></li>
-                                <li><a id="productos-medicinaInternaGeneralG" href="#">Medicina interna y general</a>
-                                </li>
-                                <li><a id="productos-tomasMuralesG" href="#" class="active">Tomas murales</a></li>
-                                <li><a id="productos-CEYEG" href="#">CEYE</a></li>
-                            </ul>
-                        </div>
-                        <div id="menuFiltro" class="col-lg-12 menuTipo mb-4">
-                            <ul>
-                                <li class="todos active"><a href="#" class="btn-menu" data-filter="todos">Todos</a></li>
-                                <li class="equipo-medico"><a href="#" class="btn-menu"
-                                        data-filter="equipo-medico">Equipos Médicos</a></li>
-                                <li class="accesorios"><a href="#" class="btn-menu"
-                                        data-filter="accesorios">Accesorios</a></li>
-                                <li class="consumibles"><a href="#" class="btn-menu"
-                                        data-filter="consumibles">Consumibles</a></li>
-                                <li class="dis-medicos"><a href="#" class="btn-menu"
-                                        data-filter="dis-medicos">Dispositivos Médicos</a></li>
-                                <li class="otros"><a href="#" class="btn-menu" data-filter="otros">Otros</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
+            <div class="col-lg-3 col-md-4 col-sm-12 col-12 mt-5">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12" id="menuCategoriasMT"></div>
             </div>
 
-            <div class="col-lg-9 mt-5">
-                <div class="col-lg-12">
+            <div class="col-lg-9 col-md-8 col-sm-12 col-12 mt-5">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="row">
-                        <div class="col-lg-12 aqua text-center mb-4">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12 aqua text-center mb-4">
                             <h2 class="estilo-lc">
                                 Próximamente
                             </h2>
@@ -124,45 +74,19 @@
     </script>
 
     <script>
-        var searchProducto = document.querySelector("#filtroProductos");
-        //console.log(searchProducto);
-
-        searchProducto.addEventListener('keyup', function (e) {
-            var term = e.target.value.toLowerCase();
-            //console.log(term);
-            var products = document.getElementsByClassName('filtroProduct');
-            //console.log(products);
-
-            var nameClasse = document.getElementById('menuFiltro').getElementsByClassName('active');
-            //classActive.removeClass("active");
-            //if(nameClasse.getAttribute("class"))
-            // var clases=nameClasse.getAttribute("class");
-            //console.log(clases[0]);
-            Array.from(products).forEach(function (product) {
-                var nombre = product.getAttribute("title");
-                console.log(nombre);
-                if (nombre.toLowerCase().indexOf(term) != -1) {
-                    product.style.display = 'block';
-                } else {
-                    product.style.display = 'none';
-                }
-            })
-        })
-    </script>
-    <script>
-        $("a[id^=productos-]").click(function (e) {
-            e.preventDefault(); //para quitar lo del # del href
-            idDiv = $(this).attr('id'); //toma el id del div
-            console.log(idDiv);
-            $("#productosIDS").load("categorias/" + idDiv + ".php");
-        });
-    </script>
-
-    <script>
         function ocultarMostrarDivs() {
 
             document.getElementById('productos').style.display = 'block'; //mostrar el contenido de catalogos
             document.getElementById('productosIDS').innerHTML = '';//vaciar el contenido de esta pagina
+        }
+    </script>
+    <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
+    <script>
+        var ventana_ancho = $(window).width();
+        if (ventana_ancho < 576) {
+            $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
+        } else {
+            $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
         }
     </script>
 </body>

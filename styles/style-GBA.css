@@ -97,7 +97,24 @@
     border-right: 2px solid #0d76a7;
     padding-right: 5px;
 }
-
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    
+    .seriviosBarraLateral {
+        border-bottom: 2px solid #0d76a7;
+        padding-right: 0px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    
+    .seriviosBarraLateral {
+        border-bottom: 2px solid #0d76a7;
+        border-right: none;
+        padding-right: 0px;
+    }
+    .barraLateral {
+        padding-top: 20px;
+    }
+}
 .imgVentas {
     width: 63%;
     box-shadow: 6px 0px 3px -2px;
