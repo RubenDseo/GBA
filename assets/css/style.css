@@ -401,10 +401,19 @@ input::-webkit-input-placeholder {
  
 }
 .menu-topScroll{
-    top: 83px;
+    top: 64px;
 }
 .menu-top{
-    top: 107px;     
+    top: 112px;     
+}
+@media only screen and (min-width: 576px) and (max-width: 767px)
+{
+    .menu-topScroll{
+        top: 91px;
+    }
+    .menu-top{
+        top: 165px;     
+    }
 }
 @media only screen and (max-width: 767px)
 {
@@ -520,11 +529,39 @@ input::-webkit-input-placeholder {
 .header-R{
     height: 500px;
 }
+
+.hero-area-monitoreo {
+	z-index: 1;
+	position: relative;
+    background-image: url(../../assets/imgB/medical-equipment-gba.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0.9;  
+    display:none;  
+}
+.hero-area-monitoreo::before {
+	content: "";
+    top: 0;
+    left: 0;
+    opacity: 0.85;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: rgba(72, 84, 123, 0.58);  
+    display:none;  
+	/*background: #000529; /* Old browsers */
+	/*background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%); /* FF3.6-15 */
+	/*background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%); /* Chrome10-25,Safari5.1-6 */
+	/*background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);*/
+}
 @media only screen and (max-width: 767px)
 {
-    #myVideo-about{
-        width: 345%;
-        height: 50%;
+    .videoSignos{
+        display: none;
     }
     #myVideo-catalogo{
         display: none;
@@ -535,7 +572,31 @@ input::-webkit-input-placeholder {
     .header-R {
         height: 425px;
     }
+    .ocultarEncabezado{
+        display: none !important;
+    }
+    .hero-area-monitoreo {
+        display:block;  
+    }
+    .hero-area-monitoreo::before {
+       
+        display:block;  
+    }
+    .header-monitoreo{
+        height: 540px;
+    }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .header-Monitoreo{
+        height: 433px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .videoSignos {
+        top: 0px !important;
+    }
+}
+
 .hero-area-content {
     color: #fff;
     padding: 80px 0 170px;
@@ -2127,6 +2188,7 @@ h4.post-title a {
     .areaEncabezado{
         margin-top: 80px !important;
     }
+
 
 }
 
