@@ -11,7 +11,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-12">
         <div class="row">
 
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="col-lg-12 col-md-12 col-sm-7 col-12">
                 <button id="regresarPage" type="button" onclick="ocultarMostrarDivs()" class="btn btn-success mb-4">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-4">
@@ -24,7 +24,7 @@
                 </button>
                 <input type="text" id="filtroProductos" class="form-control" placeholder="Buscar producto...">
             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12 menuCategorias mb-4">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-12 menuCategorias mb-4">
 
                 <button id="btnMenuTodos" class="btn btn-primary" type="button">
                     Menu <i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -50,9 +50,9 @@
                     <li><a id="productos-CEYEG" class="productos-CEYEG" href="#">CEYE</a></li>
                 </ul>
             </div>
-            <div id="menuFiltro" class="col-lg-12 col-md-12 col-sm-12 col-12 menuTipo mb-4" style="display: none;">
+            <div id="menuFiltro" class="col-lg-12 col-md-12 col-sm-6 col-12 menuTipo mb-4" style="display: none;">
                 <ul>
-                    <li class="todos active"><a href="#" class="btn-menu" data-filter="todos">Todos</a></li>
+                    <li class="todos activarSeleccion"><a href="#" class="btn-menu" data-filter="todos">Todos</a></li>
                     <li class="equipo-medico"><a href="#" class="btn-menu" data-filter="equipo-medico">Equipos
                             Médicos</a></li>
                     <li class="accesorios"><a href="#" class="btn-menu" data-filter="accesorios">Accesorios</a></li>
@@ -115,8 +115,8 @@
             var products = document.getElementsByClassName('filtroProduct');
             //console.log(products);
 
-            var nameClasse = document.getElementById('menuFiltro').getElementsByClassName('active');
-            //classActive.removeClass("active");
+            var nameClasse = document.getElementById('menuFiltro').getElementsByClassName('activarSeleccion');
+            //classActive.removeClass("activarSeleccion");
             //if(nameClasse.getAttribute("class"))
             // var clases=nameClasse.getAttribute("class");
             //console.log(clases[0]);

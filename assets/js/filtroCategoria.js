@@ -15,7 +15,7 @@
         });
 
         $("ul li").click(function(){
-            $(this).addClass("active").siblings().removeClass("active");
+            $(this).addClass("activarSeleccion").siblings().removeClass("activarSeleccion");
         })
     });
 }())

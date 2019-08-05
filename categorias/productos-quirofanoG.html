@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="col-lg-12 ">
+    <div class="col-lg-12 margenCatalogos">
 
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-12 col-12 mt-5">
@@ -88,7 +88,7 @@
     <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
     <script>
         var ventana_ancho = $(window).width();
-        if (ventana_ancho < 576) {
+        if (ventana_ancho < 767) {
             $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
         } else {
             $("#menuCategoriasMT").load("ajaxMenuCategorias.php");

@@ -389,6 +389,59 @@ input::-webkit-input-placeholder {
 .mainmenu li a.appao-btn {
 	margin-left: 55px;
 }
+
+.mostrarBotonMenu{
+    display: none;
+}
+.mostrarMenu{
+    display: block !important;
+}
+.mostrarMenuPP{
+    display: none;
+ 
+}
+.menu-topScroll{
+    top: 83px;
+}
+.menu-top{
+    top: 107px;     
+}
+@media only screen and (max-width: 767px)
+{
+    .mostrarBotonMenu{
+        display: block;
+    }
+    .mostrarMenu{
+        display: none !important;
+    }
+    .mostrarMenuPP{
+        background: rgba(86, 87, 90, 0.61);
+        right: 20px;      
+        position: absolute;
+        border: 1px solid white !important;
+    }
+    .mainmenu{
+        text-align: center;
+    }
+    .mainmenu li {
+        display: list-item;
+        margin-bottom: 10px; 
+    }
+    #primary-menu{
+        margin: 20px 0 20px;
+    }
+    .btnMenu{
+        font-size: inherit !important;
+        border-width: 4px !important;
+        border-color: rgba(255, 255, 255, 255) !important;
+    }
+
+    .btnMenu:hover{
+        font-size: inherit !important;
+        border-width: 4px !important;
+        border-color: rgba(255, 255, 255, 255) !important;  
+    }
+}
 /*--------------------------------------
 --------- HEADER AREA CSS END ---------
 ---------------------------------------*/
@@ -467,7 +520,7 @@ input::-webkit-input-placeholder {
 .header-R{
     height: 500px;
 }
-@media only screen and (max-width: 575px)
+@media only screen and (max-width: 767px)
 {
     #myVideo-about{
         width: 345%;
@@ -1694,7 +1747,6 @@ h4.post-title a {
     padding: 3px 10px !important;
     margin-top: 10px;
 }
-
 .card {
     border: 1px solid rgb(48, 69, 131) !important;
 }
@@ -1729,15 +1781,33 @@ h4.post-title a {
 	/*background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%); /* Chrome10-25,Safari5.1-6 */
 	/*background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);*/
 }
-
+@media only screen and (min-width: 992px){
+    .margenCatalogos{
+        margin-top:115px !important;
+    }  
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .max-wCatalogo {
         max-width: 350.5px !important;
     }
-
     .tam-espacio {
         width: 19px;
         padding: 0px;
+    }
+    .margenCatalogos{
+        margin-top:115px !important;
+    }
+    .tamLetra-electro{
+        font-size: 16.5px !important;
+    }
+    
+}
+@media only screen and (max-width: 767px){
+    .mostrarEncabezado{
+        display: none !important;
+    }
+    .tamContenido{
+        width: 90% !important;
     }
 }
 
@@ -1763,6 +1833,17 @@ h4.post-title a {
 
 .img-equiposMedicos {
     width: 90%;
+}
+.divVerMas{
+    margin-top: -95px; 
+    text-align: center; 
+    background: white; 
+    padding-top: 25px; 
+    padding-bottom: 20px;
+}
+.coloresBotonM{
+    color:white !important;
+    background:rgb(48, 69, 131) !important;
 }
 /*fin de las clases de index*/
 
@@ -1817,7 +1898,7 @@ h4.post-title a {
 }
 
 .tam-icono {
-    max-width: 33%;
+    max-width: 35%;
 }
 
 .tam-icono-info {
@@ -1873,7 +1954,7 @@ h4.post-title a {
 
 .menuTipo ul li {
     margin-bottom: 7px;
-    width: auto;
+    width: min-content;
 }
 
 .menuTipo ul li a {
@@ -1884,7 +1965,7 @@ h4.post-title a {
     color: rgb(43, 163, 189);
 }
 
-.active {
+.activarSeleccion  a{
     border-bottom: 2px solid rgb(43, 163, 189);
 }
 
@@ -1970,6 +2051,9 @@ h4.post-title a {
 .cotizar-color {
     color: #4a4a4a;
 }
+.mas-productos{
+    font-size: 20px;
+}
 @media only screen and (max-width: 575px) {
 
     .product {
@@ -1983,6 +2067,17 @@ h4.post-title a {
     }
 }
 
+@media only screen and (max-width: 767px){
+    .menuTipo ul li {
+    width: auto;
+    }
+
+    .menuTipo{
+        margin-top: 63px;
+    }
+
+}
+
 /*fin de las clases de los productos*/
 
 /*inician clases del index*/
@@ -1990,9 +2085,7 @@ h4.post-title a {
 .serviciosClass{
     margin-bottom: 50px;
 }
-.menus-btns{
-    margin-top:180px;
-}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     #myVideo{
         width: 100%;
@@ -2046,12 +2139,6 @@ h4.post-title a {
     }
 }
 @media only screen and (max-width: 575px) {
-    .hero-area-catalogo {
-        display:block;  
-    }
-    .hero-area-catalogo::before {
-        display:block;  
-    }
     .serviciosClass{
         margin-bottom: 0px;
     }
@@ -2066,11 +2153,7 @@ h4.post-title a {
         text-align: center;
         margin-top: 275px;
     }
-    .liProduct {
-        margin: 2px;
-        width: 100%;
-        text-align: justify;
-    }
+    
     .feature-box-info {
         flex: 5;
         text-align: justify;
@@ -2081,6 +2164,19 @@ h4.post-title a {
     }
     .mt-medium{
         margin-top:20px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .hero-area-catalogo {
+        display:block;  
+    }
+    .hero-area-catalogo::before {
+        display:block;  
+    }
+    .liProduct {
+        margin: 2px;
+        width: 100%;
+        text-align: justify;
     }
 }
 /*fin de clases del index*/
@@ -2094,6 +2190,9 @@ h4.post-title a {
 }
 .pd-escribenos{
     padding-top: 90px;
+}
+.mostrarBRM{
+    display: none;
 }
 @media only screen and (max-width: 575px) {
 
@@ -2117,6 +2216,7 @@ h4.post-title a {
     }
     .tam-icono {
         max-width: 55%;  
+        padding-top: 2px;
     }
     .pd-escribenos{
         padding-top: 10px;
@@ -2130,6 +2230,17 @@ h4.post-title a {
     }
     .contact-address li .contact-address-icon {
         padding-right: 5px;
+    }
+    .mostrarBRM{
+        display: initial;
+    }
+    .liProduct {
+        margin: 2px;
+        width: 100%;
+        text-align: justify;
+    }
+    .topCollapse{
+        top:-200px !important;
     }
 }
 /*fin de las clases de las categorias*/
