@@ -37,7 +37,7 @@
                                     <div class="flex-row align-content-start pd-name-product">
                                         Baumanómetro WellchAllyn
                                     </div>
-                                    <br class="mostrarBRM">
+                                    <br class="mostrarBRM mostrarBRP">
                                 </a>
                                 <div class="categoria-camb">
                                     En <a href="">Medicina interna y general</a>
@@ -239,7 +239,7 @@
                                     <div class="flex-row align-content-start pd-name-product">
                                         Laringoscopios WelchAllyn
                                     </div>
-                                    <br class="mostrarBRM">
+                                    <br class="mostrarBRM mostrarBRP">
                                     <br class="mostrarBRM">
                                 </a>
                                 <div class="categoria-camb">
@@ -401,7 +401,7 @@
     <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
     <script>
         var ventana_ancho = $(window).width();
-        if (ventana_ancho < 767) {
+        if (ventana_ancho <= 767) {
             $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
         } else {
             $("#menuCategoriasMT").load("ajaxMenuCategorias.php");

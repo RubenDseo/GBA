@@ -102,6 +102,7 @@
     .seriviosBarraLateral {
         border-bottom: 2px solid #0d76a7;
         padding-right: 0px;
+        border-right: none;
     }
 }
 @media only screen and (max-width: 575px) {

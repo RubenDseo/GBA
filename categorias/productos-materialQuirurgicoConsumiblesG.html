@@ -25,8 +25,8 @@
                                 Material quirúrgico y consumibles
                             </h2>
                         </div>
-                        <!--Producto 1-->
-                        <div class="col-lg-4 col-md-6 col-sm-7 col-12 mb-4 consumibles filtroProduct" title="Instrumental quirúrgico">
+                        <!--Producto 1 collapse-->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 consumibles filtroProduct" title="Instrumental quirúrgico">
                             <a href="" data-toggle="dropdown">
                                 <img class="tamImagen"
                                     src="productos/SinMarca/intrumental/600x600/Instrumental-SM-2-600x600.png"
@@ -180,7 +180,7 @@
     <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
     <script>
         var ventana_ancho = $(window).width();
-        if (ventana_ancho < 767) {
+        if (ventana_ancho <= 767) {
             $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
         } else {
             $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
@@ -189,7 +189,7 @@
     <!--poner la clase activarSeleccion en el menu de la izquierda dependiendo el catalogo-->
     <script type="text/javascript">
 
-        if (ventana_ancho < 767) {
+        if (ventana_ancho <= 767) {
             //var lala = $('.productos-materialQuirurgicoConsumiblesG').addClass("activarSeleccion");
             console.log("hola");
         } else {
