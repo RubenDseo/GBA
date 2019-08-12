@@ -322,7 +322,9 @@
 	}
 	.carousel_container
 	{
-		right: 30px;
+		right: -15px;
+		top: 90%;
+		height: 40%;
 	}
 	.product_tag
 	{
