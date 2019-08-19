@@ -588,8 +588,8 @@ input::-webkit-input-placeholder {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px){
     .header-Monitoreo{
-        height: 433px !important;
-        margin-top: 0px !important;
+        height: 41px !important;
+        margin-top: -140px !important;
         margin-bottom: 0px !important;
     }
     .videoSignos {
@@ -1844,8 +1844,11 @@ h4.post-title a {
 }
 @media only screen and (min-width: 992px){
     .margenCatalogos{
-        margin-top:115px !important;
+        margin-top:15px !important;
     }  
+    .margenCatalogoMonitoreo{
+        margin-top:115px !important;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .max-wCatalogo {
@@ -1856,6 +1859,9 @@ h4.post-title a {
         padding: 0px;
     }
     .margenCatalogos{
+        margin-top:5px !important;
+    }
+    .margenCatalogoMonitoreo{
         margin-top:115px !important;
     }
     .tamLetra-electro{

@@ -190,7 +190,7 @@
 		font-size: 18px;
 	}
 	.contact-form, .contact-address {
-		padding: 20px;
+		padding: 20px !important;
 	}
 	.contact-address li .contact-address-info {
 		margin-left: 12px;

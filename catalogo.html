@@ -10,7 +10,7 @@
         content="categorías ventiladores mecánicos ventiladores de cuidados intensivos y de traslado alta tecnología monitoreo de pacientes seguridad paciente quirófano resultados de operación neonatología productos material quirúrgico y consumibles medicina interna y general prevenir y diagnosticar tomas murales necesidades del hospital CEYE esterilidad en quirófanos">
 
     <meta name="description"
-        content="Grupo Biomédico Azteca cuenta con productos de las sigs. categorías: ventiladores mecánicos, neonatología, monitoreo de pacientes, medicina interna y general...">
+        content="En Grupo Biomédico Azteca contamos con catálogo de las sigs. categorías: ventiladores mecánicos, neonatología, monitoreo de pacientes,medicina interna y general">
 
     <!--Meta de open graph-->
     <meta property="og:title" content="Catálogo | Grupo Biomédico Azteca">
@@ -20,6 +20,10 @@
 
     <title>Catálogo | Grupo Biomédico Azteca</title>
     <link rel="shortcut icon" href="img-GBA/GBALOGO.png" type="image/x-icon">
+
+    <link rel="canonical" href="https://www.grupobiomedicoazteca.com.mx/catalogo.html" />
+
+	<link rel="alternate" media="only screen and (max-width: 767px)"  href="https://www.grupobiomedicoazteca.com.mx/catalogo.html">
 
     <!-- Start of  Zendesk Widget script -->
     <script id="ze-snippet"
@@ -126,7 +130,7 @@
                                 <p class="card-text letra-p">Contamos con ventiladores de cuidados intensivos y de
                                     traslado de
                                     alta tecnología.</p>
-                                <a id="productos-ventiladoresMecanicosG" href=""
+                                <a id="productos-ventiladoresMecanicosG" href="categorias/productos-ventiladoresMecanicosG.html"
                                     class="appao-btn appao-btn2 pd-producto">Productos</a>
                             </div>
                         </div>
@@ -145,7 +149,7 @@
                             <div class="card-body">
                                 <h3 class="card-title titulo-catalogo">Monitoreo de pacientes</h3>
                                 <p class="card-text letra-p">Para mayor seguridad para el paciente.</p>
-                                <a id="productos-monitoreoDePacientesG" href=""
+                                <a id="productos-monitoreoDePacientesG" href="categorias/productos-monitoreoDePacientesG.html"
                                     class="appao-btn appao-btn2 pd-producto">Productos</a>
                             </div>
                         </div>
@@ -164,7 +168,7 @@
                                 <p class="card-text letra-p">Para mejorar los resultados de cada operación y la
                                     seguridad del
                                     paciente.</p>
-                                <a id="productos-quirofanoG" href="productos-quirofano.html"
+                                <a id="productos-quirofanoG" href="categorias/productos-quirofanoG.html"
                                     class="appao-btn appao-btn2 pd-producto">Próximamente</a>
                             </div>
                         </div>
@@ -182,7 +186,7 @@
                             <div class="card-body">
                                 <h3 class="card-title titulo-catalogo">Neonatología</h3>
                                 <p class="card-text letra-p">Línea de productos con soluciones integrales.</p>
-                                <a id="productos-neonatologiaG" href="productos-neonatologia.html"
+                                <a id="productos-neonatologiaG" href="categorias/productos-neonatologiaG.html"
                                     class="appao-btn appao-btn2 pd-producto">Productos</a>
                             </div>
                         </div>
@@ -202,7 +206,7 @@
                                 <p class="card-text letra-p">Gran variedad de material médico para que se realicen su
                                     funciones
                                     adecuadamente.</p>
-                                <a id="productos-materialQuirurgicoConsumiblesG" href=""
+                                <a id="productos-materialQuirurgicoConsumiblesG" href="categorias/productos-materialQuirurgicoConsumiblesG.html"
                                     class="appao-btn appao-btn2 pd-producto">Productos</a>
                             </div>
                         </div>
@@ -222,7 +226,7 @@
                                 <p class="card-text letra-p">Productos para prevenir y diagnosticar enfermedades
                                     mejorando la
                                     atención del paciente. </p>
-                                <a id="productos-medicinaInternaGeneralG" href=""
+                                <a id="productos-medicinaInternaGeneralG" href="categorias/productos-medicinaInternaGeneralG.html"
                                     class="appao-btn appao-btn2 pd-producto">Productos</a>
                             </div>
                         </div>
@@ -241,7 +245,7 @@
                                 <h3 class="card-title titulo-catalogo">Tomas murales</h3>
                                 <p class="card-text letra-p">Productos que cubren todas las necesidades de su hospital.
                                 </p>
-                                <a id="productos-tomasMuralesG" href=""
+                                <a id="productos-tomasMuralesG" href="categorias/productos-tomasMuralesG.html"
                                     class="appao-btn appao-btn2 pd-producto">Próximamente</a>
                             </div>
                         </div>
@@ -262,7 +266,7 @@
                                 <p class="card-text letra-p">Prodcutos que aseguran la esterilidad del producto que se
                                     usa en
                                     quirófanos.</p>
-                                <a id="productos-CEYEG" href=""
+                                <a id="productos-CEYEG" href="categorias/productos-CEYEG.html"
                                     class="appao-btn appao-btn2 pd-producto">Próximamente</a>
                             </div>
                         </div>
@@ -342,6 +346,9 @@
         $(".head").load("ajaxHeader.php");
     </script>
 
+
+<!-- con esto ocultaba el contenido de la pag catalogo.html y mostraba la categoria a la que se le diera click-->
+<!-- 
     <script>
         $("a[id^=productos-]").click(function (e) {
             e.preventDefault();//para quitar lo del # del href
@@ -353,7 +360,7 @@
 
             $("#productosIDS").load("categorias/" + idDiv + ".php");
         });
-    </script>
+    </script>-->
 
     <script type="application/ld+json">
         {

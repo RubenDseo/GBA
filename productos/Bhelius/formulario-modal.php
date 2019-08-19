@@ -14,7 +14,7 @@
   
   $cabecera= "From: ".$nombre. "< ".$email. " >\r\n";
 
-  if(mail('adriana.galvan@dseo-misitioweb.com.mx',$asunto, $contenido, $cabecera)){
+  if(mail('ventas@grupobiomedicoazteca.com.mx',$asunto, $contenido, $cabecera)){
     echo "¡Gracias por tu mensaje ".$nombre."! Nos pondremos en contacto contigo  ";
 
   }else{
