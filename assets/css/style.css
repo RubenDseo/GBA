@@ -461,13 +461,13 @@ input::-webkit-input-placeholder {
 .hero-area {
 	z-index: 1;
 	position: relative;
-    background-image: url(../imgB/biomedic-GBA.jpg);
+    background: url(../../img-GBA/quirofano2.jpg);
     background-repeat: no-repeat;
     background-position: center;
 	background-attachment: fixed;
     background-size: cover;
     overflow: hidden;
-    opacity: 0.9;    
+  
 }
 #myVideo{
     width: 100%;
