@@ -5,26 +5,23 @@
     <title>Baumanómetro de muñeca Beurer | Grupo Biomédico Azteca</title>
     <link rel="shortcut icon" href="../../img-GBA/GBALOGO.png" type="image/x-icon">
 
-    <link rel="canonical" href="https://www.grupobiomedicoazteca.com.mx/productos/Beurer/beurer-baumanometro-negro.html" />
+    <link rel="canonical"
+        href="https://www.grupobiomedicoazteca.com.mx/productos/Beurer/beurer-baumanometro-negro.html" />
 
-	<link rel="alternate" media="only screen and (max-width: 767px)"  href="https://www.grupobiomedicoazteca.com.mx/productos/Beurer/beurer-baumanometro-negro.html">
+    <link rel="alternate" media="only screen and (max-width: 767px)"
+        href="https://www.grupobiomedicoazteca.com.mx/productos/Beurer/beurer-baumanometro-negro.html">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="keywords" content="GBA grupo biomedico azteca ingeniería biomédica Servicios Mantenimiento preventivo/ correctivo por evento Venta de equipo médico Consultoría y capacitación aspiradores resucitadores 
-    equipo médico medicina interna y general BC 32 Monitor de Presión  Baumanómetro de muñeca
+    equipo médico medicina general BC 32 Monitor de Presión  Baumanómetro de muñeca
     Medición Beurer presión sanguínea y pulso en la muñeca Pantalla clara indicador Clasificación OMS / detección de arritmias valores de medición almacenados 
     monito de presión Laringoscopios WelchAllyn Incubadora de traslado SAPS Ventilador mecánico de transporte Oxymag ">
 
     <meta name="description"
         content="En Grupo Biomédico Azteca contamos con baumanómetro de muñeca Beurer con medición de la presión sanguínea y de pulsaciones automática, promedio de todos los valores almacenados">
-    
-        <!-- Start of  Zendesk Widget script -->
-    <script id="ze-snippet"
-        src="https://static.zdassets.com/ekr/snippet.js?key=ad712fca-8b1b-437d-b3ef-6764fa25fc58"> </script>
-    <!-- End of  Zendesk Widget script -->
 
     <!--Meta de open graph-->
     <meta property="og:title" content="Baumanómetro de muñeca Beurer | Grupo Biomédico Azteca">
@@ -58,15 +55,15 @@
 
     <!--CAPTCHA-->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145588516-2"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145588516-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-	gtag('config', 'UA-145588516-2');
-	</script>
+        gtag('config', 'UA-145588516-2');
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".header" data-offset="50">
@@ -97,6 +94,9 @@
         <div class="row">
             <aside
                 class="barraLateral col-lg-3 col-md-3 col-sm-12 col-12 border-right order-lg-1 order-md-1 order-sm-2 order-2 ">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-5" id="menuCategoriasMT"></div>
+
                 <div class="text-center pb-5 ">
                     <h2 class="mas-productos">Más productos</h2>
                 </div>
@@ -211,7 +211,7 @@
                                                 BC 32 Monitor de Presión
                                             </h3>
                                         </div>
-                                        <div class="product_category">En <a href="">Medicina interna y general</a></div>
+                                        <div class="product_category">En <a href="">Medicina general</a></div>
                                         <div
                                             class="product_rating_container d-flex flex-row align-items-center justify-content-start">
                                             <div class="rating_r rating_r_4 product_rating">
@@ -437,7 +437,13 @@
         $(".head").load("../ajaxHeader.php");
         $("#modalSection").load("ajaxModalCotiza.php");
     </script>
-
+    <!-- Integracion de chat desde Bitrix-->
+    <script>
+        (function (w, d, u) {
+            var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
+            var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn.bitrix24.es/b11567145/crm/site_button/loader_2_2dcftr.js');
+    </script>
     <script>
         $("#cotizar").click(function () {
             $('#exampleModal').modal('show');
@@ -449,6 +455,15 @@
                 $("#subjectModal1").attr("value", "Beurer baumanóometro de muñeca BC32");
             }, 1000);
         });
+    </script>
+    <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
+    <script>
+        var ventana_ancho = $(window).width();
+        if (ventana_ancho <= 767) {
+            $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
+        } else {
+            $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
+        }
     </script>
     <script type="application/ld+json">
         {

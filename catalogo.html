@@ -25,11 +25,6 @@
 
 	<link rel="alternate" media="only screen and (max-width: 767px)"  href="https://www.grupobiomedicoazteca.com.mx/catalogo.html">
 
-    <!-- Start of  Zendesk Widget script -->
-    <script id="ze-snippet"
-        src="https://static.zdassets.com/ekr/snippet.js?key=ad712fca-8b1b-437d-b3ef-6764fa25fc58"> </script>
-    <!-- End of  Zendesk Widget script -->
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
 
@@ -288,7 +283,14 @@
         $(".head").load("ajaxHeader.php");
     </script>
 
-
+	<!-- Integracion de chat desde Bitrix-->
+	<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.es/b11567145/crm/site_button/loader_2_2dcftr.js');
+    </script>
+    
 <!-- con esto ocultaba el contenido de la pag catalogo.html y mostraba la categoria a la que se le diera click-->
 <!-- 
     <script>

@@ -19,11 +19,6 @@
 
     <meta name="description"
         content="En Grupo Biomédico Azteca contamos con cuna de calor radiante Saps con calefactor radiante, luces de examinación y fototerapia integrados, puertos de dispositivos">
-
-    <!-- Start of  Zendesk Widget script -->
-    <script id="ze-snippet"
-        src="https://static.zdassets.com/ekr/snippet.js?key=ad712fca-8b1b-437d-b3ef-6764fa25fc58"> </script>
-    <!-- End of  Zendesk Widget script -->
     
     <!--Meta de open graph-->
     <meta property="og:title" content="Cuna de calor radiante SAPS | Grupo Biomédico Azteca">
@@ -97,6 +92,9 @@
         <div class="row">
             <aside
                 class="barraLateral col-lg-3 col-md-3 col-sm-12 col-12 border-right order-lg-1 order-md-1 order-sm-2 order-2">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-5" id="menuCategoriasMT"></div>
+
                 <div class="text-center pb-5 ">
                     <h2 class="mas-productos">Más productos</h2>
                 </div>
@@ -445,7 +443,13 @@
         $(".head").load("../ajaxHeader.php");
         $("#modalSection").load("ajaxModalCotiza.php");
     </script>
-
+	<!-- Integracion de chat desde Bitrix-->
+	<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.es/b11567145/crm/site_button/loader_2_2dcftr.js');
+	</script>
     <script>
         $("#cotizar").click(function () {
             $('#exampleModal').modal('show');
@@ -457,6 +461,15 @@
                 $("#subjectModal1").attr("value", "Cuna de calor radiante Saps");
             }, 1000);
         });
+    </script>
+    <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
+    <script>
+        var ventana_ancho = $(window).width();
+        if (ventana_ancho <= 767) {
+            $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
+        } else {
+            $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
+        }
     </script>
     <script type="application/ld+json">
     {

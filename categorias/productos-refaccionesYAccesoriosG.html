@@ -25,9 +25,9 @@
 
 	<link rel="alternate" media="only screen and (max-width: 767px)"  href="https://www.grupobiomedicoazteca.com.mx/categorias/productos-refaccionesYAccesoriosG.html">
 
-    <!-- Start of  Zendesk Widget script -->
+    <!-- Start of  Zendesk Widget script 
     <script id="ze-snippet"
-        src="https://static.zdassets.com/ekr/snippet.js?key=ad712fca-8b1b-437d-b3ef-6764fa25fc58"> </script>
+        src="https://static.zdassets.com/ekr/snippet.js?key=ad712fca-8b1b-437d-b3ef-6764fa25fc58"> </script>-->
     <!-- End of  Zendesk Widget script -->
 
     <!-- Bootstrap CSS -->
@@ -93,7 +93,7 @@
     <div class="col-lg-12 margenCatalogos">
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-12 col-12 mt-5">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-12" id="menuCategoriasMT"></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12" id="menuRefaccionesYAccesorios"></div>
             </div>
 
             <div class="col-lg-9 col-md-8 col-sm-12 col-12 mt-5">
@@ -181,6 +181,15 @@
         $(".foot").load("ajaxFooter.php");
         $(".head").load("ajaxHeader.php");
     </script>
+    
+    <!-- Integracion de chat desde Bitrix-->
+	<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.es/b11567145/crm/site_button/loader_2_2dcftr.js');
+    </script>
+    
     <script>
         var idDiv;
         var name;
@@ -216,9 +225,9 @@
     <script>
         var ventana_ancho = $(window).width();
         if(ventana_ancho<=767){
-            $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
+            $("#menuRefaccionesYAccesorios").load("ajaxMenuRefaccionesYAccesoriosPq.php");
         }else{
-            $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
+            $("#menuRefaccionesYAccesorios").load("ajaxMenuRefaccionesYAccesorios.php");
         }
     </script>
 </body>

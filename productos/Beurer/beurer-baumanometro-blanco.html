@@ -5,9 +5,11 @@
     <title>Monitor de presión BC 30 Beurer | Grupo Biomédico Azteca</title>
     <link rel="shortcut icon" href="../../img-GBA/GBALOGO.png" type="image/x-icon">
 
-    <link rel="canonical" href="https://www.grupobiomedicoazteca.com.mx/productos/Beurer/beurer-baumanometro-blanco.html" />
+    <link rel="canonical"
+        href="https://www.grupobiomedicoazteca.com.mx/productos/Beurer/beurer-baumanometro-blanco.html" />
 
-	<link rel="alternate" media="only screen and (max-width: 767px)"  href="https://www.grupobiomedicoazteca.com.mx/productos/Beurer/beurer-baumanometro-blanco.html">
+    <link rel="alternate" media="only screen and (max-width: 767px)"
+        href="https://www.grupobiomedicoazteca.com.mx/productos/Beurer/beurer-baumanometro-blanco.html">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,16 +17,11 @@
 
     <meta name="keywords"
         content="GBA grupo biomedico azteca ingeniería biomédica Servicios Mantenimiento preventivo/ correctivo por evento Venta de equipo médico Consultoría y capacitación aspiradores resucitadores 
-    equipo médico medicina interna y general BC 30 Monitor de Presión Medición Beurer presión sanguínea y pulso en la muñeca Pantalla LCD indicador WHO/OMS* Detección de arritmia automático Gráficos mediciones Baumanómetro de muñeca Laringoscopios WelchAllyn Lámpara de fototerapia Bhelius Electrocardiógrafo LE-12CH LIFEE">
+    equipo médico medicina general BC 30 Monitor de Presión Medición Beurer presión sanguínea y pulso en la muñeca Pantalla LCD indicador WHO/OMS* Detección de arritmia automático Gráficos mediciones Baumanómetro de muñeca Laringoscopios WelchAllyn Lámpara de fototerapia Bhelius Electrocardiógrafo LE-12CH LIFEE">
 
     <meta name="description"
         content="En Grupo Biomédico Azteca contamos con monitor de presión BC 30 Beurer con pantalla LCD en donde almacena el promedio de los últimos 3 valores medidos guardados">
 
-    <!-- Start of  Zendesk Widget script -->
-    <script id="ze-snippet"
-        src="https://static.zdassets.com/ekr/snippet.js?key=ad712fca-8b1b-437d-b3ef-6764fa25fc58"> </script>
-    <!-- End of  Zendesk Widget script -->
-    
     <!--Meta de open graph-->
     <meta property="og:title" content="Monitor de presión Beurer | Grupo Biomédico Azteca">
     <meta property="og:type" content="website">
@@ -57,15 +54,15 @@
 
     <!--CAPTCHA-->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145588516-2"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145588516-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-	gtag('config', 'UA-145588516-2');
-	</script>
+        gtag('config', 'UA-145588516-2');
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".header" data-offset="50">
@@ -96,6 +93,9 @@
         <div class="row">
             <aside
                 class="barraLateral col-lg-3 col-md-3 col-sm-12 col-12 border-right order-lg-1 order-md-1 order-sm-2 order-2 ">
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-5" id="menuCategoriasMT"></div>
+
                 <div class="text-center pb-5 ">
                     <h2 class="mas-productos">Más productos</h2>
                 </div>
@@ -211,7 +211,7 @@
                                                 BC 30 Monitor de Presión
                                             </h3>
                                         </div>
-                                        <div class="product_category">En <a href="">Medicina interna y general</a></div>
+                                        <div class="product_category">En <a href="">Medicina general</a></div>
                                         <div
                                             class="product_rating_container d-flex flex-row align-items-center justify-content-start">
                                             <div class="rating_r rating_r_4 product_rating">
@@ -456,6 +456,14 @@
         $("#modalSection").load("ajaxModalCotiza.php");
     </script>
 
+    <!-- Integracion de chat desde Bitrix-->
+    <script>
+        (function (w, d, u) {
+            var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
+            var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn.bitrix24.es/b11567145/crm/site_button/loader_2_2dcftr.js');
+    </script>
+
     <script>
         $("#cotizar").click(function () {
             $('#exampleModal').modal('show');
@@ -467,6 +475,15 @@
                 $("#subjectModal1").attr("value", "Beurer Monitor de presión BC30");
             }, 1000);
         });
+    </script>
+    <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
+    <script>
+        var ventana_ancho = $(window).width();
+        if (ventana_ancho <= 767) {
+            $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
+        } else {
+            $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
+        }
     </script>
     <script type="application/ld+json">
         {

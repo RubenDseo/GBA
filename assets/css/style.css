@@ -2004,7 +2004,7 @@ h4.post-title a {
 .menuTipo ul {
     visibility: initial;
     opacity: 1;
-    width: 85%;
+    width: 100%;
     text-align: start;
     background: #f6f8fa;
     padding-left: 15px;
@@ -2021,7 +2021,7 @@ h4.post-title a {
 
 .menuTipo ul li {
     margin-bottom: 7px;
-    width: min-content;
+    width: auto;
 }
 
 .menuTipo ul li a {
@@ -2132,9 +2132,12 @@ h4.post-title a {
     .infoProduct {
         width: 350px;
     }
+    .menuTipo{
+        margin-top: 20px;
+    }
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (min-width: 576px) and (max-width: 767px){
     .menuTipo ul li {
     width: auto;
     }
