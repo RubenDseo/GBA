@@ -18,14 +18,29 @@
 						<p class="form-message"></p>
 
 						<script id="bx24_form_inline" data-skip-moving="true">
-							(function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
-									(w[b].forms=w[b].forms||[]).push(arguments[0])};
-									if(w[b]['forms']) return;
-									var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
-									var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-							})(window,document,'https://b24-qxqiqt.bitrix24.es/bitrix/js/crm/form_loader.js','b24form');
-						
-							b24form({"id":"2","lang":"la","sec":"9bxx5p","type":"inline"});
+							$(document).ready(function () {
+								//aquí el código que deseas ejecutar
+								(function (w, d, u, b) {
+									w['Bitrix24FormObject'] = b;
+									w[b] = w[b] || function () {
+										arguments[0].ref = u;
+										(w[b].forms = w[b].forms || []).push(arguments[0])
+									};
+									if (w[b]['forms']) return;
+									var s = d.createElement('script');
+									s.async = 1;
+									s.src = u + '?' + (1 * new Date());
+									var h = d.getElementsByTagName('script')[0];
+									h.parentNode.insertBefore(s, h);
+								})(window, document, 'https://b24-qxqiqt.bitrix24.es/bitrix/js/crm/form_loader.js', 'b24form');
+
+								b24form({
+									"id": "2",
+									"lang": "la",
+									"sec": "9bxx5p",
+									"type": "inline"
+								});
+							});
 						</script>
 					</div>
 
@@ -40,17 +55,17 @@
 									<i class="fab fa-whatsapp" aria-hidden="true"></i>
 								</div>
 								<div class="contact-address-info">
-									<span>WhatsApp: </span><a href="https://wa.me/15554309669">5554309669</a>
+									<a href="https://wa.me/5215554309669"><span>WhatsApp: </span>5554309669</a>
 								</div>
 							</li>
 							<li>
-									<div class="contact-address-icon">
-										<i class="fa fa-phone" aria-hidden="true"></i>
-									</div>
-									<div class="contact-address-info">
-										<span>Oficinas: </span> <a href="callto:5554309669">5555942694</a>
-									</div>
-								</li>
+								<div class="contact-address-icon">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</div>
+								<div class="contact-address-info">
+									<a href="callto:5554309669"><span>Oficinas: </span> 5555942694</a>
+								</div>
+							</li>
 							<li>
 								<div class="contact-address-icon">
 									<i class="icofont icofont-envelope"></i>
@@ -90,8 +105,10 @@
 						<ul>
 							<li><a href="https://www.facebook.com/GrupoBiomedicoAzteca" target="_blank"><i
 										class="icofont icofont-social-facebook"></i></a></li>
-							<li><a href="https://twitter.com/AztecaBiomedico" target="_blank"><i class="icofont icofont-social-twitter"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/grupo-biom%C3%A9dico-azteca-139680190/" target="_blank"><i class="icofont icofont-brand-linkedin"></i></a></li>
+							<li><a href="https://twitter.com/AztecaBiomedico" target="_blank"><i
+										class="icofont icofont-social-twitter"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/grupo-biom%C3%A9dico-azteca-139680190/"
+									target="_blank"><i class="icofont icofont-brand-linkedin"></i></a></li>
 						</ul>
 						<p>&copy;
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

@@ -22,10 +22,10 @@
 
 	<link rel="canonical" href="https://www.grupobiomedicoazteca.com.mx/" />
 
-	<link rel="alternate" media="only screen and (max-width: 767px)"  href="https://www.grupobiomedicoazteca.com.mx/">
+	<link rel="alternate" media="only screen and (max-width: 767px)" href="https://www.grupobiomedicoazteca.com.mx/">
 
 	<!--Esquema Dublin Core-->
-	<link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+	<!-- <link rel="schema.dcterms" href="http://purl.org/dc/terms/"> -->
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
 	<!-- Slick nav CSS -->
@@ -62,11 +62,14 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145588516-2"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
 
-	gtag('config', 'UA-145588516-2');
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-145588516-2');
 	</script>
 
 </head>
@@ -221,8 +224,8 @@
 						<!-- Tab Nav -->
 						<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
 							aria-orientation="vertical">
-							<a class="nav-link tab-vertical__nav-link " id="v-pills-features-tab"
-								data-toggle="pill" href="#v-pills-features" role="tab" aria-controls="v-pills-features"
+							<a class="nav-link tab-vertical__nav-link " id="v-pills-features-tab" data-toggle="pill"
+								href="#v-pills-features" role="tab" aria-controls="v-pills-features"
 								aria-selected="true">
 								1. Mantenimiento
 							</a>
@@ -236,8 +239,9 @@
 								aria-selected="false">
 								3. Capacitación
 							</a>
-							<a class="nav-link tab-vertical__nav-link active" id="v-pills-company-tab" data-toggle="pill"
-								href="#venta" role="tab" aria-controls="v-pills-company" aria-selected="false">
+							<a class="nav-link tab-vertical__nav-link active" id="v-pills-company-tab"
+								data-toggle="pill" href="#venta" role="tab" aria-controls="v-pills-company"
+								aria-selected="false">
 								4. Venta
 							</a>
 						</div>
@@ -255,8 +259,9 @@
 									<!-- Icon Block -->
 									<div class="pr-lg-4">
 										<div style="width: 250px; height: 250px;">
-											<img class="max-width-9 mb-2 w-100"
-												src="img-GBA/mantenimiento-y-reparacion.png" alt="Image Description">
+											<img class="max-width-9 mb-2 w-100 lazy" src="img-GBA/login-gif-11.gif"
+												data-original="img-GBA\webP\mantenimiento-y-reparacion.webp"
+												alt="Image Description">
 										</div>
 										<h5>Mantenimiento correctivo</h5>
 										<br>
@@ -303,7 +308,8 @@
 							aria-labelledby="v-pills-key-benefits-tab" style="border-bottom: none;">
 							<div class="row align-items-lg-center">
 								<div class="col-lg-5 col-md-6 col-sm-12 col-12 mb-7 mb-7 mb-lg-0">
-									<img class="img-fluid w-100" src="img-GBA/rigel-288-pr.png" alt="Image Description">
+									<img class="img-fluid w-100 lazy" src="img-GBA/login-gif-11.gif"
+										data-original="img-GBA\webP\rigel-288-pr.webp" alt="Image Description">
 								</div>
 
 								<div class="col-lg-7 col-md-6 col-sm-12 col-12">
@@ -331,7 +337,8 @@
 							aria-labelledby="v-pills-company-tab" style="border-bottom: none;">
 							<div class="row align-items-lg-center">
 								<div class="col-lg-5 col-md-6 col-sm-12 col-12 mb-7 mb-7 mb-lg-0">
-									<img class="img-fluid tam-imagenSer" style="width: 80%" src="img-GBA/Biomedico.png"
+									<img class="img-fluid tam-imagenSer lazy" style="width: 80%"
+										src="img-GBA/login-gif-11.gif" data-original="img-GBA\webP\Biomedico.webp"
 										alt="Image Description">
 								</div>
 
@@ -376,7 +383,7 @@
 										</div>
 									</a>
 								</div>
-								
+
 								<div id="divMaterialQuirurgico" class="col-lg-6 col-md-6 col-sm-6 col-12 mb-7 mb-sm-9"
 									style="display: block">
 									<a href="categorias/productos-materialQuirurgicoConsumiblesG.html">
@@ -411,8 +418,8 @@
 									</a>
 								</div>
 
-								<div id="divRefaccionesAccesorios" class="col-lg-6 col-md-6 col-sm-6 col-12 mb-7 mb-sm-9"
-									style="display: block">
+								<div id="divRefaccionesAccesorios"
+									class="col-lg-6 col-md-6 col-sm-6 col-12 mb-7 mb-sm-9" style="display: block">
 									<a href="categorias/productos-refaccionesYAccesoriosG.html">
 										<div class="blogBoxI2"
 											style="background-image:url(img-GBA/Img-GBA.jpg); margin: 0 auto; margin-bottom: 30px">
@@ -428,7 +435,7 @@
 									</a>
 								</div>
 
-								
+
 
 							</div>
 						</div>
@@ -480,14 +487,16 @@
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-12 order-lg-2 order-md-2 order-sm-2 order-2">
 					<div class="single-showcase-box">
-						<img class="img-biomdico" src="img-GBA/Biomedico.png" alt="showcase">
+						<img class="img-biomdico lazy" src="img-GBA/login-gif-11.gif"
+							data-original="img-GBA\webP\Biomedico.webp" alt="showcase">
 					</div>
 				</div>
 			</div>
 			<div class="row flexbox-center">
 				<div class="col-lg-6 col-md-6 col-sm-12 col-12 order-lg-1 order-md-1 order-sm-2 order-2">
 					<div class="single-showcase-box">
-						<img class="img-equiposMedicos" src="img-GBA/Equipo-Medico-GBA.png" alt="showcase">
+						<img class="img-equiposMedicos lazy" src="img-GBA/login-gif-11.gif"
+							data-original="img-GBA\webP\Equipo-Medico-GBA.webp" alt="showcase">
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-12 order-lg-2 order-md-2 order-sm-1 order-1">
@@ -530,7 +539,8 @@
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-12 order-lg-2 order-md-2 order-sm-2 order-2">
 					<div class="single-showcase-box">
-						<img class="img-Calibracion" src="img-GBA\Citrex-calibracion.png" alt="showcase">
+						<img class="img-Calibracion lazy" src="img-GBA/login-gif-11.gif"
+							data-original="img-GBA\webP\Citrex-calibracion.webp" alt="showcase">
 					</div>
 				</div>
 			</div>
@@ -551,20 +561,35 @@
 				</div>
 
 				<div class="modal-body">
-							
-					<div id="bx24_form_inline_second"></div> 
-					
-					<script id="bx24_form_modal" data-skip-moving="true">
-							(function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
-									(w[b].forms=w[b].forms||[]).push(arguments[0])};
-									if(w[b]['forms']) return;
-									var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
-									var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-							})(window,document,'https://b24-qxqiqt.bitrix24.es/bitrix/js/crm/form_loader.js','b24form');
 
-							b24form({"id":"4","lang":"la","sec":"t9ygrz","type":"inline", "node": document.getElementById("bx24_form_inline_second")});
-					</script>						
-						
+					<div id="bx24_form_inline_second"></div>
+
+					<script id="bx24_form_modal" data-skip-moving="true">
+						$(document).ready(function () {
+							(function (w, d, u, b) {
+								w['Bitrix24FormObject'] = b;
+								w[b] = w[b] || function () {
+									arguments[0].ref = u;
+									(w[b].forms = w[b].forms || []).push(arguments[0])
+								};
+								if (w[b]['forms']) return;
+								var s = d.createElement('script');
+								s.async = 1;
+								s.src = u + '?' + (1 * new Date());
+								var h = d.getElementsByTagName('script')[0];
+								h.parentNode.insertBefore(s, h);
+							})(window, document, 'https://b24-qxqiqt.bitrix24.es/bitrix/js/crm/form_loader.js', 'b24form');
+
+							b24form({
+								"id": "4",
+								"lang": "la",
+								"sec": "t9ygrz",
+								"type": "inline",
+								"node": document.getElementById("bx24_form_inline_second")
+							});
+						});
+					</script>
+
 					<!-- <form id="formularioModal">
 						<input id="nameModal1" type="text" name="nameModal1" placeholder="Nombre" required>
 						<input id="emailModal1" type="email" name="emailModal1" placeholder="Email" required>
@@ -669,8 +694,8 @@
 	<!-- testimonial section end -->
 
 	<video autoplay muted loop black id="myVideo">
-		<source src="img-GBA/quirofanovid.mp4" type="video/mp4">
-		Your browser does not support HTML5 video.
+		<data-src src="img-GBA/quirofanovid.mp4" type="video/mp4"></data-src>
+
 	</video>
 	<!-- counter section start -->
 	<section class="counter-area">
@@ -727,27 +752,34 @@
 				<div class="col-lg-12 col-md-12 col-sm-12 col-12">
 					<div class="screenshot-wrap">
 						<div class="single-screenshot">
-							<img src="productos/Bhelius/600x600/Cuna-Bhelius-600x600.png" alt="Cuna Bhelius" />
+							<img class="lazy" src="img-GBA/login-gif-11.gif"
+								data-original="productos\Bhelius\600x600\Cuna-Bhelius-600x600.webp"
+								alt="Cuna Bhelius" />
 						</div>
 						<div class="single-screenshot">
-							<img src="productos/SinMarca/intrumental/600x600/Instrumental-SM-2-600x600.png"
+							<img class="lazy" src="img-GBA/login-gif-11.gif"
+								data-original="productos/SinMarca/intrumental/600x600/Instrumental-SM-2-600x600.webp"
 								alt="Intrumental quirúrgico" />
 						</div>
 						<div class="single-screenshot">
-							<img src="productos/LifeeMedical/6x6/monitorplus-lifee-1-600.png"
+							<img class="lazy" src="img-GBA/login-gif-11.gif"
+								data-original="productos\LifeeMedical\3x3\monitoriM70-lifee-1-300.webp"
 								alt="Monitor de signos vitales LMPLUS-12 LIFEE" />
 
 						</div>
 						<div class="single-screenshot">
-							<img src="productos/Oxymag/6x6/ventiladordetransporte-oximag-6-600.png" alt="Ventilador de
+							<img class="lazy" src="img-GBA/login-gif-11.gif"
+								data-original="productos\Oxymag\3x3\ventiladordetransporte-oximag-1-300.webp" alt="Ventilador de
 							 transporte" />
 						</div>
 						<div class="single-screenshot">
-							<img src="productos/Bhelius/600x600/LamparaFoto-Bhelius-600x600.png"
+							<img class="lazy" src="img-GBA/login-gif-11.gif"
+								data-original="productos/Bhelius/600x600/LamparaFoto-Bhelius-600x600.webp"
 								alt="Lámpara de fototerapia Bhelius" />
 						</div>
 						<div class="single-screenshot">
-							<img src="productos/WellchAllyn/EstucheDeDiagnostico/600x600/EstucheDiagnostico-welchAlyn-1-600x600.png"
+							<img class="lazy" src="img-GBA/login-gif-11.gif"
+								data-original="productos/WellchAllyn/EstucheDeDiagnostico/600x600/EstucheDiagnostico-welchAlyn-1-600x600.webp"
 								alt="Estuche de diagnostico WellchAllyn" />
 						</div>
 					</div>
@@ -779,6 +811,7 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<!-- Bootstrap JS -->
 	<script src="assets/js/bootstrap.min.js"></script>
+
 	<!-- Slick nav JS -->
 	<script src="assets/js/jquery.slicknav.min.js"></script>
 	<!-- Slick JS -->
@@ -808,6 +841,27 @@
 	<!-- main JS -->
 	<script src="assets/js/main.js"></script>
 
+	<!-- Lazy load JS -->
+	<script src="js/jquery.lazyload.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js">
+	</script>
+
+	<script>
+		$(function () {
+			$("img").lazyload({
+				effect: "fadeIn",
+				plecheholder: "img-GBA/login-gif-11.gif",
+				threshold: 200
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		jQuery(function ($) {
+			$("video").lazy();
+		});
+	</script>
+
 	<script>
 		$(".foot").load("ajaxFooter.php");
 		$(".head").load("ajaxHeader.php");
@@ -815,24 +869,29 @@
 
 	<!-- Integracion de chat desde Bitrix-->
 	<script>
-        (function(w,d,u){
-                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://cdn.bitrix24.es/b11567145/crm/site_button/loader_2_2dcftr.js');
+		$(document).ready(function () {
+			(function (w, d, u) {
+				var s = d.createElement('script');
+				s.async = true;
+				s.src = u + '?' + (Date.now() / 60000 | 0);
+				var h = d.getElementsByTagName('script')[0];
+				h.parentNode.insertBefore(s, h);
+			})(window, document, 'https://cdn.bitrix24.es/b11567145/crm/site_button/loader_2_2dcftr.js');
+		});
 	</script>
-	
+
 
 	<script type="application/ld+json">
 		{
-		  "@context": "https://schema.org",
-		  "@type": "Organization",
-		  "url": "https://grupobiomedicoazteca.com.mx/",
-		  "logo": "https://www.grupobiomedicoazteca.com.mx/img-GBA/logogba-s.png",
-		  "contactPoint": [{
-		    "@type": "ContactPoint",
-		    "telephone": "+44-5523370134",
-		    "contactType": "customer service"
-		  }]
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"url": "https://grupobiomedicoazteca.com.mx/",
+			"logo": "https://www.grupobiomedicoazteca.com.mx/img-GBA/logogba-s.png",
+			"contactPoint": [{
+				"@type": "ContactPoint",
+				"telephone": "+44-5523370134",
+				"contactType": "customer service"
+			}]
 		}
 	</script>
 </body>

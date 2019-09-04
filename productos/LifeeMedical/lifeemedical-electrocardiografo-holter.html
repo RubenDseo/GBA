@@ -540,6 +540,27 @@
     <script src="../../plugins/flexslider/jquery.flexslider-min.js"></script>
     <script src="../../js/product.js"></script>
 
+    <!-- Lazy load JS -->
+	<script src="../../js/jquery.lazyload.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script>
+
+	<script>
+		  $(function(){
+			$("img").lazyload({
+				effect : "fadeIn",
+				plecheholder: "img-GBA/login-gif-11.gif",
+				threshold: 200
+			});	
+		  });
+	</script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$("video").lazy();
+		});
+		</script>
+
+
     <script>
         $(".foot").load("ajaxFooter.php");
         $(".head").load("../ajaxHeader.php");
@@ -557,13 +578,7 @@
             $('#exampleModal').modal('show');
         });
     </script>
-    <script>
-        $(document).ready(function () {
-            setTimeout(function () {
-                $("#subjectModal1").attr("value", "Electrocardiógrafo Holter LIFEE");
-            }, 1000);
-        });
-    </script>
+    
     <script>
         $("#IDLeermas").click(function (e) {
             e.preventDefault();

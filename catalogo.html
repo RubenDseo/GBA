@@ -127,7 +127,7 @@
                 <div class="card mb-3 max-wCatalogo " style="max-width: 522.5px;">
                     <div class="row no-gutters">
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <img src="img-GBA/GBA-quirofano-catalogo.jpg" class="card-img height-porcen"
+                            <img src="img-GBA/webP/GBA-quirofano-catalogo.webp" class="card-img height-porcen"
                                 alt="...">
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12">
@@ -153,7 +153,7 @@
                 <div class="card mb-3 max-wCatalogo" style="max-width: 522.5px;">
                     <div class="row no-gutters">
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <img src="img-GBA/AssetsVSInstruments.jpg" class="card-img height-porcen" alt="...">
+                            <img src="img-GBA/webP/AssetsVSInstruments.webp" class="card-img height-porcen" alt="...">
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="card-body">
@@ -173,7 +173,7 @@
                 <div class="card mb-3 max-wCatalogo" style="max-width: 522.5px;">
                     <div class="row no-gutters">
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <img src="img-GBA/GBA-baumanometros.jpg" class="card-img height-porcen" alt="...">
+                            <img src="img-GBA/webP/GBA-baumanometros.webp" class="card-img height-porcen" alt="...">
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="card-body">
@@ -195,7 +195,7 @@
                 <div class="card mb-3 max-wCatalogo" style="max-width: 522.5px;">
                     <div class="row no-gutters">
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                            <img src="img-GBA/Img-GBA-catalogo.jpg" class="card-img height-porcen" alt="...">
+                            <img src="img-GBA/webP/Img-GBA-catalogo.webp" class="card-img height-porcen" alt="...">
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="card-body">
@@ -277,6 +277,30 @@
     <script src="plugins/progressbar/progressbar.min.js"></script>
     <script src="plugins/parallax-js-master/parallax.min.js"></script>
     <script src="js/custom.js"></script>
+    	<!-- Lazy load JS -->
+	<script src="js/jquery.lazyload.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script>
+
+	<script>
+		  $(function(){
+			$("img").lazyload({
+				effect : "fadeIn",
+				plecheholder: "img-GBA/login-gif-11.gif",
+				threshold: 200
+			});	
+		  });
+	</script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$("video").lazy();
+		});
+		</script>
+
+	<script>
+		$(".foot").load("ajaxFooter.php");
+		$(".head").load("ajaxHeader.php");
+	</script>
 
     <script>
         $(".foot").load("ajaxFooter.php");
