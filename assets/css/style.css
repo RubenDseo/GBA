@@ -1970,6 +1970,12 @@ h4.post-title a {
 
 .tam-icono-info {
     font-size: 35px;
+    margin-top: 2px;
+}
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+    .tam-icono-info {
+        margin-top: 7px;
+    }
 }
 
 .color-info .color-div {
@@ -2342,5 +2348,9 @@ h4.post-title a {
     .menuPantallasPequenias{
         display: block;
     }
+}
+.camb-icono-info{
+    height: 100%;
+    border-left: solid 0px #ededed !important;
 }
 /*fin de las clases de las categorias*/
