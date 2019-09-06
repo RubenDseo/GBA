@@ -116,7 +116,7 @@
     </div>
     <!-- etiqueta de encabezado area end -->
 
-    <div class="container" style="margin-left: 0px; margin-right: 0px;max-width: 100% !important;">
+    <div class="container margen-top-medianas" style="margin-left: 0px; margin-right: 0px;max-width: 100% !important;">
         <div class="row">
             <aside
                 class="barraLateral col-lg-3 col-md-3 col-sm-12 col-12 border-right order-lg-1 order-md-1 order-sm-2 order-2">
@@ -799,14 +799,9 @@
 
         });
     </script>
-    <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
+    <!---mostrar el menu de categorias-->
     <script>
-        var ventana_ancho = $(window).width();
-        if (ventana_ancho <= 767) {
-            $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
-        } else {
-            $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
-        }
+        $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
     </script>
     <script type="application/ld+json">
         {

@@ -2121,6 +2121,11 @@ h4.post-title a {
 .mas-productos{
     font-size: 20px;
 }
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .margen-top-medianas{
+        margin-top: 531px !important;
+    }
+}
 @media only screen and (max-width: 575px) {
 
     .product {

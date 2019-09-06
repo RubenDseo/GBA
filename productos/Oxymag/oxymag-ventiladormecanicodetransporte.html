@@ -65,9 +65,9 @@
 
         gtag('config', 'UA-145588516-2');
     </script>
-     <!-- Start of  Zendesk Widget script-->
-	<script id="ze-snippet"
-    src="https://static.zdassets.com/ekr/snippet.js?key=ad712fca-8b1b-437d-b3ef-6764fa25fc58"> </script>
+    <!-- Start of  Zendesk Widget script-->
+    <script id="ze-snippet"
+        src="https://static.zdassets.com/ekr/snippet.js?key=ad712fca-8b1b-437d-b3ef-6764fa25fc58"> </script>
     <!-- End of  Zendesk Widget script -->
 </head>
 
@@ -478,24 +478,25 @@
     <script src="../../js/product.js"></script>
 
     <!-- Lazy load JS -->
-	<script src="../../js/jquery.lazyload.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script>
+    <script src="../../js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script>
 
-	<script>
-		  $(function(){
-			$("img").lazyload({
-				effect : "fadeIn",
-				plecheholder: "img-GBA/login-gif-11.gif",
-				threshold: 200
-			});	
-		  });
-	</script>
-	<script type="text/javascript">
-		jQuery(function($) {
-			$("video").lazy();
-		});
-		</script>
+    <script>
+        $(function () {
+            $("img").lazyload({
+                effect: "fadeIn",
+                plecheholder: "img-GBA/login-gif-11.gif",
+                threshold: 200
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $("video").lazy();
+        });
+    </script>
 
     <script>
         $(".foot").load("ajaxFooter.php");
@@ -514,14 +515,9 @@
             }, 1000);
         });
     </script>
-    <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
+    <!---mostrar el menu de categorias-->
     <script>
-        var ventana_ancho = $(window).width();
-        if (ventana_ancho <= 767) {
-            $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
-        } else {
-            $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
-        }
+        $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
     </script>
     <script type="application/ld+json">
         {

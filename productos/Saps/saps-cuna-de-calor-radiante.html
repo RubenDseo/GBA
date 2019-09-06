@@ -477,14 +477,9 @@
             }, 1000);
         });
     </script>
-    <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
+    <!---mostrar el menu de categorias-->
     <script>
-        var ventana_ancho = $(window).width();
-        if (ventana_ancho <= 767) {
-            $("#menuCategoriasMT").load("ajaxMenuCategoriasPq.php");
-        } else {
-            $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
-        }
+        $("#menuCategoriasMT").load("ajaxMenuCategorias.php");
     </script>
     <script type="application/ld+json">
     {
