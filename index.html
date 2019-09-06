@@ -58,7 +58,6 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145588516-2"></script>
 	<script>
@@ -71,6 +70,10 @@
 
 		gtag('config', 'UA-145588516-2');
 	</script>
+	     <!-- Start of  Zendesk Widget script-->
+		 <script id="ze-snippet"
+		 src="https://static.zdassets.com/ekr/snippet.js?key=ad712fca-8b1b-437d-b3ef-6764fa25fc58"> </script>
+		 <!-- End of  Zendesk Widget script -->
 
 </head>
 
@@ -100,7 +103,7 @@
 									brindarle un servicio de calidad.
 								</p>
 								<a href="about.html" class="appao-btn">Nosotros</a>
-								<a href="#" id="cotizar-9" class="appao-btn">Contacto</a>
+								<a href="#" id="cotizar-9" class="appao-btn modalGBA">Contacto</a>
 							</div>
 						</div>
 					</div>
@@ -121,7 +124,7 @@
 								<br>
 
 								<a href="catalogo.html" class="appao-btn">Catálogo</a>
-								<a href="#" id="cotizar-11" class="appao-btn">Contacto</a>
+								<a href="#" id="cotizar-11" class="appao-btn modalGBA">Contacto</a>
 							</div>
 						</div>
 					</div>
@@ -137,7 +140,7 @@
 								<p>Contamos con ingenieros especializados y capacitados para brindar
 									la atención y el servicio que requieran nuestros clientes.</p>
 								<a href="index.html#servicios" class="appao-btn">Servicios</a>
-								<a href="#" id="cotizar-12" class="appao-btn">Contacto</a>
+								<a href="#" id="cotizar-12" class="appao-btn modalGBA">Contacto</a>
 							</div>
 						</div>
 					</div>
@@ -271,7 +274,7 @@
 											consumibles, ajustes de parámetros, corrección de errores en software,
 											cambio de componentes electrónicos etc.</p>
 										<br />
-										<a href="#" id="cotizar-1">Contacto
+										<a href="#" id="cotizar-1" class="modalGBA">Contacto
 											<span class="fa fa-angle-right align-middle ml-2"></span>
 										</a>
 									</div>
@@ -295,7 +298,7 @@
 											baterías, consumibles, etc. Se realizan rutinas de mantenimiento para
 											asegurar el correcto funcionamiento del equipo. </p>
 										<br>
-										<a href="#" id="cotizar-2">Contacto
+										<a href="#" id="cotizar-2" class="modalGBA">Contacto
 											<span class="fa fa-angle-right align-middle ml-2"></span>
 										</a>
 									</div>
@@ -324,7 +327,7 @@
 											de medición correcta. De esta forma garantizamos que el equipo
 											funcionará de forma correcta.</p>
 										<br>
-										<a href="#" id="cotizar-3"> Conocer más
+										<a href="#" id="cotizar-3" class="modalGBA"> Conocer más
 											<span class="fa fa-angle-right align-middle ml-2"></span>
 										</a>
 									</div>
@@ -354,7 +357,7 @@
 											de un dispositivo médico y errores comunes con el fin de aumentar
 											la eficiencia en el equipo y brindar un servicio de calidad al paciente.</p>
 										<br>
-										<a href="#" id="cotizar-4"> Contacto
+										<a href="#" id="cotizar-4" class="modalGBA"> Contacto
 											<span class="fa fa-angle-right align-middle ml-2"></span>
 										</a>
 									</div>
@@ -482,7 +485,7 @@
 							<i class="icofont icofont-bubble-right ml-3"></i>
 							Reparación requerida
 						</p>
-						<a href="#" class="appao-btn appao-btn2 " id="cotizar-5">Cotizar</a>
+						<a href="#" class="appao-btn appao-btn2 modalGBA" id="cotizar-5">Cotizar</a>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-12 order-lg-2 order-md-2 order-sm-2 order-2">
@@ -534,7 +537,7 @@
 							<i class="icofont icofont-bubble-right ml-3"></i>
 							Ventiladores volumétricos
 						</p>
-						<a href="#" class="appao-btn appao-btn2 " id="cotizar-6">Cotizar</a>
+						<a href="#" class="appao-btn appao-btn2 modalGBA" id="cotizar-6">Cotizar</a>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-12 order-lg-2 order-md-2 order-sm-2 order-2">
@@ -546,43 +549,6 @@
 			</div>
 		</div>
 	</section><!-- showcase section end -->
-
-
-	<!--******************** Inicio de MODULO de mantenimiento preventivo **************-->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-		aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Cotiza</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-
-				<div class="modal-body">
-
-					<form id="formularioModal">
-						<input id="nameModal1" type="text" name="nameModal1" placeholder="Nombre" required>
-						<input id="emailModal1" type="email" name="emailModal1" placeholder="Email" required>
-						<input id="telefonoModal1" type="tel" name="telefonoModal1" placeholder="Teléfono">
-						<input id="subjectModal1" type="text" name="subjectModal1" placeholder="Asunto" required>
-						<textarea id="messageModal1" name="messageModal1" placeholder="Mensaje"></textarea>
-						<div id="recaptchaID" class="g-recaptcha mb-3"></div>
-						<div class="col-lg-12 col-md-12 col-sm-12 col-12 row">
-							<button type="button" class="appao-btn appao-btn2 mr-3"
-								data-dismiss="modal">Cancelar</button>
-							<div id="btnEnviarModal">
-								<button type="button" class="appao-btn appao-btn2"
-									style="color: white; background: rgba(48, 69, 131, 0.45);" disabled>Enviar</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--******************** fin de MODULO de mantenimiento preventivo**************-->
 
 	<!-- testimonial section start -->
 	<!--<section class="testimonial-area ptb-90">
@@ -779,6 +745,9 @@
 	</a>
 	<!--fin de icono de scroll-->
 
+	<div id="modalSection">
+
+		</div>
 	<!-- jquery main JS -->
 	<script src="assets/js/jquery.min.js"></script>
 	<!-- Bootstrap JS -->
@@ -818,7 +787,6 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js">
 	</script>
-
 	<script>
 		$(function () {
 			$("img").lazyload({
@@ -837,7 +805,24 @@
 	<script>
 		$(".foot").load("ajaxFooter.php");
 		$(".head").load("ajaxHeader.php");
+		$("#modalSection").load("ajaxModalCotiza.php");
 	</script>
+
+<script>
+        var idDiv;
+        var name;
+
+        //con el div[id^=cotizar] identifica el div seleccionado    
+        $("a[id^=cotizar]").click(function (e) {
+			e.preventDefault();
+            idDiv = $(this).attr('id');//toma el id del div
+            console.log(idDiv);
+
+            //muestra el modal con el name  en #producto-cotizado del prodcuto a cotizar
+            $('#exampleModal').modal('show');
+           
+        });
+    </script>
 
 
 	<script type="application/ld+json">
