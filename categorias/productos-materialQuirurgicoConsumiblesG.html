@@ -336,12 +336,7 @@
     </script>
     <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
     <script>
-        var ventana_ancho = $(window).width();
-        if (ventana_ancho <= 767) {
-            $("#menuQuirurgicoYConsumibles").load("ajaxMenuQuirurgicoYConsumiblesPq.php");
-        } else {
-            $("#menuQuirurgicoYConsumibles").load("ajaxMenuQuirurgicoYConsumibles.php");
-        }
+        $("#menuQuirurgicoYConsumibles").load("ajaxMenuQuirurgicoYConsumibles.php");
     </script>
 
 </body>

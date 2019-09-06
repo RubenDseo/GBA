@@ -17,7 +17,17 @@
 						<h4>Escribenos</h4>
 						<p class="form-message"></p>
 
-				
+						<form id="formulario-contacto" role="form">
+							<input id="nombre" type="text" name="name" placeholder="Nombre" required>
+							<input id="email" type="email" name="email" placeholder="Email" required>
+							<input id="telefono" type="tel" name="telefono" placeholder="Teléfono">
+							<input id="asunto" type="text" name="subject" placeholder="Asunto" required>
+							<textarea id="mensajeF" name="message" placeholder="Mensaje"></textarea>
+							<div id="wrecaptcha" class="g-recaptcha mb-3"></div>
+							<div id="btnEnviar">
+								<button type="button" class="appao-btn appao-btn2" style="color: white; background: rgba(48, 69, 131, 0.45);" disabled>Enviar</button>
+							</div>
+						</form>
 					</div>
 
 				</div>
@@ -98,7 +108,7 @@
 		</div>
 	</footer>
 
-	<script src="js/formulario.js"></script>
+	<script src="../../assets/js/formulario.js"></script>
 
 </body>
 

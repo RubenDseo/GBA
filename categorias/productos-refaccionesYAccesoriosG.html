@@ -235,11 +235,6 @@
     </script>
     <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
     <script>
-        var ventana_ancho = $(window).width();
-        if(ventana_ancho<=767){
-            $("#menuRefaccionesYAccesorios").load("ajaxMenuRefaccionesYAccesoriosPq.php");
-        }else{
-            $("#menuRefaccionesYAccesorios").load("ajaxMenuRefaccionesYAccesorios.php");
-        }
+        $("#menuRefaccionesYAccesorios").load("ajaxMenuRefaccionesYAccesorios.php");
     </script>
 </body>
