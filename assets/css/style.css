@@ -2322,4 +2322,20 @@ h4.post-title a {
         top:-200px !important;
     }
 }
+@media only screen and (min-width: 768px){
+    .menuPantallasGrandes{
+     display: block;
+    }   
+    .menuPantallasPequenias{
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px){
+    .menuPantallasGrandes{
+     display: none;
+    }   
+    .menuPantallasPequenias{
+        display: block;
+    }
+}
 /*fin de las clases de las categorias*/

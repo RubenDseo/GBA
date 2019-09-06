@@ -14,22 +14,60 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                 <input type="text" id="filtroProductos" class="form-control" placeholder="Buscar producto...">
             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12 menuCategorias mb-4">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 menuCategorias mb-4 menuPantallasGrandes">
                 <div id="id-catalogo" class="categoriasP">
                     <span><a href="#">Categorías</a></span>
                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                 </div>
                 <ul class="menuCateClass" style="display: block">
                     <li><a id="productos-equipoMedicoG" href="productos-equipoMedicoG.html">Equipos médicos</a></li>
-                    <li><a id="productos-materialQuirurgicoConsumiblesG" href="productos-materialQuirurgicoConsumiblesG.html">Material
+                    <li><a id="productos-materialQuirurgicoConsumiblesG"
+                            href="productos-materialQuirurgicoConsumiblesG.html">Material
                             quirúrgico y consumibles</a></li>
-                    <li class="activarSeleccion"><a id="productos-medicinaInternaGeneralG" href="productos-medicinaInternaGeneralG.html">Medicina general</a>
+                    <li class="activarSeleccion"><a id="productos-medicinaInternaGeneralG"
+                            href="productos-medicinaInternaGeneralG.html">Medicina general</a>
                     </li>
-                    <li><a id="productos-refaccionesYAccesoriosG" href="productos-refaccionesYAccesoriosG.html">Refacciones y accesorios</a></li>
+                    <li><a id="productos-refaccionesYAccesoriosG"
+                            href="productos-refaccionesYAccesoriosG.html">Refacciones y accesorios</a></li>
                 </ul>
             </div>
-            <div id="menuFiltro" class="col-lg-12 col-md-12 col-sm-12 col-12 menuTipo mb-4 menuCateClass"
-                style="display: block;">
+            <div id="menuFiltro"
+                class="col-lg-12 col-md-12 col-sm-12 col-12 menuTipo mb-4 menuCateClass menuPantallasGrandes">
+                <ul>
+                    <li class="todos activarSeleccion"><a href="#" class="btn-menu" data-filter="todos">Todos</a></li>
+                    <li class="baumanometro"><a href="#" class="btn-menu" data-filter="baumanometro">Baumanómetros</a>
+                    </li>
+                    <li class="estuche-de-diagnostico"><a href="#" class="btn-menu"
+                            data-filter="estuche-de-diagnostico">Estuches de diagnóstico</a>
+                    </li>
+                    <li class="laringoscopios "><a href="#" class="btn-menu"
+                            data-filter="laringoscopios">Laringoscopios</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-6 col-12 menuCategorias mb-0 menuPantallasPequenias">
+
+                <button id="btnMenuTodos" class="btn btn-primary" type="button">
+                    Menu <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </button>
+                <div id="categoriasPBtn" class="categoriasP" style="display: none">
+                    <span><a id="id-catalogo" href="">Categorías</a></span>
+                </div>
+                <ul id="menuCateID" style="display: none;">
+                    <li><a id="productos-equipoMedicoG" href="productos-equipoMedicoG.html">Equipos médicos</a></li>
+                    <li><a id="productos-materialQuirurgicoConsumiblesG"
+                            href="productos-materialQuirurgicoConsumiblesG.html">Material
+                            quirúrgico y consumibles</a></li>
+                    <li class="activarSeleccion"><a id="productos-medicinaInternaGeneralG"
+                            href="productos-medicinaInternaGeneralG.html">Medicina
+                            general</a>
+                    </li>
+                    <li><a id="productos-refaccionesYAccesoriosG"
+                            href="productos-refaccionesYAccesoriosG.html">Refacciones y accesorios</a></li>
+                </ul>
+            </div>
+            <div id="menuFiltroPequenias"
+                class="col-lg-12 col-md-12 col-sm-6 col-12 menuTipo mb-4 menuPantallasPequenias">
                 <ul>
                     <li class="todos activarSeleccion"><a href="#" class="btn-menu" data-filter="todos">Todos</a></li>
                     <li class="baumanometro"><a href="#" class="btn-menu" data-filter="baumanometro">Baumanómetros</a>
@@ -72,7 +110,34 @@
             })
         })
     </script>
+    <!--al hacer click en el boton Menu muestra/oculta los menus de categorias y todos, accesotios, etc...-->
+    <script>
+        var idDiv;
+        //con el ID btnMenuTodos identifica el click del boton  
+        $("button[id^=btnMenu]").click(function () {
 
+            idDiv = $(this).attr('id'); //toma el id del button
+
+            if (idDiv == 'btnMenuTodos') {
+
+                document.getElementById('categoriasPBtn').style.display = 'block'; //mostrar el titulo categorias
+                document.getElementById('menuCateID').style.display = 'block'; //mostrar el contenido del menu categorias
+                document.getElementById('menuFiltroPequenias').style.display = 'block'; //mostrar el contenido del menu
+
+                $("#btnMenuTodos").attr("id", "btnMenuCateTodos");
+
+            } else if (idDiv == 'btnMenuCateTodos') {
+
+                document.getElementById('categoriasPBtn').style.display = 'none'; //ocultar el titulo categorias
+                document.getElementById('menuCateID').style.display = 'none'; //ocultar el contenido del menu categorias
+                document.getElementById('menuFiltroPequenias').style.display = 'none'; //ocultar el contenido del menu
+
+                $("#btnMenuCateTodos").attr("id", "btnMenuTodos");
+
+            }
+        });
+
+    </script>
     <!-- filtro categorias del menu de todos, accesorios etc-->
     <script src="../assets/js/filtroCategoria.js"></script>
 
