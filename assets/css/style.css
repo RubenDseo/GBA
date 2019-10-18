@@ -1969,15 +1969,27 @@ h4.post-title a {
 }
 
 .tam-icono-info {
-    font-size: 35px;
+    font-size: 32px !important;
     margin-top: 2px;
 }
 @media only screen and (min-width: 575px) and (max-width: 767px) {
     .tam-icono-info {
-        margin-top: 7px;
+        margin-top: 2px;
+        font-size: 40px !important;
     }
 }
-
+@media only screen and (max-width: 574px){
+    .tam-icono-info {
+        margin-top: 2px;
+        font-size: 35px !important;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .tam-icono-info {
+        margin-top: 5px;
+        font-size: 32px !important;
+    }
+}
 .color-info .color-div {
     background: white !important;
     color: #666666 !important;
