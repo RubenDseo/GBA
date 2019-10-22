@@ -586,11 +586,22 @@ input::-webkit-input-placeholder {
         height: 540px;
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px){
+@media only screen and (min-width: 1200px) {
     .header-Monitoreo{
-        height: 41px !important;
-        margin-top: -140px !important;
-        margin-bottom: 0px !important;
+        position: relative;
+        top: -422px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .header-Monitoreo{
+        position: relative;
+        top: -284px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .header-Monitoreo{   
+        position: relative;
+        top: -215px;  
     }
     .videoSignos {
         top: 0px !important;

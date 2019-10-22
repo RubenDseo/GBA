@@ -74,7 +74,8 @@
 }
 
 .videoSignos {
-    position: absolute;
+    /* position: absolute; */
+    position: revert;
     width: 100%;
     top: -162px;
 }
