@@ -6,11 +6,13 @@
   $mensaje = $_POST['message'];
 
   $contenido="\n\n";
+  $contenido.="\n Mensaje envidado desde página web";
   $contenido.="\n Nombre: ".$nombre;
   $contenido.="\n Email: ".$email;
   $contenido.="\n Asunto: ".$asunto;
   $contenido.="\n Telefono: ".$telefono;
   $contenido.="\n Mensaje: ".$mensaje;
+  $contenido.="\n\n\n Clave(gba@grupobiomedicoazteca.com.mx)";
   
   $cabecera= "From: ".$nombre. "< ".$email. " >\r\n";
 
