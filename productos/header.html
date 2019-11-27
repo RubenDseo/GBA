@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="row flexbox-center">
+                <div class="col-lg-2 col-md-3 col-sm-9 col-9">
+					<div class="logo">
+						<a href="../../index.html"><img class="tam-logo" id="logo-R" src="../../img-GBA/logogba.png" alt="GBA" /></a>
+					</div>
+				</div>
+                <div class="col-lg-10 col-md-9 col-sm-3 col-3">
+                    <nav class="navbar navbar-dark mostrarBotonMenu" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;
+                        padding-bottom: 5p;text-align: center">
+                        <button id="btnMenuClickMostrar" class="navbar-toggler btnMenu" type="button"
+                            data-toggle="collapse" data-target="#navbarToggleExternalContent"
+                            aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                            aria-label="Toggle navigation"
+                            >
+                            <i class="fas fa-bars" style="color: rgb(255, 255, 255) !important;"></i>                        
+                        </button>
+                    </nav>
+                    <div class="responsive-menu"></div>
+                    <div class="mainmenu mostrarMenu">
+                        <ul id="primary-menu">
+                            <li><a class="nav-link active" href="../../index.html">Inicio</a></li>
+                            <li><a class="nav-link" href="../../about.html">Nosotros</a></li>
+                            <li>
+                                <a class="nav-link" href="../../index.html#servicios">Servicios</a>
+                                <!--<ul class="dropdown">
+                                            <li><a href="">Biblioteca virtual</a></li>
+                                            <li><a href="">Pago en línea paypal</a></li>
+                                            <li><a href="">Aportaciones</a></li>
+                                        </ul>-->
+                            </li>
+                            <li><a class="nav-link" href="../../catalogo.html">Catálogo</a></li>
+                            <li><a class="nav-link" href="../../index.html#contacto">Contacto</a></li>
+                            <!-- Carrito 
+                            <li class="cart">
+                                <a class="nav-link" href="cart.html" style="padding-top: 0px; padding-bottom: 5px;">
+                                    <i class="icofont icofont-cart icofont-2x"></i>
+                                </a>
+                            </li>-->
+                            <!--<li><a class="appao-btn" href="#">Download</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="menuClick" class="col-sm-5 col-7 mostrarMenuPP">
+                    <div class="mainmenu">
+                        <ul id="primary-menu">
+                            <li><a class="nav-link active" href="../../index.html">Inicio</a></li>
+                            <li><a class="nav-link" href="../../about.html">Nosotros</a></li>
+                            <li>
+                                <a class="nav-link" href="index.html#servicios">Servicios</a>
+                                <!--<ul class="dropdown">
+                                            <li><a href="">Biblioteca virtual</a></li>
+                                            <li><a href="">Pago en línea paypal</a></li>
+                                            <li><a href="">Aportaciones</a></li>
+                                        </ul>-->
+                            </li>
+                            <li><a class="nav-link" href="../../catalogo.html">Catálogo</a></li>
+                            <li><a class="nav-link" href="../../index.html#contacto">Contacto</a></li>
+                            <!-- Carrito 
+                            <li class="cart">
+                                <a class="nav-link" href="cart.html" style="padding-top: 0px; padding-bottom: 5px;">
+                                    <i class="icofont icofont-cart icofont-2x"></i>
+                                </a>
+                            </li>-->
+                            <!--<li><a class="appao-btn" href="#">Download</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <script src="../../assets/js/gba.js"></script>
+
+    <script>
+
+        $("button[id^=btnMenuClick]").click(function () {
+
+            idDiv = $(this).attr('id'); //toma el id del button
+
+            if (idDiv == 'btnMenuClickMostrar') {
+
+                document.getElementById('menuClick').style.display = 'block'; //mostrar el menu
+            
+                document.getElementById('btnMenuClickMostrar').innerHTML = '<i class="fas fa-times" style="color: rgb(255, 255, 255) !important;"></i>';//vaciar el contenido de esta pagina
+
+                $("#btnMenuClickMostrar").attr("id", "btnMenuClickOcultar");
+
+
+
+            } else if (idDiv == 'btnMenuClickOcultar') {
+
+                document.getElementById('menuClick').style.display = 'none'; //ocultar el menu
+             
+                document.getElementById('btnMenuClickOcultar').innerHTML = '<i class="fas fa-bars" style="color: rgb(255, 255, 255) !important;"></i>';//vaciar el contenido de esta pagina
+             
+                $("#btnMenuClickOcultar").attr("id", "btnMenuClickMostrar");
+
+            }
+        });
+
+    </script>
+</body>
+
+</html>

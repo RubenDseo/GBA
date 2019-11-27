@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+.barraLateral {
+    padding-top: 99px;
+}
+
+.img-realcionada {}
+
+.produc_relacionado {
+    width: 40%;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+
+.img-realcionada {
+    width: 100%;
+    box-shadow: 2px 2px 4px;
+}
+
+.divProducto {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 25px 0px;
+    border-bottom: 1px solid #70b0d5;
+}
+
+.text_pRelaconado {
+    color: #717171;
+    font-weight: 600;
+}
+
+.product_buttons>div>div {
+    width: 30%;
+    margin: auto;
+    height: auto;
+    border: solid 1px #ededed;
+    /* border-bottom: solid 1px #ededed; */
+    background: rgba(255, 255, 255, 0);
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.product_buttons>div>div:hover {
+    color: white;
+    background: rgba(152, 152, 154, 0.29);
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.text-Servicios-R {
+    text-align: justify;
+    color: antiquewhite;
+}
+
+.visibilidad {
+    visibility: hidden;
+}
+
+.LogoMarcaProducto {
+    width: 60%;
+    margin-top: 40px;
+}
+
+.img-Calibracion {
+    width: 60%;
+    margin-left: 15%;
+}
+
+.videoSignos {
+    /* position: absolute; */
+    position: revert;
+    width: 100%;
+    top: -162px;
+}
+
+.iconoGears {
+    width: max-content;
+    position: relative;
+    left: 50%;
+    top: 30%;
+}
+
+.containerServicios {
+    border-top: 1px solid #0d76a7;
+    padding-top: 34px;
+    border-bottom: 1px solid #0d76a7;
+    padding-bottom: 60px;
+}
+
+.seriviosBarraLateral {
+    border-right: 2px solid #0d76a7;
+    padding-right: 5px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    
+    .seriviosBarraLateral {
+        border-bottom: 2px solid #0d76a7;
+        padding-right: 0px;
+        border-right: none;
+    }
+}
+@media only screen and (max-width: 575px) {
+    
+    .seriviosBarraLateral {
+        border-bottom: 2px solid #0d76a7;
+        border-right: none;
+        padding-right: 0px;
+    }
+}
+@media only screen and (max-width:767px){
+    .barraLateral {
+        padding-top: 20px;
+    }
+}
+.imgVentas {
+    width: 63%;
+    box-shadow: 6px 0px 3px -2px;
+}
+
+.blogBoxI2 {
+    border-radius: 16px;
+    height: 210px;
+    width: 235px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+}
+
+.imgVentasBack {
+    background-color: #00000069;
+    border-radius: 16px;
+
+}
+
+.imgVentasBack:hover {
+    background-color: #0000001a;
+    transition: background-color 0.6s linear;
+    box-shadow: 0px 10px 10px;
+    transition: box-shadow 0.3s linear;
+}
+
+.imgVentasTitle {
+    font-size: 30px;
+    line-height: 33px;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 2px 2px 1px black;
+}
+
+.imgVentasSubtitle {
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px black;
+    color: #e0efff !important;
+}
+
+.ocultarProducto{
+    display: none;
+}
+
+.ocultarProductoBoton{
+    display: none;
+}
+
+.ocultarBProducto{
+    display: none;
+}
+
+.mostrarMasProductos{
+    display: block;
+}
+
+.mostrarProductos{
+    display: block;
+}
+
+.verMenosBProductos{
+    display: block;
+}
