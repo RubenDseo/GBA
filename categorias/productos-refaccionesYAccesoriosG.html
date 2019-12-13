@@ -118,6 +118,7 @@
 
     </div>
 
+    <div id="modalInProducto"></div>
 
     <!-- jquery main JS -->
     <script src="../js/jquery-3.2.1.min.js"></script>
@@ -169,6 +170,7 @@
         $(".foot").load("footer.html");
 		$(".head").load("header.html");
         $("#modalSection").load("modalCotizar.html");
+        $("#modalInProducto").load("../modalInfo.html");
     </script>
 
     <script>
@@ -197,5 +199,45 @@
     <!---mostrar el menu de categorias dependiendo el tam de la pantalla-->
     <script>
         $("#menuRefaccionesYAccesorios").load("menuRefaccionesYAccesorios.html");
+    </script>
+
+    <script>
+        var idDiv;
+        var name;
+
+        //con el div[id^=informacion] identifica el div seleccionado    
+        $("div[id^=informacion-]").click(function () {
+            idDiv = $(this).attr('id');//toma el id del div
+            console.log(idDiv);
+
+            idDiv = idDiv.split('-');            
+            var idInfo = idDiv[0] + "-" + idDiv[1] + idDiv[2];
+
+            //muestra el modal con la informacion del producto
+            $('#infoProducto').modal('show');
+            $(document).ready(function () {
+                setTimeout(function () {
+                    document.getElementById('addInfoProducto').innerHTML = document.getElementById(idInfo).innerHTML;
+                }, 10);
+            });
+        });
+
+        //con el a[id^=informacion] identifica el div seleccionado    
+        $("a[id^=informacion-]").click(function (e) {
+            e.preventDefault();
+            idDiv = $(this).attr('id');//toma el id del link
+            console.log(idDiv);
+
+            idDiv = idDiv.split('-');            
+            var idInfo = idDiv[0] + "-" + idDiv[1] + idDiv[2];
+
+            //muestra el modal con la informacion del producto
+            $('#infoProducto').modal('show');
+            $(document).ready(function () {
+                setTimeout(function () {
+                    document.getElementById('addInfoProducto').innerHTML = document.getElementById(idInfo).innerHTML;
+                }, 10);
+            });
+        });
     </script>
 </body>
