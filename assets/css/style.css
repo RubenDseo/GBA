@@ -2379,3 +2379,20 @@ h4.post-title a {
     border-left: solid 0px #ededed !important;
 }
 /*fin de las clases de las categorias*/
+.zoomImg { 
+    -webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 500ms;
+    -moz-transform: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 500ms;
+}
+
+.zoomImg:hover { 
+    -webkit-transform: scale(1.5,1.5);
+    -webkit-transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 500ms;
+    -moz-transform: scale(1.5,1.5);
+    -moz-transition-timing-function: ease-in-out;
+    -moz-transition-duration: 500ms;
+}
