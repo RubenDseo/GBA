@@ -2396,3 +2396,14 @@ h4.post-title a {
     -moz-transition-timing-function: ease-in-out;
     -moz-transition-duration: 500ms;
 }
+@media only screen and (max-width: 991px){
+    .mostrar-pm{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .mostrar-pm{
+        display: none;
+    }
+}
