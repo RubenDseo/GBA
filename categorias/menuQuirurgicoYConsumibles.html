@@ -31,7 +31,7 @@
                             href="productos-refaccionesYAccesoriosG.html">Refacciones y accesorios</a></li>
                 </ul>
             </div>
-            <div id="menuFiltro"
+            <!-- <div id="menuFiltro"
                 class="col-lg-12 col-md-12 col-sm-12 col-12 menuTipo mb-4 menuCateClass menuPantallasGrandes">
                 <ul>
                     <li class="todos activarSeleccion"><a href="#" class="btn-menu" data-filter="todos">Todos</a></li>
@@ -39,7 +39,7 @@
                             data-filter="material-quirurgico">Material quirúrgico</a></li>
                     <li class="consumibles"><a href="#" class="btn-menu" data-filter="consumibles">Consumibles</a></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="col-lg-12 col-md-12 col-sm-6 col-12 menuCategorias mb-0 menuPantallasPequenias">
 
                 <button id="btnMenuTodos" class="btn btn-primary" type="button">
@@ -52,7 +52,7 @@
                     <li><a id="productos-equipoMedicoG" href="productos-equipoMedicoG.html">Equipos médicos</a></li>
                     <li class="activarSeleccion"><a id="productos-materialQuirurgicoConsumiblesG"
                             href="productos-materialQuirurgicoConsumiblesG.html">Material
-                            quirúrgico y consumibles</a></li>
+                            quirúrgico y de curación / consumibles</a></li>
                     <li><a id="productos-medicinaInternaGeneralG" href="productos-medicinaInternaGeneralG.html">Medicina
                             general</a>
                     </li>
@@ -60,7 +60,7 @@
                             href="productos-refaccionesYAccesoriosG.html">Refacciones y accesorios</a></li>
                 </ul>
             </div>
-            <div id="menuFiltroPequenias"
+            <!-- <div id="menuFiltroPequenias"
                 class="col-lg-12 col-md-12 col-sm-6 col-12 menuTipo mb-4 menuPantallasPequenias "
                 style="display: none;">
                 <ul>
@@ -69,7 +69,7 @@
                             data-filter="material-quirurgico">Material quirúrgico</a></li>
                     <li class="consumibles"><a href="#" class="btn-menu" data-filter="consumibles">Consumibles</a></li>
                 </ul>
-            </div>
+            </div> -->
 
         </div>
     </div>
@@ -85,7 +85,7 @@
             var products = document.getElementsByClassName('filtroProduct');
             //console.log(products);
 
-            var nameClasse = document.getElementById('menuFiltro').getElementsByClassName('activarSeleccion');
+        // var nameClasse = document.getElementById('menuFiltro').getElementsByClassName('activarSeleccion');
             //classActive.removeClass("activarSeleccion");
             //if(nameClasse.getAttribute("class"))
             // var clases=nameClasse.getAttribute("class");
@@ -114,7 +114,7 @@
 
                 document.getElementById('categoriasPBtn').style.display = 'block'; //mostrar el titulo categorias
                 document.getElementById('menuCateID').style.display = 'block'; //mostrar el contenido del menu categorias
-                document.getElementById('menuFiltroPequenias').style.display = 'block'; //mostrar el contenido del menu
+                // document.getElementById('menuFiltroPequenias').style.display = 'block'; //mostrar el contenido del menu
 
                 $("#btnMenuTodos").attr("id", "btnMenuCateTodos");
 
@@ -122,7 +122,7 @@
 
                 document.getElementById('categoriasPBtn').style.display = 'none'; //ocultar el titulo categorias
                 document.getElementById('menuCateID').style.display = 'none'; //ocultar el contenido del menu categorias
-                document.getElementById('menuFiltroPequenias').style.display = 'none'; //ocultar el contenido del menu
+                // document.getElementById('menuFiltroPequenias').style.display = 'none'; //ocultar el contenido del menu
 
                 $("#btnMenuCateTodos").attr("id", "btnMenuTodos");
 

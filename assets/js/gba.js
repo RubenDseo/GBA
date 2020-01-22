@@ -19,7 +19,7 @@ $( document ).ready(function() {
         }
 
         if(ventana_ancho>=768 && ventana_ancho<=991){
-            $('#logo-R').attr("style", "width: 140%");
+            $('#logo-R').attr("style", "width: 135%");
 
             $(window).scroll(function(){
                 if($(this).scrollTop()>10){              
@@ -27,7 +27,7 @@ $( document ).ready(function() {
                     $('#logo-R').addClass("tam-logo");
 
                 }else{
-                    $('#logo-R').attr("style", "width: 140%");
+                    $('#logo-R').attr("style", "width: 135%");
                     $('#logo-R').addClass("tam-logo");
                 }
             });

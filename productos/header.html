@@ -10,19 +10,19 @@
         <div class="container">
             <div class="row flexbox-center">
                 <div class="col-lg-2 col-md-3 col-sm-9 col-9">
-					<div class="logo">
-						<a href="../../index.html"><img class="tam-logo" id="logo-R" src="../../img-GBA/logogba.png" alt="GBA" /></a>
-					</div>
-				</div>
+                    <div class="logo">
+                        <a href="../../index.html"><img class="tam-logo" id="logo-R" src="../../img-GBA/logogba.png"
+                                alt="GBA" /></a>
+                    </div>
+                </div>
                 <div class="col-lg-10 col-md-9 col-sm-3 col-3">
                     <nav class="navbar navbar-dark mostrarBotonMenu" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;
                         padding-bottom: 5p;text-align: center">
                         <button id="btnMenuClickMostrar" class="navbar-toggler btnMenu" type="button"
                             data-toggle="collapse" data-target="#navbarToggleExternalContent"
                             aria-controls="navbarToggleExternalContent" aria-expanded="false"
-                            aria-label="Toggle navigation"
-                            >
-                            <i class="fas fa-bars" style="color: rgb(255, 255, 255) !important;"></i>                        
+                            aria-label="Toggle navigation">
+                            <i class="fas fa-bars" style="color: rgb(255, 255, 255) !important;"></i>
                         </button>
                     </nav>
                     <div class="responsive-menu"></div>
@@ -30,14 +30,18 @@
                         <ul id="primary-menu">
                             <li><a class="nav-link active" href="../../index.html">Inicio</a></li>
                             <li><a class="nav-link" href="../../about.html">Nosotros</a></li>
-                            <li>
-                                <a class="nav-link" href="../../index.html#servicios">Servicios</a>
-                                <!--<ul class="dropdown">
-                                            <li><a href="">Biblioteca virtual</a></li>
-                                            <li><a href="">Pago en línea paypal</a></li>
-                                            <li><a href="">Aportaciones</a></li>
-                                        </ul>-->
-                            </li>
+                            <!-- Example single danger button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-danger dropdown-toggle cambiodColor"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    SERVICIOS
+                                </button>
+                                <div class="dropdown-menu" style="font-size: 14px !important;">
+                                    <a class="dropdown-item" href="../../servicios-mantenimiento-y-calibracion.html">Mantenimiento y calibración</a>
+                                    <!-- <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a> -->
+                                </div>
+                            </div>
                             <li><a class="nav-link" href="../../catalogo.html">Catálogo</a></li>
                             <li><a class="nav-link" href="../../contact.html">Contacto</a></li>
                             <!-- Carrito 
@@ -51,20 +55,35 @@
                     </div>
                 </div>
 
-                <div id="menuClick" class="col-sm-5 col-7 mostrarMenuPP">
+                <div id="menuClick" class="col-sm-5 col-9 mostrarMenuPP">
                     <div class="mainmenu">
                         <ul id="primary-menu">
                             <li><a class="nav-link active" href="../../index.html">Inicio</a></li>
                             <li><a class="nav-link" href="../../about.html">Nosotros</a></li>
-                            <li>
+                            <!-- <li>
                                 <a class="nav-link" href="../../index.html#servicios">Servicios</a>
-                                <!--<ul class="dropdown">
+                                <ul class="dropdown">
                                             <li><a href="">Biblioteca virtual</a></li>
                                             <li><a href="">Pago en línea paypal</a></li>
                                             <li><a href="">Aportaciones</a></li>
-                                        </ul>-->
-                            </li>
-                            <li><a class="nav-link" href="../../catalogo.html">Catálogo</a></li>
+                                        </ul>
+                            </li> -->
+                            <!-- Example single danger button -->
+                            <div class="btn-group" style="margin-bottom: 10px;">
+                                <button id="idMenuMostrar" type="button"
+                                    class="btn btn-danger dropdown-toggle cambiodColor" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    SERVICIOS
+                                </button>
+                                <div class="dropdown-menu"
+                                    style="font-size: 14px !important; transform: translate3d(-51px, 33px, 0px) !important;">
+                                    <a class="dropdown-item" href="../servicios-mantenimiento-y-calibracion.html">Mantenimiento y calibración</a>
+                                    <!-- <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a> -->
+                                </div>
+                            </div>
+                            <li id="menuCat1" style="display: none;"><a class="nav-link" href="catalogo.html"> </a></li>
+                            <li><a id="catMargen" class="nav-link" href="../../catalogo.html">Catálogo</a></li>
                             <li><a class="nav-link" href="../../contact.html">Contacto</a></li>
                             <!-- Carrito 
                             <li class="cart">
@@ -91,7 +110,7 @@
             if (idDiv == 'btnMenuClickMostrar') {
 
                 document.getElementById('menuClick').style.display = 'block'; //mostrar el menu
-            
+
                 document.getElementById('btnMenuClickMostrar').innerHTML = '<i class="fas fa-times" style="color: rgb(255, 255, 255) !important;"></i>';//vaciar el contenido de esta pagina
 
                 $("#btnMenuClickMostrar").attr("id", "btnMenuClickOcultar");
@@ -101,14 +120,30 @@
             } else if (idDiv == 'btnMenuClickOcultar') {
 
                 document.getElementById('menuClick').style.display = 'none'; //ocultar el menu
-             
+
                 document.getElementById('btnMenuClickOcultar').innerHTML = '<i class="fas fa-bars" style="color: rgb(255, 255, 255) !important;"></i>';//vaciar el contenido de esta pagina
-             
+
                 $("#btnMenuClickOcultar").attr("id", "btnMenuClickMostrar");
 
             }
         });
 
+        $("button[id^=idMenu]").click(function () {
+
+            idDiv = $(this).attr('id'); //toma el id del button
+
+            if (idDiv == 'idMenuMostrar') {
+                idDiv = $(this).attr('id');
+                document.getElementById('menuCat1').style.display = 'block'; //mostrar el menu
+                document.getElementById('catMargen').setAttribute("style", "margin-top: 10px");
+                $("#idMenuMostrar").attr("id", "idMenuOcultar");
+            } else if (idDiv == 'idMenuOcultar') {
+                idDiv = $(this).attr('id');
+                document.getElementById('menuCat1').style.display = 'none'; //mostrar el menu
+                document.getElementById('catMargen').setAttribute("style", "margin-top: 0px");
+                $("#idMenuOcultar").attr("id", "idMenuMostrar");
+            }
+        });
     </script>
 </body>
 
